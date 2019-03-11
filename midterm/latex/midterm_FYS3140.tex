@@ -4,6 +4,8 @@
 \usepackage{bm}
 \usepackage{varioref}
 \usepackage{booktabs}
+\usepackage{commath}
+\usepackage{amsmath}
 \usepackage{tikz}
 %\usepackage{cite}
 \usetikzlibrary{shapes.misc}
@@ -27,8 +29,125 @@ cross/.default={1pt}}
 \begin{document}
 % front page
 \input{titlepage}
-\section*{Task 1}
+\section*{Problem 1: Complex analysis}
+\subsection*{Part A: Cauchy integral formula and harmonic functions}
+We will begin by studying Cauchy's integral formula for a function $f(z)$ which is analytical inside and on the closed curve $C_R$ defined by
+\begin{equation}
+  C_R: \abs{z-z_0}=R \label{contour}
+\end{equation}
+Cauchy's integral formula takes the form
+\begin{equation}
+  f(z_0) = \frac{1}{2\pi i} \oint_{C_R} \frac{f(z)}{z-z_0}\dif z \label{CIF}
+\end{equation}
+\subsubsection*{a)}
+We let $M$ denote the maximum absolute value of $f(z)$ on $C_R$ such that
+\begin{equation}
+  \abs{f(z)} \leq M, \label{M}
+\end{equation}
+for all $z$ on the contour. We will use this to find an upper bound on the absolute value of $f(z_0)$
+\begin{equation}
+  \abs{f(z_0)} = \abs{\frac{1}{2\pi i} \oint_{C_R} \frac{f(z)}{z-z_0}\dif z} = \frac{1}{2\pi}\,\abs{\oint_{C_R} \frac{f(z)}{z-z_0}\dif z}. \label{begining}
+\end{equation}
+We begin by writing the absolute value of the integral in terms of Riemann sums
+\begin{equation}
+  \abs{\oint_{C_R} \frac{f(z)}{z-z_0}\dif z} = \lim_{n \to \infty} \abs{\sum_{k=1}^{n} \frac{f(z_k)}{z_k-z_0}}\Delta z_k }.
+\end{equation}
+For this sum we will use the generalized triangle inequality, which states that
+\begin{equation}
+  \abs{\sum_i = a_i} \leq \sum_i \abs{a_i},
+\end{equation}
+which is true for an arbritary number of terms. Using this we rewrite the Riemann-sum
+\begin{equation}
+  \abs{\oint_{C_R} \frac{f(z)}{z-z_0}\dif z} \leq \lim_{n \to \infty} \sum_{k=1}^{n} \abs{\frac{f(z_k)}{z_k-z_0}}}\Delta z_k = \lim_{n \to \infty} \sum_{k=1}^{n} \frac{\abs{f(z_k)}}{\abs{z_k-z_0}}}\Delta z_k,
+\end{equation}
+where we have used that the absolute value of the fraction is just the absolute value of each factor. We have already defined $\abs{f(z)}$ in equation \eqref{M}, and we recognize the denominator as the radius $R$ from the definition of the contour \eqref{contour}. Since both of these are constants we can take them outside of the sum, where we now have a new upper bound estimate
+\begin{equation}
+  \abs{\oint_{C_R} \frac{f(z)}{z-z_0}\dif z} \leq \frac{M}{R} \,\,\lim_{n \to \infty} \sum_{k=1}^{n} \Delta z_k.
+\end{equation}
+The infinitesimal sums over the changes in $z_k$ will add up to the circomference of the curve, which is just a circle with radius $R$. Thus the upper bound can be written as
+\begin{equation}
+  \abs{\oint_{C_R} \frac{f(z)}{z-z_0}\dif z} \leq \frac{M}{R}\,2\pi R.
+\end{equation}
+We cancel the $R$'s leaving us with the simple expression for the upper bound estimate
+\begin{equation}
+  \abs{\oint_{C_R} \frac{f(z)}{z-z_0}\dif z} \leq 2\pi M.
+\end{equation}
+We insert this expression into our original one \eqref{begining}
+\begin{equation}
+  \abs{f(z_0)} = \frac{1}{2\pi}\,\abs{\oint_{C_R} \frac{f(z)}{z-z_0}\dif z} \leq \frac{1}{2\pi} \, 2\pi M.
+\end{equation}
+Canceling the factors of $2\pi$ we find the final expression for the upper bound estimate of the contour integral
+\begin{equation}
+  \abs{f(z_0)} \leq M.
+\end{equation}
 
+\subsubsection*{b)}
+We will try to rewrite Cauchy's integral formula \eqref{CIF} for the special case of a circular contour around a point $z_0$. We do this by writing the complex number $z$ in terms of the center of the circle plus another terms looping around a cirlce with radius $R$
+\begin{equation}
+  z = z_0 + R e^{it} \,\,\qquad t \in [0, 2\pi].
+\end{equation}
+By taking the derivative of $z$ with respect to time we can solve for the infinitesimal $\dif z$
+\begin{equation}
+  \frac{\dif z}{\dif t} = iRe^{it} \rightarrow \dif z = iRe^{it} \dif t.
+\end{equation}
+We use this substitution in Cauchy's integral formula \eqref{CIF}
+\begin{equation}
+  f(z_0) = \frac{1}{2\pi i} \oint_{C_R} \frac{f(z)}{z-z_0}\dif z = \frac{1}{2\pi i} \int_{0}^{2\pi} \frac{f(z_0+Re^{it})}{z_0+Re^{it}-z_0}\,iRe^{it} \dif t.
+\end{equation}
+We see that the $i$ outside of the integral cancels with the one inside, and by subtracting away the $z_0$'s in the denominator we can cancel the factor $Re^{it}$, thus
+\begin{equation}
+  f(z_0) = \frac{1}{2\pi} \int_{0}^{2\pi} f(z_0+Re^{it}) \dif t. \label{answer1b}
+\end{equation}
+This expression will only work for circular contours around $z_0$.
+
+\subsubsection*{c)}
+We introduce the function $u(x, y)$, which is harmonic on and inside a circle of radius $R$ centerd at $z_0=x_0+iy_0$. We can evaluate the value of $u$ at the center of the circle using Cauchy's integral formula \eqref{CIF}
+\begin{equation}
+  f(z_0) = \frac{1}{2\pi i} \oint_{C_R} \frac{f(z)}{z-z_0}\dif z.
+\end{equation}
+In the previous task we showed that such a integral, for a circular contour with radius $R$ around a point $z_0$ can be rewritten to a integral over a real scalar $t$ from $0$ to $2\pi$ \eqref{answer1b}. We use this result, but now for a variable $\theta$ over the same interval, to evaluate $z_0$ at the center of the circel
+\begin{equation}
+  u(x_0, y_0) = \frac{1}{2\pi} \int_{0}^{2\pi} f(z_0+Re^{i\theta}) \dif \theta.
+\end{equation}
+This result tells us that to evalue an analytic, and in this case harmonic, function at the center of a circle we can only use values along a circle around the point. Due to the factor $1/2\pi$ outside the integral the functionvalue at the center of the circle is equal to the average value of the function along the contour. It is quite incredible that we can do this for an arbritary radius $R$ (as long as the function is still analytic inside and on the contour), and always be able to evalue the function at a point we never looked at.
+
+\subsubsection*{d)}
+For a pair of two dimensional functions $u(x, y)$ and $v(x, y)$ which are each other's harmonic conjugates we have the following relation
+\begin{equation}
+  \pdv{u}{x} = \pdv{v}{y} \qquad \qquad \pdv{v}{x} = - \pdv{u}{y}, \label{harmonic_def}
+\end{equation}
+which is actually the definition of a harmonic conjugate in two dimensions.
+We can use this to derive the orthogonality of the gradients of the functions, where the two dimensional nabla-operator is defined as
+\begin{equation}
+  \nabla = \left( \pdv{}{x}, \,\, \pdv{}{y} \right),
+\end{equation}
+meaning that the inner product between the two functions can be written as
+\begin{equation}
+  \left( \vec{ \nabla u} \right) \,\cdot   \left( \vec{ \nabla v} \right) = \left( \pdv{u}{x}, \,\, \pdv{u}{y} \right)\cdot \left( \pdv{v}{x}, \,\, \pdv{v}{y} \right) = \pdv{u}{x}\pdv{v}{x} + \pdv{u}{y}\pdv{v}{y}.
+\end{equation}
+Where we have written the left hand side in bold to emphesise that it is a vector. We then make a substitution from the definition of harmonic conjugates \eqref{harmonic_def} on $v$ so that we only have derivatives acting on $u$
+\begin{equation}
+  \left( \vec{ \nabla u} \right) \,\cdot   \left( \vec{ \nabla v} \right) = -\pdv{u}{y}\pdv{u}{x} + \pdv{u}{x}\pdv{u}{y} = 0.
+\end{equation}
+Since both terms are equal, but with oposite sign, they exactly cancel each other. Thus we have showed that the gradient of two functions which are each others harmonic conjugates have to be orthogonal. We did not specify anything about $u$ and $v$ except from them being harmonic conjugates of each other, thus this orthogonality must hold for all pairs of analytical conjugates.
+
+\subsubsection*{e)}
+We will now look at concrete example where one of the harmonic functions, $u(x, y)$, is known, and we want to find it's harmonic conjugate $v(x,y)$. The expression for the known harmonic function is
+\begin{equation}
+  u(x,y) = \sin{x}\cosh{y}.
+\end{equation}
+We begin by finding it's derivatives and second derivatives with respect to both $x$ and $y$ seperately
+\begin{align}
+  \begin{split}
+  \pdv{u}{x} &= \cos{x}\cosh{y}\qquad \qquad\pdv[2]{u}{x} = -\sin{x}\cosh{y} \\
+  \pdv{u}{y} &= \sin{x}\sinh{y}\qquad \qquad\pdv[2]{u}{y} = \sin{x}\cosh{y}. \label{derivatives}
+\end{split}
+\end{align}
+We begin by checking that $u(x, y)$ infact is harmonic
+\begin{equation}
+  \nabla^2u = \pdv[2]{u}{x}+\pdv[2]{u}{y} = -\sin{x}\cosh{y} + \sin{x}\cosh{y} = 0,
+\end{equation}
+here we used the double derivatives calculated in \eqref{derivatives}, and find that $u$ is harmonic. We now want to find the harmonic conjugate of $u$, which we can calculate through the definition of harmonic conjugates \eqref{harmonic_def}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%% Main document
 %\bibliography{citations.bib}
 %\bibliographystyle{plain}
