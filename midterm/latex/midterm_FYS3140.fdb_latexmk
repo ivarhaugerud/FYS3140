@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1552301883 "midterm_FYS3140.tex" "midterm_FYS3140.pdf" "midterm_FYS3140" 1552301883
+["pdflatex"] 1552327020 "midterm_FYS3140.tex" "midterm_FYS3140.pdf" "midterm_FYS3140" 1552327020
   "/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc" 1480098666 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2017/texmf-dist/fonts/map/fontname/texfonts.map" 1480098670 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/local/texlive/2017/texmf-dist/fonts/tfm/bitstrea/charter/bchb7t.tfm" 1480098691 2732 006d846b4d54f9b40899c7c3eecd771a ""
@@ -48,6 +48,7 @@
   "/usr/local/texlive/2017/texmf-dist/fonts/type1/bitstrea/charter/bchb8a.pfb" 1480098732 33799 6c8c18c1e1a138641a52c29f0b878445 ""
   "/usr/local/texlive/2017/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb" 1480098732 34869 539b6fed90ef630e9049bc13079bc598 ""
   "/usr/local/texlive/2017/texmf-dist/fonts/type1/bitstrea/charter/bchri8a.pfb" 1480098732 35118 12369bddf1a14581d11fcdbf86619250 ""
+  "/usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb" 1480098733 11493 4f5ed183a47d3197cf8cd322325db6de ""
   "/usr/local/texlive/2017/texmf-dist/fonts/type1/public/kpfonts/jkpbmi.pfb" 1480098741 30150 06d9f1e44cd2aaece5c883899a203d50 ""
   "/usr/local/texlive/2017/texmf-dist/fonts/type1/public/kpfonts/jkpbsy.pfb" 1480098741 26098 d5b5e3d8655bb92aee7b17ec362d35e0 ""
   "/usr/local/texlive/2017/texmf-dist/fonts/type1/public/kpfonts/jkpex.pfb" 1480098741 26063 d0c01419499cfc86ce6e24338c9c47c4 ""
@@ -243,14 +244,14 @@
   "dsfont.sty" 1549144684 230 7bc61880b468bfd38aedc173be7c3486 ""
   "includes.tex" 1549144684 6762 0dc844219e143d5bc0bedc74feca7b42 ""
   "kpfonts.sty" 1549144684 72678 bed744d4209ebdc37bccfd5495338379 ""
-  "midterm_FYS3140.aux" 1552301830 1283 dc9eda004d3834743e1b381f5f1b8000 ""
-  "midterm_FYS3140.out" 1552301830 0 d41d8cd98f00b204e9800998ecf8427e ""
-  "midterm_FYS3140.tex" 1552301878 9066 b43d5a343abe233f0e08d7b9e660b73a ""
+  "midterm_FYS3140.aux" 1552326840 1413 dd58b0e6146e1aa07398aa88a1ae9d0b ""
+  "midterm_FYS3140.out" 1552326840 0 d41d8cd98f00b204e9800998ecf8427e ""
+  "midterm_FYS3140.tex" 1552327018 12503 03a975d6c02b89f940780529f1d67779 ""
   "notation.tex" 1549144684 2579 29902145e637214087a54f07f9c947d5 ""
   "titlepage.tex" 1552297880 1606 0f2c0d474d6f34270fad9acaec1eea73 ""
   (generated)
-  "midterm_FYS3140.aux"
   "midterm_FYS3140.thm"
-  "midterm_FYS3140.pdf"
   "midterm_FYS3140.out"
+  "midterm_FYS3140.pdf"
   "midterm_FYS3140.log"
+  "midterm_FYS3140.aux"

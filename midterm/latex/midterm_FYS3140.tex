@@ -147,7 +147,68 @@ We begin by checking that $u(x, y)$ infact is harmonic
 \begin{equation}
   \nabla^2u = \pdv[2]{u}{x}+\pdv[2]{u}{y} = -\sin{x}\cosh{y} + \sin{x}\cosh{y} = 0,
 \end{equation}
-here we used the double derivatives calculated in \eqref{derivatives}, and find that $u$ is harmonic. We now want to find the harmonic conjugate of $u$, which we can calculate through the definition of harmonic conjugates \eqref{harmonic_def}.
+here we used the double derivatives calculated in \eqref{derivatives}, and find that $u$ is harmonic. We now want to find the harmonic conjugate of $u$, which we can solve for through the definition of harmonic conjugates \eqref{harmonic_def}. We begin with the first equality in \eqref{harmonic_def}, and put in the derivative of $u$ from \eqref{derivatives}
+\begin{equation}
+  \dv{v}{y} = \dv{u}{x} = - \sin{x}\sinh{y}.
+\end{equation}
+We multiply each side with $\dif y$ and take the integral on both sides
+\begin{equation}
+  \int \dif v =  \int \cos{x}\cosh{y} \dif y.
+\end{equation}
+The left hand side will just be the function $v(x, y)$, while on the right hand side we can take $\cos{x}$ outside the integral, and the integral of $\cosh{y}$ is known, leaving us with
+\begin{equation}
+  v(x, y) =  \cos{x}\sinh{y} + C(x). \label{first}
+\end{equation}
+The term $C(x)$ is the integration constant, which can depend on $x$ since we took the integral over $y$. We repeat the process for the secound equality in \eqref{harmonic_def}
+\begin{equation}
+  \dv{v}{x} = -\dv{u}{y} = - \sin{x}\sinh{y}.
+\end{equation}
+We multilpy each side with $\dif x$ and take the integral
+\begin{equation}
+  \int \dif v = - \int \sin{x}\sinh{y} \dif x.
+\end{equation}
+The left hand side will just result in the function $v(x, y)$, while the right hand side is triviall, thus
+\begin{equation}
+  v(x, y) = \cos{x}\sinh{y} + C(y). \label{last}
+\end{equation}
+Where $C(y)$ is the integration constant, which can depend on $x$ since the integral was only over $y$. The two expressions we have found (\ref{first}, \ref{last}) are consistent with one another, as they should be, and we see that the integration constant can not depend on either $x$ or $y$, and must therefore just be a constant. The final expression for $u$'s harmonic conjugate is therefore
+\begin{equation}
+  v(x, y) = \cos{x}\sinh{y} + C. \label{v}
+\end{equation}
+Having found both $u(x,y)$ and $v(x,y)$ we can find the analytic function $f=u+iv$, which has the form
+\begin{equation}
+  f(x, y) = u(x, y) + iv(x, y) = \sin{x}\cosh{y} + i\cos{x}\sinh{y}.
+\end{equation}
+In our calculations we will ignore the integration constant. We begin by writing the trigonometric and hyperbolic functions on exponential form
+\begin{equation}
+  f(x, y) = \frac{1}{2i}\left(e^{ix}-e^{-ix}\right)\frac{1}{2}\left(e^{y}+e^{-y}\right) + i\frac{1}{2}\left(e^{ix}+e^{-ix}\right)\frac{1}{2}\left(e^{y}-e^{-y}\right).
+\end{equation}
+We multiply out the parenthesis in each term, and factor out $1/4$
+\begin{equation}
+  f(x, y) = \frac{1}{4i}\left(e^{ix-y}+e^{ix+y}-e^{-ix-y}-e^{-ix+y}\right) + i\frac{1}{4}\left(e^{ix+y}-e^{ix-y}+e^{-ix+y}-e^{-ix-y}\right).
+\end{equation}
+In the secound term we multiply with $i$ in the denominator and numerator, flipping the sign and making the $i$ appear in the denominator so that we can rewrite the expression to
+\begin{equation}
+  f(x, y) = \frac{1}{4i}\left(e^{ix-y}+e^{ix+y}-e^{-ix-y}-e^{-ix+y} - e^{ix+y}+ e^{ix-y}-e^{-ix+y}+e^{-ix-y}\right),
+\end{equation}
+where we see that we have four terms canceling
+\begin{equation}
+  f(x, y) = \frac{1}{4i}\left(e^{ix-y}+\cancel{e^{ix+y}}-\bcancel{e^{-ix-y}}-e^{-ix+y} - \cancel{e^{ix+y}}+ e^{ix-y}-e^{-ix+y}+\bcancel{e^{-ix-y}}\right),
+\end{equation}
+leaving us with
+\begin{equation}
+  f(x, y) = \frac{1}{4i}\left(2e^{ix-y} - 2e^{-ix+y}\right).
+\end{equation}
+We can cancel one factor of $2$ and recognize that we can use $z=x+iy$ to rewrite the exponent as $iz=ix-y$
+\begin{equation}
+  f(x, y) = \frac{1}{2i}\left(e^{iz} - e^{-iz}\right).
+\end{equation}
+We recognize this expression as the exponential form of sinus, thus
+\begin{equation}
+  f(x, y) = \sin{z}.
+\end{equation}
+
+\subsubsection*{f)}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%% Main document
 %\bibliography{citations.bib}
 %\bibliographystyle{plain}
