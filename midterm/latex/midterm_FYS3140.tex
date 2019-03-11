@@ -130,7 +130,9 @@ Where we have written the left hand side in bold to emphesise that it is a vecto
   \left( \vec{ \nabla u} \right) \,\cdot   \left( \vec{ \nabla v} \right) = -\pdv{u}{y}\pdv{u}{x} + \pdv{u}{x}\pdv{u}{y} = 0.
 \end{equation}
 Since both terms are equal, but with oposite sign, they exactly cancel each other. Thus we have showed that the gradient of two functions which are each others harmonic conjugates have to be orthogonal. We did not specify anything about $u$ and $v$ except from them being harmonic conjugates of each other, thus this orthogonality must hold for all pairs of analytical conjugates.
-
+\begin{equation}
+  \left( \vec{ \nabla u} \right) \,\cdot   \left( \vec{ \nabla v} \right) = 0. \label{ortogonality_harmo}
+\end{equation}
 \subsubsection*{e)}
 We will now look at concrete example where one of the harmonic functions, $u(x, y)$, is known, and we want to find it's harmonic conjugate $v(x,y)$. The expression for the known harmonic function is
 \begin{equation}
@@ -209,6 +211,23 @@ We recognize this expression as the exponential form of sinus, thus
 \end{equation}
 
 \subsubsection*{f)}
+Now that we have found a pair of two harmonic conjugates we can test the property of the orthogonality of their gradient \eqref{ortogonality_harmo} found earlier. We begin by calculating their derivatives
+\begin{align}
+  \begin{split}
+  \pdv{u}{x} = \cos{x}\cosh{y}\qquad \qquad\pdv{u}{y} &= \sin{x}\sinh{y} \\
+  \pdv{v}{x} = -\sin{x}\sinh{y}\qquad \qquad\pdv{v}{y} &= \cos{x}\cosh{y}. \label{derivatives_2}
+\end{split}
+\end{align}
+The inner product between the two gradients is given by
+\begin{equation}
+  \left( \vec{ \nabla u} \right) \,\cdot   \left( \vec{ \nabla v} \right) = \left( \pdv{u}{x}, \,\, \pdv{u}{y} \right)\cdot \left( \pdv{v}{x}, \,\, \pdv{v}{y} \right) = \pdv{u}{x}\pdv{v}{x} + \pdv{u}{y}\pdv{v}{y} = 0
+\end{equation}
+We insert these derivatives into the inner product of the two gradients,
+\begin{equation}
+  \left( \vec{ \nabla u} \right) \,\cdot   \left( \vec{ \nabla v} \right) = -\cos{x}\cosh{y}\sin{x}\sinh{y} + \sin{x}\sinh{y}\cos{x}\cosh{y} = 0,
+\end{equation}
+where we see that the two terms are identical, but with opposite sign, and thereby canceling. Our expressions for the harmonic conjugates $u$ and $v$ satisfy the property of orthogonality found previously.
+\subsubsection*{g)}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%% Main document
 %\bibliography{citations.bib}
 %\bibliographystyle{plain}

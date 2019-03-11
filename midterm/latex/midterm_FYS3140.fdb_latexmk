@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1552327020 "midterm_FYS3140.tex" "midterm_FYS3140.pdf" "midterm_FYS3140" 1552327020
+["pdflatex"] 1552327602 "midterm_FYS3140.tex" "midterm_FYS3140.pdf" "midterm_FYS3140" 1552327602
   "/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc" 1480098666 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2017/texmf-dist/fonts/map/fontname/texfonts.map" 1480098670 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/local/texlive/2017/texmf-dist/fonts/tfm/bitstrea/charter/bchb7t.tfm" 1480098691 2732 006d846b4d54f9b40899c7c3eecd771a ""
@@ -244,14 +244,14 @@
   "dsfont.sty" 1549144684 230 7bc61880b468bfd38aedc173be7c3486 ""
   "includes.tex" 1549144684 6762 0dc844219e143d5bc0bedc74feca7b42 ""
   "kpfonts.sty" 1549144684 72678 bed744d4209ebdc37bccfd5495338379 ""
-  "midterm_FYS3140.aux" 1552326840 1413 dd58b0e6146e1aa07398aa88a1ae9d0b ""
-  "midterm_FYS3140.out" 1552326840 0 d41d8cd98f00b204e9800998ecf8427e ""
-  "midterm_FYS3140.tex" 1552327018 12503 03a975d6c02b89f940780529f1d67779 ""
+  "midterm_FYS3140.aux" 1552327471 1524 3b3d3355cbf4f0c99b5dc7849b624831 ""
+  "midterm_FYS3140.out" 1552327471 0 d41d8cd98f00b204e9800998ecf8427e ""
+  "midterm_FYS3140.tex" 1552327602 13855 73ecefe11a3ecc53f2b19c4a24e7187e ""
   "notation.tex" 1549144684 2579 29902145e637214087a54f07f9c947d5 ""
   "titlepage.tex" 1552297880 1606 0f2c0d474d6f34270fad9acaec1eea73 ""
   (generated)
   "midterm_FYS3140.thm"
-  "midterm_FYS3140.out"
   "midterm_FYS3140.pdf"
-  "midterm_FYS3140.log"
   "midterm_FYS3140.aux"
+  "midterm_FYS3140.out"
+  "midterm_FYS3140.log"
