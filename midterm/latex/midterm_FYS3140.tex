@@ -23,6 +23,9 @@ cross/.default={1pt}}
 \input{includes} % various packages needed for maths etc.
 \input{notation} % short-hand notation and macros
 
+\DeclareRobustCommand{\bigO}{%
+  \text{\usefont{OMS}{cmsy}{m}{n}O}%
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -404,9 +407,24 @@ We solve for $y$ and find
 \end{equation}
 Where we have now found an expression for the path of the lightray, where $x_0$ will be determined by the initial conditions. This expression can also be written as
 \begin{equation}
-   y = \frac{1}{\gamma}\left(\frac{K}{n_0}\cosh{\left(\frac{n_0\gamma}{K}\left(x-x_0\right)\right)}-1\right).
+   y = \frac{1}{\gamma}\left(\frac{K}{n_0}\cosh{\left(\frac{n_0\gamma}{K}\left(x-x_0\right)\right)}-1\right). \label{2b}
 \end{equation}
+
+
 \subsubsection*{c)}
+To simplify the expression for the path of the light we will assume that the argument of $\cosh{}$ is small, such that we can taylor expand. The first taylor coefficients of $\cosh{}$ can be shown to be equal to
+\begin{equation}
+  \cosh{x}\approx1+\frac{x^2}{2} + \frac{x^4}{24} + \ldots.
+\end{equation}
+In this taylor expansion we will only include up to the order of $x^3$, and we insert this into our expression for the path of light \eqref{2b}
+\begin{equation}
+   y = \frac{1}{\gamma}\left(\frac{K}{n_0}\left(1+\frac{1}{2}\left(\frac{n_0\gamma}{K}\left(x-x_0\right)\right)^2 \right)-1\right) + \bigO\left(\left(\frac{n_0\gamma}{K}\right)^4\right)
+\end{equation}
+By doing the multiplication, and collecting terms with common denominator we can rewrite this expression as
+\begin{equation}
+   y = \frac{K-n_0}{\gamma n_0} + \frac{n_0\gamma}{2K}\left(x-x_0\right)^2.
+\end{equation}
+We recognize this expression as a parabola.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%% Main document
 %\bibliography{citations.bib}
 %\bibliographystyle{plain}

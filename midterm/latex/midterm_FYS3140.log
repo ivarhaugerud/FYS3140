@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.9.8)  12 MAR 2019 11:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.9.8)  12 MAR 2019 12:08
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -2234,44 +2234,44 @@ LaTeX Warning: Label `EL' multiply defined.
 )
 \openout1 = `midterm_FYS3140.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/jkp/m/it on input line 29.
-LaTeX Font Info:    Try loading font information for OML+jkp on input line 29.
+LaTeX Font Info:    Checking defaults for OML/jkp/m/it on input line 32.
+LaTeX Font Info:    Try loading font information for OML+jkp on input line 32.
 (/usr/local/texlive/2017/texmf-dist/tex/latex/kpfonts/omljkp.fd
 File: omljkp.fd 2006/08/15 v1.0
 )
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMS/jkp/m/n on input line 29.
-LaTeX Font Info:    Try loading font information for OMS+jkp on input line 29.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMS/jkp/m/n on input line 32.
+LaTeX Font Info:    Try loading font information for OMS+jkp on input line 32.
 (/usr/local/texlive/2017/texmf-dist/tex/latex/kpfonts/omsjkp.fd
 File: omsjkp.fd 2006/08/15 v1.0
 )
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMX/jkp/m/n on input line 29.
-LaTeX Font Info:    Try loading font information for OMX+jkp on input line 29.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMX/jkp/m/n on input line 32.
+LaTeX Font Info:    Try loading font information for OMX+jkp on input line 32.
 (/usr/local/texlive/2017/texmf-dist/tex/latex/kpfonts/omxjkp.fd
 File: omxjkp.fd 2006/08/15 v1.0
 )
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for U/jkpexa/m/n on input line 29.
-LaTeX Font Info:    Try loading font information for U+jkpexa on input line 29.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for U/jkpexa/m/n on input line 32.
+LaTeX Font Info:    Try loading font information for U+jkpexa on input line 32.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/kpfonts/ujkpexa.fd
 File: ujkpexa.fd 2006/08/15 v1.0
 )
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 29.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 29.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 32.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 32.
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Try loading font information for OT1+bch on input line 29.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Try loading font information for OT1+bch on input line 32.
 (/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/ot1bch.fd
 File: ot1bch.fd 2004/10/18 font definitions for OT1/bch.
 ) ABD: EveryShipout initializing macros (/usr/local/texlive/2017/texmf-dist/tex
@@ -2328,9 +2328,9 @@ Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: hypcap package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package backref Info: ** backref set up for natbib ** on input line 29.
+Package backref Info: ** backref set up for natbib ** on input line 32.
 \AtBeginShipoutBox=\box75
-Package hyperref Info: Link coloring ON on input line 29.
+Package hyperref Info: Link coloring ON on input line 32.
 (/usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
@@ -2339,47 +2339,47 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 \c@section@level=\count287
 LaTeX Info: Redefining \Ref on input line 515.
 )
-LaTeX Info: Redefining \ref on input line 29.
-LaTeX Info: Redefining \pageref on input line 29.
-LaTeX Info: Redefining \nameref on input line 29.
+LaTeX Info: Redefining \ref on input line 32.
+LaTeX Info: Redefining \pageref on input line 32.
+LaTeX Info: Redefining \nameref on input line 32.
 (./midterm_FYS3140.out) (./midterm_FYS3140.out)
 \@outlinefile=\write6
 \openout6 = `midterm_FYS3140.out'.
 
-LaTeX Info: Redefining \Ref on input line 29.
+LaTeX Info: Redefining \Ref on input line 32.
 (./titlepage.tex [1
 
 {/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}])
-LaTeX Font Info:    Try loading font information for OT1+jkp on input line 34.
+LaTeX Font Info:    Try loading font information for OT1+jkp on input line 37.
 (/usr/local/texlive/2017/texmf-dist/tex/latex/kpfonts/ot1jkp.fd
 File: ot1jkp.fd 2007/08/30 Fontinst v1.928 font definitions for OT1/jkp.
 )
-LaTeX Font Info:    Try loading font information for U+jkpmia on input line 34.
+LaTeX Font Info:    Try loading font information for U+jkpmia on input line 37.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/kpfonts/ujkpmia.fd
 File: ujkpmia.fd 2006/08/15 v1.0
 )
-LaTeX Font Info:    Try loading font information for U+jkpsya on input line 34.
+LaTeX Font Info:    Try loading font information for U+jkpsya on input line 37.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/kpfonts/ujkpsya.fd
 File: ujkpsya.fd 2006/08/15 v1.0
 )
-LaTeX Font Info:    Try loading font information for U+jkpsyb on input line 34.
+LaTeX Font Info:    Try loading font information for U+jkpsyb on input line 37.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/kpfonts/ujkpsyb.fd
 File: ujkpsyb.fd 2006/08/15 v1.0
 )
-LaTeX Font Info:    Try loading font information for U+jkpsyc on input line 34.
+LaTeX Font Info:    Try loading font information for U+jkpsyc on input line 37.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/kpfonts/ujkpsyc.fd
 File: ujkpsyc.fd 2006/08/15 v1.0
 )
-LaTeX Font Info:    Try loading font information for U+lasy on input line 34.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 37.
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
 ! Extra }, or forgotten $.
-l.53 ...1}^{n} \frac{f(z_k)}{z_k-z_0}}\Delta z_k }
+l.56 ...1}^{n} \frac{f(z_k)}{z_k-z_0}}\Delta z_k }
                                                   .
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -2388,7 +2388,7 @@ the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
 ! Extra }, or forgotten $.
-l.61 ...um_{k=1}^{n} \abs{\frac{f(z_k)}{z_k-z_0}}}
+l.64 ...um_{k=1}^{n} \abs{\frac{f(z_k)}{z_k-z_0}}}
                                                   \Delta z_k = \lim_{n \to \...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -2397,7 +2397,7 @@ the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
 ! Extra }, or forgotten $.
-l.61 ...1}^{n} \frac{\abs{f(z_k)}}{\abs{z_k-z_0}}}
+l.64 ...1}^{n} \frac{\abs{f(z_k)}}{\abs{z_k-z_0}}}
                                                   \Delta z_k,
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -2405,29 +2405,29 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-LaTeX Font Info:    Try loading font information for OT1+jkpss on input line 70
+LaTeX Font Info:    Try loading font information for OT1+jkpss on input line 73
 .
 (/usr/local/texlive/2017/texmf-dist/tex/latex/kpfonts/ot1jkpss.fd
 File: ot1jkpss.fd 2007/07/16 Fontinst v1.928 font definitions for OT1/jkpss.
 ) [2] [3]
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <9> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 126.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 129.
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <7> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 126.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 129.
 [4] [5] [6] <../figures/first.pdf, id=108, 718.685pt x 357.335pt>
 File: ../figures/first.pdf Graphic file (type pdf)
 <use ../figures/first.pdf>
-Package pdftex.def Info: ../figures/first.pdf used on input line 238.
+Package pdftex.def Info: ../figures/first.pdf used on input line 241.
 (pdftex.def)             Requested size: 438.17227pt x 217.86497pt.
 <../figures/secound.pdf, id=110, 718.685pt x 357.335pt>
 File: ../figures/secound.pdf Graphic file (type pdf)
 <use ../figures/secound.pdf>
-Package pdftex.def Info: ../figures/secound.pdf used on input line 249.
+Package pdftex.def Info: ../figures/secound.pdf used on input line 252.
 (pdftex.def)             Requested size: 438.17227pt x 217.86497pt.
 <../figures/third.pdf, id=112, 861.2175pt x 356.33125pt>
 File: ../figures/third.pdf Graphic file (type pdf)
 <use ../figures/third.pdf>
-Package pdftex.def Info: ../figures/third.pdf used on input line 260.
+Package pdftex.def Info: ../figures/third.pdf used on input line 263.
 (pdftex.def)             Requested size: 438.17227pt x 181.29698pt.
 [7] [8 <../figures/first.pdf> <../figures/secound.pdf
 
@@ -2436,7 +2436,7 @@ pdfTeX warning: pdflatex (file ../figures/secound.pdf): PDF inclusion: multiple
 >] <../figures/contour_and_sing.pdf, id=210, 611.28375pt x 416.55624pt>
 File: ../figures/contour_and_sing.pdf Graphic file (type pdf)
 <use ../figures/contour_and_sing.pdf>
-Package pdftex.def Info: ../figures/contour_and_sing.pdf used on input line 278
+Package pdftex.def Info: ../figures/contour_and_sing.pdf used on input line 281
 .
 (pdftex.def)             Requested size: 350.53915pt x 238.86964pt.
 [9 <../figures/third.pdf>] [10 <../figures/contour_and_sing.pdf>] [11] [12] [13
@@ -2445,11 +2445,11 @@ Package pdftex.def Info: ../figures/contour_and_sing.pdf used on input line 278
 \openout7 = `midterm_FYS3140.thm'.
 
 [14]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 412.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 412.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 431.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 431.
 (./midterm_FYS3140.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 412.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 412.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 431.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 431.
 Package rerunfilecheck Info: File `midterm_FYS3140.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
@@ -2457,30 +2457,31 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 31900 strings out of 492995
- 594401 string characters out of 6132705
- 653785 words of memory out of 5000000
- 34763 multiletter control sequences out of 15000+600000
- 73895 words of font info for 162 fonts, out of 8000000 for 9000
+ 31910 strings out of 492995
+ 594494 string characters out of 6132705
+ 653842 words of memory out of 5000000
+ 34768 multiletter control sequences out of 15000+600000
+ 74407 words of font info for 164 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,15n,77p,10406b,452s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2017/texmf-dist/fonts/type1/bitstrea/charter/bchb8a.pfb></usr/local/texl
 ive/2017/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb></usr/local/texlive
 /2017/texmf-dist/fonts/type1/bitstrea/charter/bchri8a.pfb></usr/local/texlive/2
-017/texmf-dist/fonts/type1/public/kpfonts/jkpbmi.pfb></usr/local/texlive/2017/t
-exmf-dist/fonts/type1/public/kpfonts/jkpbsy.pfb></usr/local/texlive/2017/texmf-
-dist/fonts/type1/public/kpfonts/jkpex.pfb></usr/local/texlive/2017/texmf-dist/f
-onts/type1/public/kpfonts/jkpexa.pfb></usr/local/texlive/2017/texmf-dist/fonts/
-type1/public/kpfonts/jkpmi.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/
-public/kpfonts/jkpmia.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/publi
-c/kpfonts/jkpmn8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/kp
-fonts/jkpsy.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts
-/latxfont/line10.pfb>
-Output written on midterm_FYS3140.pdf (14 pages, 9275860 bytes).
+017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/20
+17/texmf-dist/fonts/type1/public/kpfonts/jkpbmi.pfb></usr/local/texlive/2017/te
+xmf-dist/fonts/type1/public/kpfonts/jkpbsy.pfb></usr/local/texlive/2017/texmf-d
+ist/fonts/type1/public/kpfonts/jkpex.pfb></usr/local/texlive/2017/texmf-dist/fo
+nts/type1/public/kpfonts/jkpexa.pfb></usr/local/texlive/2017/texmf-dist/fonts/t
+ype1/public/kpfonts/jkpmi.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/p
+ublic/kpfonts/jkpmia.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public
+/kpfonts/jkpmn8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/kpf
+onts/jkpsy.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/
+latxfont/line10.pfb>
+Output written on midterm_FYS3140.pdf (14 pages, 9284423 bytes).
 PDF statistics:
- 399 PDF objects out of 1000 (max. 8388607)
- 286 compressed objects within 3 object streams
- 112 named destinations out of 1000 (max. 500000)
+ 409 PDF objects out of 1000 (max. 8388607)
+ 295 compressed objects within 3 object streams
+ 116 named destinations out of 1000 (max. 500000)
  33 words of extra memory for PDF output out of 10000 (max. 10000000)
 

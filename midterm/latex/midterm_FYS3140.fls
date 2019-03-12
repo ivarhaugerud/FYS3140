@@ -513,6 +513,8 @@ INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/bitstrea/charter/bchr7t.tfm
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/vf/public/kpfonts/jkpmn7t.vf
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/kpfonts/jkpmne.tfm
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/kpfonts/jkpmn8r.tfm
+INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
+INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/cm/cmsy9.tfm
 OUTPUT midterm_FYS3140.thm
 INPUT midterm_FYS3140.aux
 INPUT ./midterm_FYS3140.out
@@ -521,6 +523,7 @@ INPUT /usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/type1/bitstrea/charter/bchb8a.pfb
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/type1/bitstrea/charter/bchri8a.pfb
+INPUT /usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/type1/public/kpfonts/jkpbmi.pfb
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/type1/public/kpfonts/jkpbsy.pfb
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/type1/public/kpfonts/jkpex.pfb
