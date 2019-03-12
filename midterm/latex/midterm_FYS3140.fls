@@ -518,10 +518,10 @@ INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/cm/cmsy9.tfm
 INPUT ../figures/2c.pdf
 INPUT ../figures/2c.pdf
 INPUT ../figures/2c.pdf
+INPUT ../figures/drawing.pdf
+INPUT ../figures/drawing.pdf
+INPUT ../figures/drawing.pdf
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/bitstrea/charter/bchri7t.tfm
-INPUT ../figures/drawing.pdf
-INPUT ../figures/drawing.pdf
-INPUT ../figures/drawing.pdf
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/bitstrea/charter/bchri7t.tfm
 INPUT ../figures/picture.jpg
 INPUT ../figures/picture.jpg

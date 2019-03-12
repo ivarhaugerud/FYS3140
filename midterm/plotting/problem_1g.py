@@ -5,8 +5,8 @@ import seaborn as sns
 import os
 
 import matplotlib
-matplotlib.rc('xtick', labelsize=14)
-matplotlib.rc('ytick', labelsize=14)
+matplotlib.rc('xtick', labelsize=16)
+matplotlib.rc('ytick', labelsize=16)
 matplotlib.rcParams['mathtext.fontset'] = 'stix'
 matplotlib.rcParams['font.family'] = 'STIXGeneral'
 
@@ -64,26 +64,26 @@ fig = plt.figure(num=None, figsize=(10, 5), dpi=80, facecolor='w', edgecolor='k'
 cbaxes = fig.add_axes([0.1, 0.1, 0.03, 0.8])  # This is the position for the colorbar
 
 plt.subplot(1,3,1)
-plt.title(r"$u = x$", fontsize=14)
+plt.title(r"$u = x$", fontsize=17)
 eyy = plt.contourf(X, Y, X, 100)
 cp = plt.contour(X, Y,  X, colors='black')
 cp = plt.contour(X, Y, -X, colors='black')
-plt.xlabel('$x$', fontsize=14)
-plt.ylabel('$y$', fontsize=14)
+plt.xlabel('$x$', fontsize=17)
+plt.ylabel('$y$', fontsize=17)
 
 
 plt.subplot(1,3,2)
-plt.title(r"$v = y$", fontsize=14)
+plt.title(r"$v = y$", fontsize=17)
 plt.contourf(X, Y, Y, 100)
 cp = plt.contour(X, Y,  Y, colors='black')
 cp = plt.contour(X, Y, -Y, colors='black')
-plt.xlabel('$x$', fontsize=14)
+plt.xlabel('$x$', fontsize=17)
 
 plt.subplot(1,3,3)
-plt.title(r"continous $u$ - dashed $v$", fontsize=14)
+plt.title(r"continous $u$ - dashed $v$", fontsize=17)
 cp = plt.contour(X, Y, X)
 cp = plt.contour(X, Y, Y, linestyles='dashed')
-plt.xlabel('$x$', fontsize=14)
+plt.xlabel('$x$', fontsize=17)
 plt.tight_layout(pad=0.1, w_pad=0.1, h_pad=0.3)
 
 plt.savefig("../figures/first.pdf", bbox_inches="tight")
@@ -95,25 +95,25 @@ plt.show()
 plt.figure(num=None, figsize=(10, 5), dpi=80, facecolor='w', edgecolor='k')
 
 plt.subplot(1,3,1)
-plt.title(r"u = $x^2-y^2$", fontsize=14)
+plt.title(r"u = $x^2-y^2$", fontsize=17)
 plt.contourf(X, Y, X**2-Y**2, 100)
 cp = plt.contour(X, Y,  X**2-Y**2, colors='black')
 cp = plt.contour(X, Y, -X**2+Y**2, colors='black')
-plt.xlabel('$x$', fontsize=14)
-plt.ylabel('$y$', fontsize=14)
+plt.xlabel('$x$', fontsize=17)
+plt.ylabel('$y$', fontsize=17)
 
 plt.subplot(1,3,2)
-plt.title(r"$v = 2xy$", fontsize=14)
+plt.title(r"$v = 2xy$", fontsize=17)
 plt.contourf(X, Y, X, 100)
 cp = plt.contour(X, Y, -2*X*Y, colors='black')
 cp = plt.contour(X, Y,  2*X*Y, colors='black')
-plt.xlabel('$x$', fontsize=14)
+plt.xlabel('$x$', fontsize=17)
 
 plt.subplot(1,3,3)
-plt.title(r"continous $u$ - dashed $v$", fontsize=14)
+plt.title(r"continous $u$ - dashed $v$", fontsize=17)
 cp = plt.contour(X, Y, X**2-Y**2)
 cp = plt.contour(X, Y, 2*X*Y, linestyles='dashed')
-plt.xlabel('$x$', fontsize=14)
+plt.xlabel('$x$', fontsize=17)
 plt.tight_layout(pad=0.1, w_pad=0.1, h_pad=0.3)
 
 plt.savefig("../figures/secound.pdf", bbox_inches="tight")
@@ -132,12 +132,12 @@ Z2 = np.sin(X)*np.cosh(Y)
 plt.figure(num=None, figsize=(12, 5), dpi=80, facecolor='w', edgecolor='k')
 
 plt.subplot(1,3,1)
-plt.title(r"$u = \cos{x}\,\sinh{y}$", fontsize=14)
+plt.title(r"$u = \cos{x}\,\sinh{y}$", fontsize=17)
 plt.contourf(X, Y, Z1, 100)
 cp = plt.contour(X, Y,  Z1, colors='black')
 cp = plt.contour(X, Y, -Z1, colors='black')
-plt.xlabel('$x$', fontsize=14)
-plt.ylabel('$y$', fontsize=14)
+plt.xlabel('$x$', fontsize=17)
+plt.ylabel('$y$', fontsize=17)
 
 ax = plt.gca()
 ax.xaxis.set_major_locator(plt.MultipleLocator(np.pi))
@@ -146,11 +146,11 @@ ax.yaxis.set_major_locator(plt.MultipleLocator(np.pi))
 ax.yaxis.set_major_formatter(plt.FuncFormatter(multiple_formatter()))
 
 plt.subplot(1,3,2)
-plt.title(r"$v = \sin{x}\,\cosh{y}$", fontsize=14)
+plt.title(r"$v = \sin{x}\,\cosh{y}$", fontsize=17)
 plt.contourf(X, Y, Z2, 100)
 cp = plt.contour(X, Y,  Z2, colors='black')
 cp = plt.contour(X, Y, -Z2, colors='black')
-plt.xlabel('$x$', fontsize=14)
+plt.xlabel('$x$', fontsize=17)
 
 ax = plt.gca()
 ax.xaxis.set_major_locator(plt.MultipleLocator(np.pi))
@@ -159,10 +159,10 @@ ax.yaxis.set_major_locator(plt.MultipleLocator(np.pi))
 ax.yaxis.set_major_formatter(plt.FuncFormatter(multiple_formatter()))
 
 plt.subplot(1,3,3)
-plt.title(r"continous $u$ - dashed $v$", fontsize=14)
+plt.title(r"continous $u$ - dashed $v$", fontsize=17)
 cp = plt.contour(X, Y, Z1)
 cp = plt.contour(X, Y, Z2, linestyles='dashed')
-plt.xlabel('$x$', fontsize=14)
+plt.xlabel('$x$', fontsize=17)
 
 ax = plt.gca()
 ax.xaxis.set_major_locator(plt.MultipleLocator(np.pi))

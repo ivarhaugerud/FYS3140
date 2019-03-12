@@ -20,7 +20,7 @@ plt.plot(x, x**2)
 #plt.axis([-3, 3, -0.1, 9])
 
 plt.legend(loc="best", fontsize=13)
-plt.xlabel(r"$x$   $\left[\frac{n_0\gamma}{2K}(x-x_0)\right]$", fontsize=14)
+plt.xlabel(r"$x-x_0$   $\left[\frac{n_0\gamma}{2K}\right]$", fontsize=14)
 plt.ylabel(r"$y - \frac{K-n_0}{\gamma n_0}$   $\left[\frac{n_0\gamma}{2K}\right]$", fontsize=14)
 
 plt.savefig("../figures/2c.pdf", bbox_inches = "tight")
