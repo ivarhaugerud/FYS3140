@@ -1,8 +1,10 @@
 # Fdb version 3
-["pdflatex"] 1552389784 "midterm_FYS3140.tex" "midterm_FYS3140.pdf" "midterm_FYS3140" 1552389784
+["pdflatex"] 1552396323 "midterm_FYS3140.tex" "midterm_FYS3140.pdf" "midterm_FYS3140" 1552396323
   "../figures/2c.pdf" 1552389733 15036 9ccac2b3e723694931419847c5183ef8 ""
   "../figures/contour_and_sing.pdf" 1552383488 18559 bded1ba63b6422829d56c8d71bb72ec6 ""
+  "../figures/drawing.pdf" 1552395376 13004 1a1c0fef5475bfda8d46983ea79a7017 ""
   "../figures/first.pdf" 1552337834 1714905 5108d7e7572d3ecb05f42eb6ccef7038 ""
+  "../figures/picture.jpg" 1552396242 11561 5eb24c70a2383a3af710db201bc27ba8 ""
   "../figures/secound.pdf" 1552337851 3971149 f6ae433ffa62f6c1c1e46cdd36a2eeb7 ""
   "../figures/third.pdf" 1552337875 3444676 7e1b9c62aa5b5f925ebe91fdb7e08822 ""
   "/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc" 1480098666 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -262,14 +264,14 @@
   "dsfont.sty" 1549144684 230 7bc61880b468bfd38aedc173be7c3486 ""
   "includes.tex" 1549144684 6762 0dc844219e143d5bc0bedc74feca7b42 ""
   "kpfonts.sty" 1549144684 72678 bed744d4209ebdc37bccfd5495338379 ""
-  "midterm_FYS3140.aux" 1552388921 6838 686f746b259649dd6471f5dc49d1fdf1 ""
-  "midterm_FYS3140.out" 1552388920 0 d41d8cd98f00b204e9800998ecf8427e ""
-  "midterm_FYS3140.tex" 1552389779 29531 237de3a4062d21eb6f7edb93cc4726f6 ""
+  "midterm_FYS3140.aux" 1552396322 9278 6ff3287a6d9fad87f9cc21651358a8ef ""
+  "midterm_FYS3140.out" 1552396322 0 d41d8cd98f00b204e9800998ecf8427e ""
+  "midterm_FYS3140.tex" 1552396320 31734 384279d12339a03a612c95a17af89e05 ""
   "notation.tex" 1549144684 2579 29902145e637214087a54f07f9c947d5 ""
   "titlepage.tex" 1552297880 1606 0f2c0d474d6f34270fad9acaec1eea73 ""
   (generated)
-  "midterm_FYS3140.log"
-  "midterm_FYS3140.out"
-  "midterm_FYS3140.pdf"
   "midterm_FYS3140.aux"
+  "midterm_FYS3140.pdf"
   "midterm_FYS3140.thm"
+  "midterm_FYS3140.out"
+  "midterm_FYS3140.log"
