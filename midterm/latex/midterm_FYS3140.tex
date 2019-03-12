@@ -43,39 +43,39 @@ Cauchy's integral formula takes the form
   f(z_0) = \frac{1}{2\pi i} \oint_{C_R} \frac{f(z)}{z-z_0}\dif z \label{CIF}
 \end{equation}
 \subsubsection*{a)}
-We let $M$ denote the maximum absolute value of $f(z)$ on $C_R$ such that
+We let $M$ denote the maximum absolute value of $f(z)$ for all $z$ on the contour $C_R$
 \begin{equation}
-  \abs{f(z)} \leq M, \label{M}
+  \abs{f(z)} \leq M. \label{M}
 \end{equation}
-for all $z$ on the contour. We will use this to find an upper bound on the absolute value of $f(z_0)$
+We will use this to find an upper bound on the absolute value of $f(z_0)$. To find this value we begin by taking the absolute value on each side of the Cauchy's integral formula \eqref{CIF}
 \begin{equation}
   \abs{f(z_0)} = \abs{\frac{1}{2\pi i} \oint_{C_R} \frac{f(z)}{z-z_0}\dif z} = \frac{1}{2\pi}\,\abs{\oint_{C_R} \frac{f(z)}{z-z_0}\dif z}. \label{begining}
 \end{equation}
-We begin by writing the absolute value of the integral in terms of Riemann sums
+Here we have used that the absolute value of a product is equal to the product of the absolute value of each factor. We continue by writing the absolute value of the integral in terms of a Riemann sum
 \begin{equation}
-  \abs{\oint_{C_R} \frac{f(z)}{z-z_0}\dif z} = \lim_{n \to \infty} \abs{\sum_{k=1}^{n} \frac{f(z_k)}{z_k-z_0}}\Delta z_k.
+  \abs{\oint_{C_R} \frac{f(z)}{z-z_0}\dif z} = \lim_{n \to \infty} \abs{\sum_{k=1}^{n} \frac{f(z_k)}{z_k-z_0}}\Delta z_k. \label{first_riemann}
 \end{equation}
 For this sum we will use the generalized triangle inequality, which states that
 \begin{equation}
-  \abs{\sum_i a_i} \leq \sum_i \abs{a_i},
+  \abs{\sum_{i}^{n} a_i} \leq \sum_{i}^{n} \abs{a_i}, \label{GTI}
 \end{equation}
-which is true for an arbitrary number of terms. Using this we rewrite the Riemann-sum
+which is true for an arbitrary number of terms, here denoted $n$. Using the generalized triangle inequality \eqref{GTI} we rewrite the Riemann sum \eqref{first_riemann}
 \begin{equation}
   \abs{\oint_{C_R} \frac{f(z)}{z-z_0}\dif z} \leq \lim_{n \to \infty} \sum_{k=1}^{n} \abs{\frac{f(z_k)}{z_k-z_0}}\Delta z_k = \lim_{n \to \infty} \sum_{k=1}^{n} \frac{\abs{f(z_k)}}{\abs{z_k-z_0}} \Delta z_k,
 \end{equation}
-where we have used that the absolute value of the fraction is just the absolute value of each factor. We have already defined $\abs{f(z)}$ in equation \eqref{M}, and we recognize the denominator as the radius $R$ from the definition of the contour \eqref{contour}. Since both of these are constants we can take them outside of the sum, where we now have a new upper bound estimate
+where we have used that the absolute value of the fraction is just the absolute value of each factor. We have already defined an upper bound for $\abs{f(z)}$ in equation \eqref{M}, and we recognize the denominator as the radius $R$ from the definition of the contour \eqref{contour}. Since both of these are constants we can take them outside of the sum, where we now have a new upper bound estimate
 \begin{equation}
   \abs{\oint_{C_R} \frac{f(z)}{z-z_0}\dif z} \leq \frac{M}{R} \,\,\lim_{n \to \infty} \sum_{k=1}^{n} \Delta z_k.
 \end{equation}
-The infinitesimal sums over the changes in $z_k$ will add up to the circumference of the curve, which is just a circle with radius $R$. Thus the upper bound can be written as
+The infinitesimal sums over the changes in $z_k$ will add up to the circumference of the curve, which is just a circle with radius $R$. Thus the upper bound of the integral can be written as
 \begin{equation}
   \abs{\oint_{C_R} \frac{f(z)}{z-z_0}\dif z} \leq \frac{M}{R}\,2\pi R.
 \end{equation}
-We cancel the $R$'s leaving us with the simple expression for the upper bound estimate
+We cancel the $R$'s leaving us with the simple expression
 \begin{equation}
   \abs{\oint_{C_R} \frac{f(z)}{z-z_0}\dif z} \leq 2\pi M.
 \end{equation}
-We insert this expression into our original one \eqref{begining}
+We insert the upper bound of the integral into our original expression for the absolute value of $f(z)$ \eqref{begining}
 \begin{equation}
   \abs{f(z_0)} = \frac{1}{2\pi}\,\abs{\oint_{C_R} \frac{f(z)}{z-z_0}\dif z} \leq \frac{1}{2\pi} \, 2\pi M.
 \end{equation}
@@ -89,7 +89,7 @@ We will try to rewrite Cauchy's integral formula \eqref{CIF} for the special cas
 \begin{equation}
   z = z_0 + R e^{it} \,\,\qquad t \in [0, 2\pi].
 \end{equation}
-By taking the derivative of $z$ with respect to time we can solve for the infinitesimal $\dif z$
+The values chosen for $t$ is a real number such that the exponential term completes one round counter clockwise in the complex plane. By taking the derivative of the new rewrite of $z$ with respect to time we can solve for the infinitesimal $\dif z$
 \begin{equation}
   \frac{\dif z}{\dif t} = iRe^{it} \rightarrow \dif z = iRe^{it} \dif t.
 \end{equation}
@@ -101,7 +101,8 @@ We see that the $i$ outside of the integral cancels with the one inside, and by 
 \begin{equation}
   f(z_0) = \frac{1}{2\pi} \int_{0}^{2\pi} f(z_0+Re^{it}) \dif t. \label{answer1b}
 \end{equation}
-This expression will only work for circular contours around $z_0$.
+This expression will only work for circular contours around $z_0$. We can see that this rewrite gives an easier solution to the previous problem, where we imidiatly see that $\abs{f(z_0)}$ is bound by the largest value of $f(z)$ along the circle. The factor of $1/2\pi$ outside will cancel with the integral of $\dif t$ from $0$ to $2\pi$ once we factorize out $M$ and creating an upper bound.
+
 \subsubsection*{c)}
 We introduce the function $u(x, y)$, which is harmonic on and inside a circle of radius $R$ centred at $z_0=x_0+iy_0$. We can evaluate the value of $u$ at the center of the circle using Cauchy's integral formula \eqref{CIF}
 \begin{equation}
@@ -114,11 +115,11 @@ In the previous task we showed that such a integral, for a circular contour with
 This result tells us that to evaluate an analytic, and in this case harmonic, function at the center of a circle we can only use values along a circle around the point. Due to the factor $1/2\pi$ outside the integral the function value at the center of the circle is equal to the average value of the function along the contour. It is quite incredible that we can do this for an arbitrary radius $R$ (as long as the function is still analytic inside and on the contour), and always be able to evaluate the function at a point we never looked at.
 
 \subsubsection*{d)}
-For a pair of two dimensional functions $u(x, y)$ and $v(x, y)$ which are each other's harmonic conjugates we have the following relation
+For a pair of two dimensional functions $u(x, y)$ and $v(x, y)$, which are each other's harmonic conjugates, we have the following relation
 \begin{equation}
   \pdv{u}{x} = \pdv{v}{y} \qquad \qquad \pdv{v}{x} = - \pdv{u}{y}, \label{harmonic_def}
 \end{equation}
-which is actually the definition of a harmonic conjugate in two dimensions.
+which has to be fulfilled for a pair of harmonic conjugate functions in two dimensions.
 We can use this to derive the orthogonality of the gradients of the functions, where the two dimensional nabla-operator is defined as
 \begin{equation}
   \nabla = \left( \pdv{}{x}, \,\, \pdv{}{y} \right),
@@ -127,14 +128,15 @@ meaning that the inner product between the two functions can be written as
 \begin{equation}
   \left( \vec{ \nabla u} \right) \,\cdot   \left( \vec{ \nabla v} \right) = \left( \pdv{u}{x}, \,\, \pdv{u}{y} \right)\cdot \left( \pdv{v}{x}, \,\, \pdv{v}{y} \right) = \pdv{u}{x}\pdv{v}{x} + \pdv{u}{y}\pdv{v}{y}.
 \end{equation}
-Where we have written the left hand side in bold to emphasis that it is a vector. We then make a substitution from the definition of harmonic conjugates \eqref{harmonic_def} on $v$ so that we only have derivatives acting on $u$
+Where we have written the left hand side in bold to emphasis that it is the inner product between two vectors. We then make a substitution from the property of harmonic conjugates \eqref{harmonic_def} on $v$ so that we only have derivatives acting on $u$
 \begin{equation}
   \left( \vec{ \nabla u} \right) \,\cdot   \left( \vec{ \nabla v} \right) = -\pdv{u}{y}\pdv{u}{x} + \pdv{u}{x}\pdv{u}{y} = 0.
 \end{equation}
-Since both terms are equal, but with opposite sign, they exactly cancel each other. Thus we have showed that the gradient of two functions which are each others harmonic conjugates have to be orthogonal. We did not specify anything about $u$ and $v$ except from them being harmonic conjugates of each other, thus this orthogonality must hold for all pairs of analytical conjugates.
+Since both terms are equal, but with opposite sign, they exactly cancel each other. Thus we have showed that the gradient of two functions which are each others harmonic conjugates have to be orthogonal. We did not specify anything about $u$ and $v$ except from them being harmonic conjugates of each other, thus this orthogonality must hold for all pairs of analytical conjugates
 \begin{equation}
   \left( \vec{ \nabla u} \right) \,\cdot   \left( \vec{ \nabla v} \right) = 0. \label{ortogonality_harmo}
 \end{equation}
+
 \subsubsection*{e)}
 We will now look at concrete example where one of the harmonic functions, $u(x, y)$, is known, and we want to find it's harmonic conjugate $v(x,y)$. The expression for the known harmonic function is
 \begin{equation}
@@ -151,9 +153,9 @@ We begin by checking that $u(x, y)$ is in fact harmonic
 \begin{equation}
   \nabla^2u = \pdv[2]{u}{x}+\pdv[2]{u}{y} = -\sin{x}\cosh{y} + \sin{x}\cosh{y} = 0,
 \end{equation}
-here we used the double derivatives calculated in \eqref{derivatives}, and find that $u$ is harmonic. We now want to find the harmonic conjugate of $u$, which we can solve for through the definition of harmonic conjugates \eqref{harmonic_def}. We begin with the first equality in \eqref{harmonic_def}, and put in the derivative of $u$ from \eqref{derivatives}
+here we used the double derivatives calculated in \eqref{derivatives}, and find that $u$ is harmonic. We now want to find the harmonic conjugate of $u$, which we can solve for through the property of harmonic conjugates \eqref{harmonic_def}. We begin with the first equality in \eqref{harmonic_def}, and put in the derivative of $u$ from \eqref{derivatives}
 \begin{equation}
-  \dv{v}{y} = \dv{u}{x} = - \sin{x}\sinh{y}.
+  \dv{v}{y} = \dv{u}{x} = \cos{x}\cosh{y}.
 \end{equation}
 We multiply each side with $\dif y$ and take the integral on both sides
 \begin{equation}
@@ -175,7 +177,7 @@ The left hand side will just result in the function $v(x, y)$, while the right h
 \begin{equation}
   v(x, y) = \cos{x}\sinh{y} + C(y). \label{last}
 \end{equation}
-Where $C(y)$ is the integration constant, which can depend on $x$ since the integral was only over $y$. The two expressions we have found (\ref{first}, \ref{last}) are consistent with one another, as they should be, and we see that the integration constant can not depend on either $x$ or $y$, and must therefore just be a constant. The final expression for $u$'s harmonic conjugate is therefore
+Where $C(y)$ is the integration constant, which can depend on $y$ since the integral was only over $x$. The two expressions we have found (\ref{first}, \ref{last}) are consistent with one another, as they should be, and we see that the integration constant can not depend on either $x$ or $y$, and must therefore just be a constant. The final expression for $u$'s harmonic conjugate is therefore
 \begin{equation}
   v(x, y) = \cos{x}\sinh{y} + C. \label{v}
 \end{equation}
@@ -183,7 +185,7 @@ Having found both $u(x,y)$ and $v(x,y)$ we can find the analytic function $f=u+i
 \begin{equation}
   f(x, y) = u(x, y) + iv(x, y) = \sin{x}\cosh{y} + i\cos{x}\sinh{y}.
 \end{equation}
-In our calculations we will ignore the integration constant. We begin by writing the trigonometric and hyperbolic functions on exponential form
+In our calculations we will ignore the integration constant, as this would only add a constant to the final answer. We begin by writing the trigonometric and hyperbolic functions on exponential form
 \begin{equation}
   f(x, y) = \frac{1}{2i}\left(e^{ix}-e^{-ix}\right)\frac{1}{2}\left(e^{y}+e^{-y}\right) + i\frac{1}{2}\left(e^{ix}+e^{-ix}\right)\frac{1}{2}\left(e^{y}-e^{-y}\right).
 \end{equation}
@@ -207,7 +209,7 @@ We can cancel one factor of $2$ and recognize that we can use $z=x+iy$ to rewrit
 \begin{equation}
   f(x, y) = \frac{1}{2i}\left(e^{iz} - e^{-iz}\right).
 \end{equation}
-We recognize this expression as the exponential form of sinus, thus
+We recognize this expression as the exponential form of sinus, thus finding the final, simple, form of our function $f$
 \begin{equation}
   f(x, y) = \sin{z}.
 \end{equation}
@@ -222,7 +224,7 @@ Now that we have found a pair of two harmonic conjugates we can test the propert
 \end{align}
 The inner product between the two gradients is given by
 \begin{equation}
-  \left( \vec{ \nabla u} \right) \,\cdot   \left( \vec{ \nabla v} \right) = \left( \pdv{u}{x}, \,\, \pdv{u}{y} \right)\cdot \left( \pdv{v}{x}, \,\, \pdv{v}{y} \right) = \pdv{u}{x}\pdv{v}{x} + \pdv{u}{y}\pdv{v}{y} = 0
+  \left( \vec{ \nabla u} \right) \,\cdot   \left( \vec{ \nabla v} \right) = \left( \pdv{u}{x}, \,\, \pdv{u}{y} \right)\cdot \left( \pdv{v}{x}, \,\, \pdv{v}{y} \right) = \pdv{u}{x}\pdv{v}{x} + \pdv{u}{y}\pdv{v}{y}
 \end{equation}
 We insert these derivatives into the inner product of the two gradients,
 \begin{equation}
@@ -238,7 +240,7 @@ This is displayed in figure \vref{fig:g1}, where the left most figure is the con
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{../figures/first.pdf}
-  \caption{The contour levels of $u=x$ and $v=y$ is displayed in the left and middle figure respectively. Where the colour indicates the functional value at a given point, and the black lines show the lines with a constant functional value. For the last figure the colour still indicates the function value, and displays the curve of a  constant value. The dashed line is for $v=y$, and the continuous lines for $u=x$, we see that the dashed and continuous lines always cross orthogonally.}
+  \caption{The contour levels of $u=x$ and $v=y$ is displayed in the left and middle figure respectively, where the colour indicates the functional value at a given point, and the black lines show the lines with a constant functional value. For the last figure the colour still indicates the function value, and displays the curve of a  constant value. The dashed line is for $v=y$, and the continuous lines for $u=x$, we see that the dashed and continuous lines always cross orthogonally.}
   \label{fig:g1}
 \end{figure}
 We repeat this for the function
@@ -256,25 +258,25 @@ Lastly we do this for the function we have just studied
 \begin{equation}
   f(z) = \sin{z} = \sin{x}\cosh{y}+i\cos{x}\sinh{y} \rightarrow u=\sin{x}\cosh{y}\qquad v=\cos{x}\sinh{y}.
 \end{equation}
-This is displayed in figure \vref{fig:g3}, with the same order as the previous figure. We can again see in the right most figure that the dashed and continuous lines are orthogonal, as it should be.
+This is displayed in figure \vref{fig:g3}, with the same order as the previous figure. We can again see in the right most figure that the dashed and continuous lines are orthogonal, as it should be.\par
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{../figures/third.pdf}
   \caption{The contour levels of $u=\sin{x}\cosh{y}$ and $v=\cos{x}\sinh{y}$ is displayed in the left and middle figure respectively. Where the colour indicates the functional value at a given point, and the black lines show the lines with a constant functional value. For the last figure the colour still indicates the function value, and displays the curve of a  constant value. The dashed line is for $v=\cos{x}\sinh{y}$, and the continuous lines for $u=\sin{x}\cosh{y}$, we see that the dashed and continuous lines always cross orthogonally.}
   \label{fig:g3}
 \end{figure}
-
+\textbf{WRITE MORE}
 \subsection*{Part B: A contour integral}
 \subsubsection*{a)}
 We want to solve the contour integral
 \begin{equation}
   I = \oint_{C}\frac{4i\left(z^2+4\right)}{z\left(z^2-16\right)}\sin{\left( \frac{5\pi}{z^2+4} \right)} \dif z,
 \end{equation}
-where $C$ is the closed contour integral around $z=3$ with a radius of $2$, $C: \abs{z-3} = 2$. We begin by rewriting the integral by finding the roots of the polynomials to display the singularities more clearly
+where $C$ is the closed, circular, curve around $z=3$ with a radius of $2$, $C: \abs{z-3} = 2$. We begin by rewriting the integral by finding the roots of the polynomials to display the singularities more clearly
 \begin{equation}
   I = \oint_{C}\frac{4i\left(z+2i\right)\left(z-2i\right)}{z\left(z+4\right)\left(z-4\right)}\sin{\left( \frac{5\pi}{\left(z+2i\right)\left(z-2i\right)} \right)} \dif z. \label{integral}
 \end{equation}
-With this rewrite we can see that we have singularities at $z=0$, $z=4$ and $z=-4$. We also see that inside the sine we have two points where we divide by zero; $z=2i$ and $z=-2i$. These singularities are displayed in the complex plane in figure \vref{fig:1Ba}.\par
+With this rewrite we can see that we have singularities at $z=0$, $z=4$ and $z=-4$. We also see that inside the sine we have two points where we divide by zero; $z=2i$ and $z=-2i$. All of these singularities are displayed in graphically in the complex plane in figure \vref{fig:1Ba}.\par
 \begin{figure}
   \centering
   \includegraphics[width=0.8\textwidth]{../figures/contour_and_sing.pdf}
@@ -282,15 +284,15 @@ With this rewrite we can see that we have singularities at $z=0$, $z=4$ and $z=-
   \label{fig:1Ba}
 \end{figure}
 We see from the figure that there is only one singularity inside the contour, and no singularities on the contour. This singularity is at $z=4$, and we can see that it is a simple pole since it is of order $1$, but we have to be careful to check that this is not a removable singularity. We must check that for $z=4$ the sine factor is not equal to zero, which could have removed the singularity. For $z=4$ the sine-argument is $5\pi/20=\pi/4$, which will make the sine-factor equal to $\sqrt{2}$. Thus the singularity at $z=4$ is not removable.\\
-To calculate the integral we only need to find the integrand's residue at $z=4$. We do this by using the following procedure
+To calculate the integral we only need to find the integrand's residue at $z=4$. We find the residue by using the following procedure
 \begin{equation}
   \text{Res}(z_0) = \lim_{z \to z_0} \left[(z-z_0)f(z)\right],
 \end{equation}
-where $f(z)$ is the integrand. We calculate this for $z_0=4$ and $f(z)$ being the integrand in our integral \eqref{integral}
+where $f(z)$ is the integrand and $z_0$ the singularity we want the residue for. We calculate this for $z_0=4$ and $f(z)$ being the integrand in our integral \eqref{integral}
 \begin{equation}
     \text{Res}(4) = \lim_{z \to 4}\left[\cancel{(z-4)}\frac{4i\left(z+2i\right)\left(z-2i\right)}{z\left(z+4\right)\cancel{\left(z-4\right)}}\sin{\left( \frac{5\pi}{\left(z+2i\right)\left(z-2i\right)} \right)}\right].
 \end{equation}
-We cancel the $z-4$ terms, and the value now becomes well defined. We calculate the products and find
+We cancel the $(z-4)$ terms, and the value now becomes well defined. We calculate the products and find
 \begin{equation}
     \text{Res}(4) = \lim_{z \to 4}\left[\frac{4i\left(z^2+4\right)}{z\left(z+4\right)}\sin{\left( \frac{5\pi}{z^2+4} \right)}\right].
 \end{equation}

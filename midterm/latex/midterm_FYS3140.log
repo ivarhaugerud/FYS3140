@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.9.8)  12 MAR 2019 18:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.9.8)  12 MAR 2019 22:33
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -2374,77 +2374,81 @@ LaTeX Font Info:    Try loading font information for U+lasy on input line 37.
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-LaTeX Font Info:    Try loading font information for OT1+jkpss on input line 73
+LaTeX Font Info:    Try loading font information for OT1+jkpss on input line 69
 .
 (/usr/local/texlive/2017/texmf-dist/tex/latex/kpfonts/ot1jkpss.fd
 File: ot1jkpss.fd 2007/07/16 Fontinst v1.928 font definitions for OT1/jkpss.
 ) [2] [3]
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <9> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 128.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 129.
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <7> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 128.
-[4] [5] [6] <../figures/first.pdf, id=108, 718.685pt x 355.3275pt>
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 129.
+[4] [5] [6] [7] <../figures/first.pdf, id=120, 718.685pt x 355.3275pt>
 File: ../figures/first.pdf Graphic file (type pdf)
 <use ../figures/first.pdf>
-Package pdftex.def Info: ../figures/first.pdf used on input line 240.
+Package pdftex.def Info: ../figures/first.pdf used on input line 242.
 (pdftex.def)             Requested size: 438.17227pt x 216.641pt.
-<../figures/secound.pdf, id=110, 718.685pt x 354.32375pt>
+<../figures/secound.pdf, id=122, 718.685pt x 354.32375pt>
 File: ../figures/secound.pdf Graphic file (type pdf)
 <use ../figures/secound.pdf>
-Package pdftex.def Info: ../figures/secound.pdf used on input line 251.
+Package pdftex.def Info: ../figures/secound.pdf used on input line 253.
 (pdftex.def)             Requested size: 438.17227pt x 216.02904pt.
-<../figures/third.pdf, id=112, 860.21375pt x 353.32pt>
+<../figures/third.pdf, id=124, 860.21375pt x 353.32pt>
 File: ../figures/third.pdf Graphic file (type pdf)
 <use ../figures/third.pdf>
-Package pdftex.def Info: ../figures/third.pdf used on input line 262.
+Package pdftex.def Info: ../figures/third.pdf used on input line 264.
 (pdftex.def)             Requested size: 438.17227pt x 179.97516pt.
-[7] [8 <../figures/first.pdf> <../figures/secound.pdf
+[8 <../figures/first.pdf>] [9 <../figures/secound.pdf> <../figures/third.pdf
 
-pdfTeX warning: pdflatex (file ../figures/secound.pdf): PDF inclusion: multiple
- pdfs with page group included in a single page
->] <../figures/contour_and_sing.pdf, id=210, 611.28375pt x 416.55624pt>
+pdfTeX warning: pdflatex (file ../figures/third.pdf): PDF inclusion: multiple p
+dfs with page group included in a single page
+>] <../figures/contour_and_sing.pdf, id=252, 611.28375pt x 416.55624pt>
 File: ../figures/contour_and_sing.pdf Graphic file (type pdf)
 <use ../figures/contour_and_sing.pdf>
-Package pdftex.def Info: ../figures/contour_and_sing.pdf used on input line 280
+Package pdftex.def Info: ../figures/contour_and_sing.pdf used on input line 282
 .
 (pdftex.def)             Requested size: 350.53915pt x 238.86964pt.
-[9 <../figures/third.pdf>] [10 <../figures/contour_and_sing.pdf>] [11] [12] [13
-] <../figures/2c.pdf, id=327, 394.47375pt x 306.14375pt>
+[10 <../figures/contour_and_sing.pdf>] [11] [12] [13] [14] <../figures/2c.pdf, 
+id=338, 394.47375pt x 306.14375pt>
 File: ../figures/2c.pdf Graphic file (type pdf)
 <use ../figures/2c.pdf>
-Package pdftex.def Info: ../figures/2c.pdf used on input line 429.
+Package pdftex.def Info: ../figures/2c.pdf used on input line 431.
 (pdftex.def)             Requested size: 284.8093pt x 221.03526pt.
-[14] <../figures/drawing.pdf, id=343, 405.515pt x 274.02374pt>
+<../figures/drawing.pdf, id=339, 405.515pt x 274.02374pt>
 File: ../figures/drawing.pdf Graphic file (type pdf)
 <use ../figures/drawing.pdf>
-Package pdftex.def Info: ../figures/drawing.pdf used on input line 436.
+Package pdftex.def Info: ../figures/drawing.pdf used on input line 438.
 (pdftex.def)             Requested size: 293.57462pt x 198.38406pt.
-<../figures/picture.jpg, id=346, 481.8pt x 361.35pt>
+<../figures/picture.jpg, id=342, 481.8pt x 361.35pt>
 File: ../figures/picture.jpg Graphic file (type jpg)
 <use ../figures/picture.jpg>
-Package pdftex.def Info: ../figures/picture.jpg used on input line 444.
+Package pdftex.def Info: ../figures/picture.jpg used on input line 446.
 (pdftex.def)             Requested size: 306.71924pt x 230.04468pt.
 \tf@thm=\write7
 \openout7 = `midterm_FYS3140.thm'.
 
-[15 <../figures/2c.pdf>] [16 <../figures/drawing.pdf
+[15] [16 <../figures/2c.pdf> <../figures/drawing.pdf
 
 pdfTeX warning: pdflatex (file ../figures/drawing.pdf): PDF inclusion: invalid 
 other resource which is no dict (key 'ProcSets', type <array>); ignored.
-> <../figures/picture.jpg>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 451.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 451.
+>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 453.
+[17 <../figures/picture.jpg>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 453.
 (./midterm_FYS3140.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 451.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 451.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 453.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 453.
 Package rerunfilecheck Info: File `midterm_FYS3140.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 31945 strings out of 492995
- 595017 string characters out of 6132705
- 655144 words of memory out of 5000000
- 34792 multiletter control sequences out of 15000+600000
+ 31944 strings out of 492995
+ 594998 string characters out of 6132705
+ 655199 words of memory out of 5000000
+ 34790 multiletter control sequences out of 15000+600000
  78083 words of font info for 168 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,15n,77p,10406b,452s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2462,10 +2466,10 @@ ublic/kpfonts/jkpmia.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public
 /kpfonts/jkpmn8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/kpf
 onts/jkpsy.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/
 latxfont/line10.pfb>
-Output written on midterm_FYS3140.pdf (16 pages, 9298790 bytes).
+Output written on midterm_FYS3140.pdf (17 pages, 9301389 bytes).
 PDF statistics:
- 495 PDF objects out of 1000 (max. 8388607)
- 342 compressed objects within 4 object streams
- 122 named destinations out of 1000 (max. 500000)
+ 501 PDF objects out of 1000 (max. 8388607)
+ 347 compressed objects within 4 object streams
+ 123 named destinations out of 1000 (max. 500000)
  48 words of extra memory for PDF output out of 10000 (max. 10000000)
 
