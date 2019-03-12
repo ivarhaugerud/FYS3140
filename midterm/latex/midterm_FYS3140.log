@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.9.8)  12 MAR 2019 11:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.9.8)  12 MAR 2019 11:56
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -2439,16 +2439,17 @@ File: ../figures/contour_and_sing.pdf Graphic file (type pdf)
 Package pdftex.def Info: ../figures/contour_and_sing.pdf used on input line 278
 .
 (pdftex.def)             Requested size: 350.53915pt x 238.86964pt.
-[9 <../figures/third.pdf>] [10 <../figures/contour_and_sing.pdf>] [11] [12]
+[9 <../figures/third.pdf>] [10 <../figures/contour_and_sing.pdf>] [11] [12] [13
+]
 \tf@thm=\write7
 \openout7 = `midterm_FYS3140.thm'.
 
-[13]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 389.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 389.
+[14]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 412.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 412.
 (./midterm_FYS3140.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 389.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 389.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 412.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 412.
 Package rerunfilecheck Info: File `midterm_FYS3140.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
@@ -2456,10 +2457,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 31892 strings out of 492995
- 594325 string characters out of 6132705
- 653756 words of memory out of 5000000
- 34762 multiletter control sequences out of 15000+600000
+ 31900 strings out of 492995
+ 594401 string characters out of 6132705
+ 653785 words of memory out of 5000000
+ 34763 multiletter control sequences out of 15000+600000
  73895 words of font info for 162 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,15n,77p,10406b,452s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2476,10 +2477,10 @@ public/kpfonts/jkpmia.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/publi
 c/kpfonts/jkpmn8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/kp
 fonts/jkpsy.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts
 /latxfont/line10.pfb>
-Output written on midterm_FYS3140.pdf (13 pages, 9272965 bytes).
+Output written on midterm_FYS3140.pdf (14 pages, 9275860 bytes).
 PDF statistics:
- 386 PDF objects out of 1000 (max. 8388607)
- 274 compressed objects within 3 object streams
- 105 named destinations out of 1000 (max. 500000)
+ 399 PDF objects out of 1000 (max. 8388607)
+ 286 compressed objects within 3 object streams
+ 112 named destinations out of 1000 (max. 500000)
  33 words of extra memory for PDF output out of 10000 (max. 10000000)
 

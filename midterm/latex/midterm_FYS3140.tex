@@ -372,17 +372,41 @@ Now we only have $y$ dependence on the right hand side, and $x$ dependence on th
 \end{equation}
 The left most integral is simply $x$, while to the left integral we will begin by substituting the ugly expression in the denominator
 \begin{equation}
-  \frac{n_0\left(1+\gamma y\right)}{K} = u \rightarrow \frac{\dif u}{\dif y} = \frac{n_0\gamma}{K} \rightarrow \dif y = \frac{K}{n_0\gamma} \dif u.
+  \frac{n_0\left(1+\gamma y\right)}{K} = u \rightarrow \frac{\dif u}{\dif y} = \frac{n_0\gamma}{K} \rightarrow \dif y = \frac{K}{n_0\gamma} \dif u. \label{u}
 \end{equation}
 We put in for $u$ and $\dif u$ in the integral, thus becoming
 \begin{equation}
-   x = \int \frac{1}{\sqrt{u^2-1}} \frac{K}{n_0\gamma} \dif u,
+   x = \int \frac{1}{\sqrt{u^2-1}} \,\,\frac{K}{n_0\gamma} \dif u,
 \end{equation}
-Where we can move $K/n_0\gamma$ outside the integral as they are constants, and move them other to the other side of the equals sign. The integral we are left with is therefore simplified down to integral
+Where we can move $K/n_0\gamma$ outside the integral as they are constants. The integral we are left with is therefore simplified down to
 \begin{equation}
-   \frac{n_0\gamma x}{K} = \int \frac{1}{\sqrt{u^2-1}} \dif u.
+   x = \frac{K}{n_0\gamma}\int \frac{1}{\sqrt{u^2-1}} \dif u.
 \end{equation}
-which we can solve. To simplify we multiply the constants over to the other side
+which we can solve. To simplify we multiply the constants over to the other side, and use that this is known integral with solution equal to the inverse hyperbolic consine
+\begin{equation}
+   \frac{n_0\gamma x}{K} = \cosh^{-1}{u} + C,
+\end{equation}
+where $C$ is an integration constant. To singel out $u$ we move $C$ over to the other side and take $\cosh{}$ on both sides of the equal sign cancel the inverse, giving us
+\begin{equation}
+   u = \cosh{\left(\frac{n_0\gamma x}{K}-C\right)}.
+\end{equation}
+We put in for the definition of $u$ \eqref{u}, and rewrite the expression inside $\cosh{}$
+\begin{equation}
+   \frac{n_0\left(1+\gamma y\right)}{K} = \cosh{\left(\frac{n_0\gamma}{K}\left(x-\frac{KC}{n_0\gamma}\right)\right)}.
+\end{equation}
+The new factor containing the integration constant $x$ has unit length, and we will therefore redefine it to
+\begin{equation}
+  x_0 \equiv \frac{KC}{n_0\gamma} .
+\end{equation}
+We solve for $y$ and find
+\begin{equation}
+   y = -\frac{1}{\gamma} + \frac{K}{n_0\gamma}\cosh{\left(\frac{n_0\gamma}{K}\left(x-x_0\right)\right)}.
+\end{equation}
+Where we have now found an expression for the path of the lightray, where $x_0$ will be determined by the initial conditions. This expression can also be written as
+\begin{equation}
+   y = \frac{1}{\gamma}\left(\frac{K}{n_0}\cosh{\left(\frac{n_0\gamma}{K}\left(x-x_0\right)\right)}-1\right).
+\end{equation}
+\subsubsection*{c)}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%% Main document
 %\bibliography{citations.bib}
 %\bibliographystyle{plain}
