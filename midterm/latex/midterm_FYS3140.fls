@@ -495,7 +495,6 @@ INPUT ../figures/secound.pdf
 INPUT ../figures/third.pdf
 INPUT ../figures/third.pdf
 INPUT ../figures/third.pdf
-OUTPUT midterm_FYS3140.thm
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/vf/bitstrea/charter/bchb7t.vf
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/bitstrea/charter/bchb8r.tfm
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/vf/bitstrea/charter/bchr7t.vf
@@ -506,6 +505,10 @@ INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/kpfonts/jkpmn8r.tfm
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/vf/public/kpfonts/jkpmn7t.vf
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/kpfonts/jkpmne.tfm
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/kpfonts/jkpmn8r.tfm
+INPUT ../figures/contour_and_sing.pdf
+INPUT ../figures/contour_and_sing.pdf
+INPUT ../figures/contour_and_sing.pdf
+OUTPUT midterm_FYS3140.thm
 INPUT midterm_FYS3140.aux
 INPUT ./midterm_FYS3140.out
 INPUT ./midterm_FYS3140.out

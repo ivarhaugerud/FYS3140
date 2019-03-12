@@ -264,6 +264,22 @@ This is displayed in figure \vref{fig:g3}, with the same order as the previous f
 
 \subsection*{Part B: A contour integral}
 \subsubsection*{a)}
+We want to solve the contour integral
+\begin{equation}
+  I = \oint_{C}\frac{4i\left(z^2+4\right)}{z\left(z^2-16\right)}\sin{\left( \frac{5\pi}{z^2+4} \right)} \dif z,
+\end{equation}
+where $C$ is the closed contour integral around $z=3$ with a radius of $2$, $C: \abs{z-3} = 2$. We begin by rewriting the integral by finding the roots of the polynomials to display the singularities more clearly
+\begin{equation}
+  I = \oint_{C}\frac{4i\left(z+2i\right)\left(z-2i\right)}{z\left(z+4\right)\left(z-4\right)}\sin{\left( \frac{5\pi}{\left(z+2i\right)\left(z-2i\right)} \right)} \dif z. \label{integral}
+\end{equation}
+With this rewrite we can see that we have singularities at $z=0$, $z=4$ and $z=-4$. We also see that inside the sine we have two points where we divide by zero; $z=2i$ and $z=-2i$. These singularities are displayed in the complex plane in figure \vref{fig:1Ba}.
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{../figures/contour_and_sing.pdf}
+  \caption{The contour $C$ defined as $C: \abs{z-3} = 2$ is shown in the complex plane together with the singularities of our integral \eqref{integral}. The true singularities are displayed as red crosses, while the singularities inside the sine function is displayed as red circles. We see that inside our contour we only have $1$ singulart, which lies at $z=4$.}
+  \label{fig:1Ba}
+\end{figure}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%% Main document
 %\bibliography{citations.bib}
 %\bibliographystyle{plain}
