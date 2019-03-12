@@ -272,14 +272,117 @@ where $C$ is the closed contour integral around $z=3$ with a radius of $2$, $C: 
 \begin{equation}
   I = \oint_{C}\frac{4i\left(z+2i\right)\left(z-2i\right)}{z\left(z+4\right)\left(z-4\right)}\sin{\left( \frac{5\pi}{\left(z+2i\right)\left(z-2i\right)} \right)} \dif z. \label{integral}
 \end{equation}
-With this rewrite we can see that we have singularities at $z=0$, $z=4$ and $z=-4$. We also see that inside the sine we have two points where we divide by zero; $z=2i$ and $z=-2i$. These singularities are displayed in the complex plane in figure \vref{fig:1Ba}.
+With this rewrite we can see that we have singularities at $z=0$, $z=4$ and $z=-4$. We also see that inside the sine we have two points where we divide by zero; $z=2i$ and $z=-2i$. These singularities are displayed in the complex plane in figure \vref{fig:1Ba}.\par
 \begin{figure}
   \centering
-  \includegraphics[width=\textwidth]{../figures/contour_and_sing.pdf}
-  \caption{The contour $C$ defined as $C: \abs{z-3} = 2$ is shown in the complex plane together with the singularities of our integral \eqref{integral}. The true singularities are displayed as red crosses, while the singularities inside the sine function is displayed as red circles. We see that inside our contour we only have $1$ singulart, which lies at $z=4$.}
+  \includegraphics[width=0.8\textwidth]{../figures/contour_and_sing.pdf}
+  \caption{The contour $C$ defined as $C: \abs{z-3} = 2$ is shown in the complex plane together with the singularities of our integral \eqref{integral}. The orientation of the contour is shown by the pointing of the arrow. The singularities are displayed as red crosses, while the singularities inside the sine function are displayed as red circles. We see that inside our contour we only have $1$ singularity, which lies at $z=4$.}
   \label{fig:1Ba}
 \end{figure}
-
+We see from the figure that there is only one singulartity inside the contour, and no singularties on the contour. This singularity is at $z=4$, and we can see that it is a simple pole since it is of order $1$, but we have to be carefull to check that this is not a removable singularity. We must check that for $z=4$ the sine factor is not equal to zero, which could have removed the singularity. For $z=4$ the sine-argument is $5\pi/20=\pi/4$, which will make the sine-factor equal to $\sqrt{2}$. Thus the singularity at $z=4$ is not removable.\\
+To calculate the integral we only need to find the integrand's residue at $z=4$. We do this by using the following procedure
+\begin{equation}
+  \text{Res}(z_0) = \lim_{z \to z_0} \left[(z-z_0)f(z)\right],
+\end{equation}
+where $f(z)$ is the integrand. We calculate this for $z_0=4$ and $f(z)$ being the integrand in our integral \eqref{integral}
+\begin{equation}
+    \text{Res}(4) = \lim_{z \to 4}\left[\cancel{(z-4)}\frac{4i\left(z+2i\right)\left(z-2i\right)}{z\left(z+4\right)\cancel{\left(z-4\right)}}\sin{\left( \frac{5\pi}{\left(z+2i\right)\left(z-2i\right)} \right)}\right].
+\end{equation}
+We cancel the $z-4$ terms, and the value now becomes well defined. We calculate the products and find
+\begin{equation}
+    \text{Res}(4) = \lim_{z \to 4}\left[\frac{4i\left(z^2+4\right)}{z\left(z+4\right)}\sin{\left( \frac{5\pi}{z^2+4} \right)}\right].
+\end{equation}
+By evaluating the limit of $z$ we get
+\begin{equation}
+    \text{Res}(4) = \frac{4i\left(16+4\right)}{4\left(4+4\right)}\sin{\left( \frac{5\pi}{16+4} \right)} = \frac{80i}{32}\sin{\left( \frac{5\pi}{20} \right)} = \frac{5i}{2}\sin{\left(\frac{\pi}{4}\right)} = \frac{5i}{\sqrt{2}}.
+\end{equation}
+Where we have used that $\sin{\left(\frac{\pi}{4}\right)}=\sqrt{2}$. Since this is the value of the only residue inside our contour we can use it to calculate the integral
+\begin{equation}
+  I  = 2\pi i\,\,\text{Res}(4) = 2\pi i\frac{5i}{\sqrt{2}} = -5\pi\sqrt{2}
+\end{equation}
+\section*{Problem 2: Variational calculus}
+Fermat's principle states that light travels through media with an index of refraction $n$ such that
+\begin{equation}
+  P = \int n \dif s
+\end{equation}
+is stationary, where stationary means that the value of the integral is minimized when the integrationlimits are fixed. In this expression $\dif s$ is an infinitesimal line element, and as we are studying the path of light in a two dimensional plane it is defined as
+\begin{equation}
+  \dif s = \sqrt{\left(\dif x\right)^2 + \left(\dif y\right)^2}. \label{s}
+\end{equation}
+We will in this problem assume that the index of refraction is only a function of $y$-coordinate, $n=n(y)$.
+\subsubsection*{a)}
+To find the integrand $K$ which makes the integral stationary we will insert the integrand into the Euler-Lagrange equation
+\begin{equation}
+  \dv{}{t}\left( \dv{K}{\dot{q}} \right) - \dv{K}{q} = 0, \label{EL}
+\end{equation}
+and solve for one of the coordinates. In this expression $t$ is the integration-variable, and $q$ is the function variable of $n$, and $\dot{q}$ is the derivative of the $q$ with respect to the integration-variable $t$. With the definition of $\dif s$ \eqref{s} we can either choose to integrate over $x$ or $y$, depending on which one we factorize out of the square root. One option is favorable over the other. We want to choose the integration variable such that one term in the Euler-Lagrange equation \eqref{EL} dissapears. Since the index of refraction is only a function of $y$ we see that the right most term in the Euler-Lagrange equation \eqref{EL} will dissapear if $q=x$. We will therefore factorize out the $\dif y^2$ in $\dif s$ such that the integrand is only a function of $y$ and $\dot{x}$, where $\dot{x}=\dif x/\dif y$.
+Thus we rewrite our integral to the form
+\begin{equation}
+  P = \int n(y) \sqrt{1+\left(\frac{\dif x}{\dif y}\right)^2} \dif y = \int \underbrace{n(y) \sqrt{1+\dot{x}^2}}_{F} \dif y.
+\end{equation}
+We put this expression for $F$ into the Euler-Lagrange equation \eqref{EL}, now with $y$ instead of $t$ and $x$ instead of $q$ and see that the secound term dissapears
+\begin{equation}
+  \dv{}{y}\left(\dv{}{\dot{x}}\left( n(y) \sqrt{1+\dot{x}^2} \right)\right) - \underbrace{\dv{}{x}\left(n(y) \sqrt{1+\dot{x}^2}\right)}_0 = 0. \label{EL}
+\end{equation}
+Our equation is thereby simplified down to
+\begin{equation}
+  \dv{}{y}\left(\dv{}{\dot{x}}\left( n(y) \sqrt{1+\dot{x}^2} \right)\right) = 0.
+\end{equation}
+When the derivative of a function is zero we know that the function must be equal to a constant, which we will call $K$, we can therefore rewrite the equation to
+\begin{equation}
+  \dv{}{\dot{x}}\left( n(y) \sqrt{1+\dot{x}^2}\right) = K,
+\end{equation}
+which we want to solve for $\dot{x}$. To do this we begin by calculating the derivative using the chain rule
+\begin{equation}
+   \frac{n(y)\dot{x}}{\sqrt{1+\dot{x}^2}} = K.
+\end{equation}
+We devide with the index of refraction before squaring on both sides
+\begin{equation}
+   \frac{\dot{x}^2}{1+\dot{x}^2} = \frac{K^2}{n^2}.
+\end{equation}
+We divide the the numerator and denominator on the left hand side with $\dot{x}^2$ to only get one term containing $\dot{x}$
+\begin{equation}
+   \frac{1}{1+\dot{x}^{-2}} = \frac{K^2}{n^2}.
+\end{equation}
+We flip each fraction and subtract one from each side singeling out $\dot{x}^2$
+\begin{equation}
+   \frac{1}{\dot{x}^{2}} = \frac{n^2}{K^2}-1 = \frac{n^2-K^2}{K^2}.
+\end{equation}
+We flip the fractions back and the square root on both sides leaving us with an expression for $\dot{x}$
+\begin{equation}
+   \dot{x} = \pm\frac{K}{\sqrt{n^2-K^2}}. \label{2a}
+\end{equation}
+By knowing the derivative of the $x$-coordinate of the light ray as a function of the index of refraction we can determine the path of the light given initial conditions.
+\subsubsection*{b)}
+We will try and solve equation \eqref{2a} for $y(x)$ to explain the path of light close to the hot asphalt on a warm day. The closer the air is to the hot asphalt, the hotter the air is. When the air is hotter it becomes less dense, and thereby effecting the index of refraction. We will model this by linearizing the index of refraction
+\begin{equation}
+  n\left(y\right) = n_0\left(1+\gamma y\right),
+\end{equation}
+where $\gamma$ is a positive with units of one over length. Our coordinate system is set such that $y=0$ corresponds to the ground. From this we see that the index of refraction is equal to $n_0$ on the ground, and increases the further away from the ground you are. We will use this linearization for the index of refraction and solve for the path of the light, starting from \eqref{2a}
+\begin{equation}
+   \frac{\dif x}{\dif y} = \frac{K}{\sqrt{n_0^2\left(1+\gamma y\right)^2-K^2}}.
+\end{equation}
+We multiply both sides with $\dif y$ and divide with $K$ upstairs and downstairs on the right hand side
+\begin{equation}
+   \dif x = \frac{\dif y}{\sqrt{\left(n_0\left(1+\gamma y\right)/K\right)^2-1}}.
+\end{equation}
+Now we only have $y$ dependence on the right hand side, and $x$ dependence on the left hand side. We can therefore take the integral on each side
+\begin{equation}
+   \int \dif x = \int \frac{1}{\sqrt{\left(n_0\left(1+\gamma y\right)/K\right)^2-1}} \dif y.
+\end{equation}
+The left most integral is simply $x$, while to the left integral we will begin by substituting the ugly expression in the denominator
+\begin{equation}
+  \frac{n_0\left(1+\gamma y\right)}{K} = u \rightarrow \frac{\dif u}{\dif y} = \frac{n_0\gamma}{K} \rightarrow \dif y = \frac{K}{n_0\gamma} \dif u.
+\end{equation}
+We put in for $u$ and $\dif u$ in the integral, thus becoming
+\begin{equation}
+   x = \int \frac{1}{\sqrt{u^2-1}} \frac{K}{n_0\gamma} \dif u,
+\end{equation}
+Where we can move $K/n_0\gamma$ outside the integral as they are constants, and move them other to the other side of the equals sign. The integral we are left with is therefore simplified down to integral
+\begin{equation}
+   \frac{n_0\gamma x}{K} = \int \frac{1}{\sqrt{u^2-1}} \dif u.
+\end{equation}
+which we can solve. To simplify we multiply the constants over to the other side
 %%%%%%%%%%%%%%%%%%%%%%%%%%%% Main document
 %\bibliography{citations.bib}
 %\bibliographystyle{plain}
