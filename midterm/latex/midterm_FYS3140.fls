@@ -515,6 +515,9 @@ INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/kpfonts/jkpmne.tfm
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/kpfonts/jkpmn8r.tfm
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/cm/cmsy9.tfm
+INPUT ../figures/2c.pdf
+INPUT ../figures/2c.pdf
+INPUT ../figures/2c.pdf
 OUTPUT midterm_FYS3140.thm
 INPUT midterm_FYS3140.aux
 INPUT ./midterm_FYS3140.out
