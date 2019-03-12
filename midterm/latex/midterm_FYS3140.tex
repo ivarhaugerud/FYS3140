@@ -53,21 +53,21 @@ for all $z$ on the contour. We will use this to find an upper bound on the absol
 \end{equation}
 We begin by writing the absolute value of the integral in terms of Riemann sums
 \begin{equation}
-  \abs{\oint_{C_R} \frac{f(z)}{z-z_0}\dif z} = \lim_{n \to \infty} \abs{\sum_{k=1}^{n} \frac{f(z_k)}{z_k-z_0}}\Delta z_k }.
+  \abs{\oint_{C_R} \frac{f(z)}{z-z_0}\dif z} = \lim_{n \to \infty} \abs{\sum_{k=1}^{n} \frac{f(z_k)}{z_k-z_0}}\Delta z_k.
 \end{equation}
 For this sum we will use the generalized triangle inequality, which states that
 \begin{equation}
-  \abs{\sum_i = a_i} \leq \sum_i \abs{a_i},
+  \abs{\sum_i a_i} \leq \sum_i \abs{a_i},
 \end{equation}
-which is true for an arbritary number of terms. Using this we rewrite the Riemann-sum
+which is true for an arbitrary number of terms. Using this we rewrite the Riemann-sum
 \begin{equation}
-  \abs{\oint_{C_R} \frac{f(z)}{z-z_0}\dif z} \leq \lim_{n \to \infty} \sum_{k=1}^{n} \abs{\frac{f(z_k)}{z_k-z_0}}}\Delta z_k = \lim_{n \to \infty} \sum_{k=1}^{n} \frac{\abs{f(z_k)}}{\abs{z_k-z_0}}}\Delta z_k,
+  \abs{\oint_{C_R} \frac{f(z)}{z-z_0}\dif z} \leq \lim_{n \to \infty} \sum_{k=1}^{n} \abs{\frac{f(z_k)}{z_k-z_0}}\Delta z_k = \lim_{n \to \infty} \sum_{k=1}^{n} \frac{\abs{f(z_k)}}{\abs{z_k-z_0}} \Delta z_k,
 \end{equation}
 where we have used that the absolute value of the fraction is just the absolute value of each factor. We have already defined $\abs{f(z)}$ in equation \eqref{M}, and we recognize the denominator as the radius $R$ from the definition of the contour \eqref{contour}. Since both of these are constants we can take them outside of the sum, where we now have a new upper bound estimate
 \begin{equation}
   \abs{\oint_{C_R} \frac{f(z)}{z-z_0}\dif z} \leq \frac{M}{R} \,\,\lim_{n \to \infty} \sum_{k=1}^{n} \Delta z_k.
 \end{equation}
-The infinitesimal sums over the changes in $z_k$ will add up to the circomference of the curve, which is just a circle with radius $R$. Thus the upper bound can be written as
+The infinitesimal sums over the changes in $z_k$ will add up to the circumference of the curve, which is just a circle with radius $R$. Thus the upper bound can be written as
 \begin{equation}
   \abs{\oint_{C_R} \frac{f(z)}{z-z_0}\dif z} \leq \frac{M}{R}\,2\pi R.
 \end{equation}
@@ -85,7 +85,7 @@ Canceling the factors of $2\pi$ we find the final expression for the upper bound
 \end{equation}
 
 \subsubsection*{b)}
-We will try to rewrite Cauchy's integral formula \eqref{CIF} for the special case of a circular contour around a point $z_0$. We do this by writing the complex number $z$ in terms of the center of the circle plus another terms looping around a cirlce with radius $R$
+We will try to rewrite Cauchy's integral formula \eqref{CIF} for the special case of a circular contour around a point $z_0$. We do this by writing the complex number $z$ in terms of the center of the circle plus another terms looping around a circle with radius $R$
 \begin{equation}
   z = z_0 + R e^{it} \,\,\qquad t \in [0, 2\pi].
 \end{equation}
@@ -102,17 +102,16 @@ We see that the $i$ outside of the integral cancels with the one inside, and by 
   f(z_0) = \frac{1}{2\pi} \int_{0}^{2\pi} f(z_0+Re^{it}) \dif t. \label{answer1b}
 \end{equation}
 This expression will only work for circular contours around $z_0$.
-
 \subsubsection*{c)}
-We introduce the function $u(x, y)$, which is harmonic on and inside a circle of radius $R$ centerd at $z_0=x_0+iy_0$. We can evaluate the value of $u$ at the center of the circle using Cauchy's integral formula \eqref{CIF}
+We introduce the function $u(x, y)$, which is harmonic on and inside a circle of radius $R$ centred at $z_0=x_0+iy_0$. We can evaluate the value of $u$ at the center of the circle using Cauchy's integral formula \eqref{CIF}
 \begin{equation}
   f(z_0) = \frac{1}{2\pi i} \oint_{C_R} \frac{f(z)}{z-z_0}\dif z.
 \end{equation}
-In the previous task we showed that such a integral, for a circular contour with radius $R$ around a point $z_0$ can be rewritten to a integral over a real scalar $t$ from $0$ to $2\pi$ \eqref{answer1b}. We use this result, but now for a variable $\theta$ over the same interval, to evaluate $z_0$ at the center of the circel
+In the previous task we showed that such a integral, for a circular contour with radius $R$ around a point $z_0$ can be rewritten to a integral over a real scalar $t$ from $0$ to $2\pi$ \eqref{answer1b}. We use this result, but now for a variable $\theta$ over the same interval, to evaluate $z_0$ at the center of the circle
 \begin{equation}
   u(x_0, y_0) = \frac{1}{2\pi} \int_{0}^{2\pi} f(z_0+Re^{i\theta}) \dif \theta.
 \end{equation}
-This result tells us that to evalue an analytic, and in this case harmonic, function at the center of a circle we can only use values along a circle around the point. Due to the factor $1/2\pi$ outside the integral the functionvalue at the center of the circle is equal to the average value of the function along the contour. It is quite incredible that we can do this for an arbritary radius $R$ (as long as the function is still analytic inside and on the contour), and always be able to evalue the function at a point we never looked at.
+This result tells us that to evaluate an analytic, and in this case harmonic, function at the center of a circle we can only use values along a circle around the point. Due to the factor $1/2\pi$ outside the integral the function value at the center of the circle is equal to the average value of the function along the contour. It is quite incredible that we can do this for an arbitrary radius $R$ (as long as the function is still analytic inside and on the contour), and always be able to evaluate the function at a point we never looked at.
 
 \subsubsection*{d)}
 For a pair of two dimensional functions $u(x, y)$ and $v(x, y)$ which are each other's harmonic conjugates we have the following relation
@@ -128,11 +127,11 @@ meaning that the inner product between the two functions can be written as
 \begin{equation}
   \left( \vec{ \nabla u} \right) \,\cdot   \left( \vec{ \nabla v} \right) = \left( \pdv{u}{x}, \,\, \pdv{u}{y} \right)\cdot \left( \pdv{v}{x}, \,\, \pdv{v}{y} \right) = \pdv{u}{x}\pdv{v}{x} + \pdv{u}{y}\pdv{v}{y}.
 \end{equation}
-Where we have written the left hand side in bold to emphesise that it is a vector. We then make a substitution from the definition of harmonic conjugates \eqref{harmonic_def} on $v$ so that we only have derivatives acting on $u$
+Where we have written the left hand side in bold to emphasis that it is a vector. We then make a substitution from the definition of harmonic conjugates \eqref{harmonic_def} on $v$ so that we only have derivatives acting on $u$
 \begin{equation}
   \left( \vec{ \nabla u} \right) \,\cdot   \left( \vec{ \nabla v} \right) = -\pdv{u}{y}\pdv{u}{x} + \pdv{u}{x}\pdv{u}{y} = 0.
 \end{equation}
-Since both terms are equal, but with oposite sign, they exactly cancel each other. Thus we have showed that the gradient of two functions which are each others harmonic conjugates have to be orthogonal. We did not specify anything about $u$ and $v$ except from them being harmonic conjugates of each other, thus this orthogonality must hold for all pairs of analytical conjugates.
+Since both terms are equal, but with opposite sign, they exactly cancel each other. Thus we have showed that the gradient of two functions which are each others harmonic conjugates have to be orthogonal. We did not specify anything about $u$ and $v$ except from them being harmonic conjugates of each other, thus this orthogonality must hold for all pairs of analytical conjugates.
 \begin{equation}
   \left( \vec{ \nabla u} \right) \,\cdot   \left( \vec{ \nabla v} \right) = 0. \label{ortogonality_harmo}
 \end{equation}
@@ -141,14 +140,14 @@ We will now look at concrete example where one of the harmonic functions, $u(x, 
 \begin{equation}
   u(x,y) = \sin{x}\cosh{y}.
 \end{equation}
-We begin by finding it's derivatives and second derivatives with respect to both $x$ and $y$ seperately
+We begin by finding it's derivatives and second derivatives with respect to both $x$ and $y$ separately
 \begin{align}
   \begin{split}
   \pdv{u}{x} &= \cos{x}\cosh{y}\qquad \qquad\pdv[2]{u}{x} = -\sin{x}\cosh{y} \\
   \pdv{u}{y} &= \sin{x}\sinh{y}\qquad \qquad\pdv[2]{u}{y} = \sin{x}\cosh{y}. \label{derivatives}
 \end{split}
 \end{align}
-We begin by checking that $u(x, y)$ infact is harmonic
+We begin by checking that $u(x, y)$ is in fact harmonic
 \begin{equation}
   \nabla^2u = \pdv[2]{u}{x}+\pdv[2]{u}{y} = -\sin{x}\cosh{y} + \sin{x}\cosh{y} = 0,
 \end{equation}
@@ -164,15 +163,15 @@ The left hand side will just be the function $v(x, y)$, while on the right hand 
 \begin{equation}
   v(x, y) =  \cos{x}\sinh{y} + C(x). \label{first}
 \end{equation}
-The term $C(x)$ is the integration constant, which can depend on $x$ since we took the integral over $y$. We repeat the process for the secound equality in \eqref{harmonic_def}
+The term $C(x)$ is the integration constant, which can depend on $x$ since we took the integral over $y$. We repeat the process for the second equality in \eqref{harmonic_def}
 \begin{equation}
   \dv{v}{x} = -\dv{u}{y} = - \sin{x}\sinh{y}.
 \end{equation}
-We multilpy each side with $\dif x$ and take the integral
+We multiply each side with $\dif x$ and take the integral
 \begin{equation}
   \int \dif v = - \int \sin{x}\sinh{y} \dif x.
 \end{equation}
-The left hand side will just result in the function $v(x, y)$, while the right hand side is triviall, thus
+The left hand side will just result in the function $v(x, y)$, while the right hand side is trivial, thus
 \begin{equation}
   v(x, y) = \cos{x}\sinh{y} + C(y). \label{last}
 \end{equation}
@@ -192,7 +191,7 @@ We multiply out the parenthesis in each term, and factor out $1/4$
 \begin{equation}
   f(x, y) = \frac{1}{4i}\left(e^{ix-y}+e^{ix+y}-e^{-ix-y}-e^{-ix+y}\right) + i\frac{1}{4}\left(e^{ix+y}-e^{ix-y}+e^{-ix+y}-e^{-ix-y}\right).
 \end{equation}
-In the secound term we multiply with $i$ in the denominator and numerator, flipping the sign and making the $i$ appear in the denominator so that we can rewrite the expression to
+In the second term we multiply with $i$ in the denominator and numerator, flipping the sign and making the $i$ appear in the denominator so that we can rewrite the expression to
 \begin{equation}
   f(x, y) = \frac{1}{4i}\left(e^{ix-y}+e^{ix+y}-e^{-ix-y}-e^{-ix+y} - e^{ix+y}+ e^{ix-y}-e^{-ix+y}+e^{-ix-y}\right),
 \end{equation}
@@ -235,33 +234,33 @@ We have studied the orthogonality of the harmonic conjugates, we will now displa
 \begin{equation}
   f(z) = x+iy \rightarrow u=x\qquad v=y.
 \end{equation}
-This is displayed in figure \vref{fig:g1}, where the left most figure is the contours of $u$, the middle is the cotours of $v$, and the rightmost is both plotted together where $u$ is continous and $v$ is dashed. In the right most figure we can clearly see the orthogonality as all the dashed and continous lines cross orthgonally.\par
+This is displayed in figure \vref{fig:g1}, where the left most figure is the contours of $u$, the middle is the contours of $v$, and the rightmost is both plotted together where $u$ is continuous and $v$ is dashed. In the right most figure we can clearly see the orthogonality as all the dashed and continuous lines cross orthogonally.\par
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{../figures/first.pdf}
-  \caption{The contour levels of $u=x$ and $v=y$ is displayed in the left and middle figure respectivly. Where the colour indicates the functional value at a given point, and the black lines show the lines with a constant functional value. For the last figure the colour still indicates the function value, and displays the curve of a  constant value. The dashed line is for $v=y$, and the continous lines for $u=x$, we see that the dashed and continous lines always cross orthogonally.}
+  \caption{The contour levels of $u=x$ and $v=y$ is displayed in the left and middle figure respectively. Where the colour indicates the functional value at a given point, and the black lines show the lines with a constant functional value. For the last figure the colour still indicates the function value, and displays the curve of a  constant value. The dashed line is for $v=y$, and the continuous lines for $u=x$, we see that the dashed and continuous lines always cross orthogonally.}
   \label{fig:g1}
 \end{figure}
 We repeat this for the function
 \begin{equation}
   f(z) = z^2 = x^2-y^2+2ixy \rightarrow u=x^2-y^2\qquad v=2xy.
 \end{equation}
-This is displayed in figure \vref{fig:g2}, with the same order as the previous figure. We can again see in the right most figure that the dashed and continous lines are orthogonal, as it should be.\par
+This is displayed in figure \vref{fig:g2}, with the same order as the previous figure. We can again see in the right most figure that the dashed and continuous lines are orthogonal, as it should be.\par
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{../figures/secound.pdf}
-  \caption{The contour levels of $u=x^2-y^2$ and $v=2xy$ is displayed in the left and middle figure respectivly. Where the colour indicates the functional value at a given point, and the black lines show the lines with a constant functional value. For the last figure the colour still indicates the function value, and displays the curve of a  constant value. The dashed line is for $v=2xy$, and the continous lines for $u=x^2-y^2$, we see that the dashed and continous lines always cross orthogonally.}
+  \caption{The contour levels of $u=x^2-y^2$ and $v=2xy$ is displayed in the left and middle figure respectively. Where the colour indicates the functional value at a given point, and the black lines show the lines with a constant functional value. For the last figure the colour still indicates the function value, and displays the curve of a  constant value. The dashed line is for $v=2xy$, and the continuous lines for $u=x^2-y^2$, we see that the dashed and continuous lines always cross orthogonally.}
   \label{fig:g2}
 \end{figure}
 Lastly we do this for the function we have just studied
 \begin{equation}
   f(z) = \sin{z} = \sin{x}\cosh{y}+i\cos{x}\sinh{y} \rightarrow u=\sin{x}\cosh{y}\qquad v=\cos{x}\sinh{y}.
 \end{equation}
-This is displayed in figure \vref{fig:g3}, with the same order as the previous figure. We can again see in the right most figure that the dashed and continous lines are orthogonal, as it should be.
+This is displayed in figure \vref{fig:g3}, with the same order as the previous figure. We can again see in the right most figure that the dashed and continuous lines are orthogonal, as it should be.
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{../figures/third.pdf}
-  \caption{The contour levels of $u=\sin{x}\cosh{y}$ and $v=\cos{x}\sinh{y}$ is displayed in the left and middle figure respectivly. Where the colour indicates the functional value at a given point, and the black lines show the lines with a constant functional value. For the last figure the colour still indicates the function value, and displays the curve of a  constant value. The dashed line is for $v=\cos{x}\sinh{y}$, and the continous lines for $u=\sin{x}\cosh{y}$, we see that the dashed and continous lines always cross orthogonally.}
+  \caption{The contour levels of $u=\sin{x}\cosh{y}$ and $v=\cos{x}\sinh{y}$ is displayed in the left and middle figure respectively. Where the colour indicates the functional value at a given point, and the black lines show the lines with a constant functional value. For the last figure the colour still indicates the function value, and displays the curve of a  constant value. The dashed line is for $v=\cos{x}\sinh{y}$, and the continuous lines for $u=\sin{x}\cosh{y}$, we see that the dashed and continuous lines always cross orthogonally.}
   \label{fig:g3}
 \end{figure}
 
@@ -282,7 +281,7 @@ With this rewrite we can see that we have singularities at $z=0$, $z=4$ and $z=-
   \caption{The contour $C$ defined as $C: \abs{z-3} = 2$ is shown in the complex plane together with the singularities of our integral \eqref{integral}. The orientation of the contour is shown by the pointing of the arrow. The singularities are displayed as red crosses, while the singularities inside the sine function are displayed as red circles. We see that inside our contour we only have $1$ singularity, which lies at $z=4$.}
   \label{fig:1Ba}
 \end{figure}
-We see from the figure that there is only one singulartity inside the contour, and no singularties on the contour. This singularity is at $z=4$, and we can see that it is a simple pole since it is of order $1$, but we have to be carefull to check that this is not a removable singularity. We must check that for $z=4$ the sine factor is not equal to zero, which could have removed the singularity. For $z=4$ the sine-argument is $5\pi/20=\pi/4$, which will make the sine-factor equal to $\sqrt{2}$. Thus the singularity at $z=4$ is not removable.\\
+We see from the figure that there is only one singularity inside the contour, and no singularities on the contour. This singularity is at $z=4$, and we can see that it is a simple pole since it is of order $1$, but we have to be careful to check that this is not a removable singularity. We must check that for $z=4$ the sine factor is not equal to zero, which could have removed the singularity. For $z=4$ the sine-argument is $5\pi/20=\pi/4$, which will make the sine-factor equal to $\sqrt{2}$. Thus the singularity at $z=4$ is not removable.\\
 To calculate the integral we only need to find the integrand's residue at $z=4$. We do this by using the following procedure
 \begin{equation}
   \text{Res}(z_0) = \lim_{z \to z_0} \left[(z-z_0)f(z)\right],
@@ -308,7 +307,7 @@ Fermat's principle states that light travels through media with an index of refr
 \begin{equation}
   P = \int n \dif s
 \end{equation}
-is stationary, where stationary means that the value of the integral is minimized when the integrationlimits are fixed. In this expression $\dif s$ is an infinitesimal line element, and as we are studying the path of light in a two dimensional plane it is defined as
+is stationary, where stationary means that the value of the integral is minimized when the integration limits are fixed. In this expression $\dif s$ is an infinitesimal line element, and as we are studying the path of light in a two dimensional plane it is defined as
 \begin{equation}
   \dif s = \sqrt{\left(\dif x\right)^2 + \left(\dif y\right)^2}. \label{s}
 \end{equation}
@@ -318,14 +317,14 @@ To find the integrand $K$ which makes the integral stationary we will insert the
 \begin{equation}
   \dv{}{t}\left( \dv{K}{\dot{q}} \right) - \dv{K}{q} = 0, \label{EL}
 \end{equation}
-and solve for one of the coordinates. In this expression $t$ is the integration-variable, and $q$ is the function variable of $n$, and $\dot{q}$ is the derivative of the $q$ with respect to the integration-variable $t$. With the definition of $\dif s$ \eqref{s} we can either choose to integrate over $x$ or $y$, depending on which one we factorize out of the square root. One option is favorable over the other. We want to choose the integration variable such that one term in the Euler-Lagrange equation \eqref{EL} dissapears. Since the index of refraction is only a function of $y$ we see that the right most term in the Euler-Lagrange equation \eqref{EL} will dissapear if $q=x$. We will therefore factorize out the $\dif y^2$ in $\dif s$ such that the integrand is only a function of $y$ and $\dot{x}$, where $\dot{x}=\dif x/\dif y$.
+and solve for one of the coordinates. In this expression $t$ is the integration-variable, and $q$ is the function variable of $n$, and $\dot{q}$ is the derivative of the $q$ with respect to the integration-variable $t$. With the definition of $\dif s$ \eqref{s} we can either choose to integrate over $x$ or $y$, depending on which one we factorize out of the square root. One option is favorable over the other. We want to choose the integration variable such that one term in the Euler-Lagrange equation \eqref{EL} disappears. Since the index of refraction is only a function of $y$ we see that the right most term in the Euler-Lagrange equation \eqref{EL} will disappear if $q=x$. We will therefore factorize out the $\dif y^2$ in $\dif s$ such that the integrand is only a function of $y$ and $\dot{x}$, where $\dot{x}=\dif x/\dif y$.
 Thus we rewrite our integral to the form
 \begin{equation}
   P = \int n(y) \sqrt{1+\left(\frac{\dif x}{\dif y}\right)^2} \dif y = \int \underbrace{n(y) \sqrt{1+\dot{x}^2}}_{F} \dif y.
 \end{equation}
-We put this expression for $F$ into the Euler-Lagrange equation \eqref{EL}, now with $y$ instead of $t$ and $x$ instead of $q$ and see that the secound term dissapears
+We put this expression for $F$ into the Euler-Lagrange equation \eqref{EL}, now with $y$ instead of $t$ and $x$ instead of $q$ and see that the second term disappears
 \begin{equation}
-  \dv{}{y}\left(\dv{}{\dot{x}}\left( n(y) \sqrt{1+\dot{x}^2} \right)\right) - \underbrace{\dv{}{x}\left(n(y) \sqrt{1+\dot{x}^2}\right)}_0 = 0. \label{EL}
+  \dv{}{y}\left(\dv{}{\dot{x}}\left( n(y) \sqrt{1+\dot{x}^2} \right)\right) - \underbrace{\dv{}{x}\left(n(y) \sqrt{1+\dot{x}^2}\right)}_0 = 0. \label{EL_2}
 \end{equation}
 Our equation is thereby simplified down to
 \begin{equation}
@@ -339,7 +338,7 @@ which we want to solve for $\dot{x}$. To do this we begin by calculating the der
 \begin{equation}
    \frac{n(y)\dot{x}}{\sqrt{1+\dot{x}^2}} = K.
 \end{equation}
-We devide with the index of refraction before squaring on both sides
+We divide with the index of refraction before squaring on both sides
 \begin{equation}
    \frac{\dot{x}^2}{1+\dot{x}^2} = \frac{K^2}{n^2}.
 \end{equation}
@@ -347,7 +346,7 @@ We divide the the numerator and denominator on the left hand side with $\dot{x}^
 \begin{equation}
    \frac{1}{1+\dot{x}^{-2}} = \frac{K^2}{n^2}.
 \end{equation}
-We flip each fraction and subtract one from each side singeling out $\dot{x}^2$
+We flip each fraction and subtract one from each side singling out $\dot{x}^2$
 \begin{equation}
    \frac{1}{\dot{x}^{2}} = \frac{n^2}{K^2}-1 = \frac{n^2-K^2}{K^2}.
 \end{equation}
@@ -385,7 +384,7 @@ Where we can move $K/n_0\gamma$ outside the integral as they are constants. The 
 \begin{equation}
    x = \frac{K}{n_0\gamma}\int \frac{1}{\sqrt{u^2-1}} \dif u.
 \end{equation}
-which we can solve. To simplify we multiply the constants over to the other side, and use that this is known integral with solution equal to the inverse hyperbolic consine
+which we can solve. To simplify we multiply the constants over to the other side, and use that this is known integral with solution equal to the inverse hyperbolic cosine
 \begin{equation}
    \frac{n_0\gamma x}{K} = \cosh^{-1}{u} + C,
 \end{equation}
@@ -405,18 +404,18 @@ We solve for $y$ and find
 \begin{equation}
    y = -\frac{1}{\gamma} + \frac{K}{n_0\gamma}\cosh{\left(\frac{n_0\gamma}{K}\left(x-x_0\right)\right)}.
 \end{equation}
-Where we have now found an expression for the path of the lightray, where $x_0$ will be determined by the initial conditions. This expression can also be written as
+Where we have now found an expression for the path of the light ray, where $x_0$ will be determined by the initial conditions. This expression can also be written as
 \begin{equation}
    y = \frac{1}{\gamma}\left(\frac{K}{n_0}\cosh{\left(\frac{n_0\gamma}{K}\left(x-x_0\right)\right)}-1\right). \label{2b}
 \end{equation}
 
 
 \subsubsection*{c)}
-To simplify the expression for the path of the light we will assume that the argument of $\cosh{}$ is small, such that we can taylor expand. The first taylor coefficients of $\cosh{}$ can be shown to be equal to
+To simplify the expression for the path of the light we will assume that the argument of $\cosh{}$ is small, such that we can Taylor expand. The first Taylor coefficients of $\cosh{}$ can be shown to be equal to
 \begin{equation}
   \cosh{x}\approx1+\frac{x^2}{2} + \frac{x^4}{24} + \ldots.
 \end{equation}
-In this taylor expansion we will only include up to the order of $x^3$, and we insert this into our expression for the path of light \eqref{2b}
+In this Taylor expansion we will only include up to the order of $x^3$, and we insert this into our expression for the path of light \eqref{2b}
 \begin{equation}
    y = \frac{1}{\gamma}\left(\frac{K}{n_0}\left(1+\frac{1}{2}\left(\frac{n_0\gamma}{K}\left(x-x_0\right)\right)^2 \right)-1\right) + \bigO\left(\left(\frac{n_0\gamma}{K}\right)^4\right)
 \end{equation}
@@ -424,7 +423,7 @@ By doing the multiplication, and collecting terms with common denominator we can
 \begin{equation}
    y = \frac{K-n_0}{\gamma n_0} + \frac{n_0\gamma}{2K}\left(x-x_0\right)^2.
 \end{equation}
-We recognize this expression as a parabola. This solution is shown graphically in figure \vref{fig:2c}. In this figure the axis is scaled such that we do not have to set values for $n_0$, $\gamma$ and $K$. In this figure we can easily interperet $x_0$. We see that when $x=x_0$ the light ray's altitude is at it's lowest. Thus $x_0$ is the $x-$coordinate coreesponding to the minima of the altitude of the light ray, where the path turns around, and begin heading upwards after the decline. The origin of $x_0$ was the integration constant, and thereby the value of $x_0$ is determined through the initial conditions of the light ray.
+We recognize this expression as a parabola. This solution is shown graphically in figure \vref{fig:2c}. In this figure the axis is scaled such that we do not have to set values for $n_0$, $\gamma$ and $K$. In this figure we can easily interpret $x_0$. We see that when $x=x_0$ the light ray's altitude is at it's lowest. Thus $x_0$ is the $x-$coordinate corresponding to the minima of the altitude of the light ray, where the path turns around, and begin heading upwards after the decline. The origin of $x_0$ was the integration constant, and thereby the value of $x_0$ is determined through the initial conditions of the light ray.
 \begin{figure}
   \centering
   \includegraphics[width=0.65\textwidth]{../figures/2c.pdf}
@@ -435,15 +434,15 @@ We recognize this expression as a parabola. This solution is shown graphically i
 \begin{figure}
   \centering
   \includegraphics[width=0.67\textwidth]{../figures/drawing.pdf}
-  \caption{A qualitative drawing of what will happen when you look at hot asphalt. The eye intercepts the light ray when looking down at the asphalt. The red dotted lign shows where the object is pervievd to be located by the eye. The continous red line shows the actual position of the object emitting the light. The eye is therefore observing something being \textit{reflected} in the asphalt, even though the light ray never touched the asphalt. In the figure we have indicated the position of the minima, which is $(K-n_0)/\gamma n_0$ away from the ground with $x$-coordinate equal to $x_0$.}
+  \caption{A qualitative drawing of what will happen when you look at hot asphalt. The eye intercepts the light ray when looking down at the asphalt. The red dotted line shows where the object is perceived to be located by the eye. The continuous red line shows the actual position of the object emitting the light. The eye is therefore observing something being \textit{reflected} in the asphalt, even though the light ray never touched the asphalt. In the figure we have indicated the position of the minima, which is $(K-n_0)/\gamma n_0$ away from the ground with $x$-coordinate equal to $x_0$.}
   \label{fig:2d}
 \end{figure}
-We have found an expression for the path of light, but this explain why the road may look like a mirror on a hot day? When looking down onto the hot asphalt the eye will intercept light which has traveld in the path of the parabola. The eye will therefore see an object in the asphalt which actually is above. It will look like the light ray was reflected in the asphalt, even though the light ray never touched the asphalt. This is displayed in a qualitative drawing in figure \vref{fig:2d}. In the drawing we have included the $x$ and $y$-coordinates of the local minima. From the figure the eye will believe the red cross is at the position following the dashed line, while the actual position of the red cross would be far above the asphalt. This effect is exactly the same as a mirror, we see an object \textit{inside} the mirror, while the actual source of the light is actually elsewhere.\par
-A real world example of this effect, called miraging, is displayed in figure \vref{fig:2d2}. Here we see that instead of seeing black asphalt we are actually looking up to the sky. This is observed because of varying index of refraction resulting from the heat difference close to the asphalt. This picture is consistent with what our calculations tell us.
+We have found an expression for the path of light, but this explain why the road may look like a mirror on a hot day? When looking down onto the hot asphalt the eye will intercept light which has traveled in the path of the parabola. The eye will therefore see an object in the asphalt which actually is above. It will look like the light ray was reflected in the asphalt, even though the light ray never touched the asphalt. This is displayed in a qualitative drawing in figure \vref{fig:2d}. In the drawing we have included the $x$ and $y$-coordinates of the local minima. From the figure the eye will believe the red cross is at the position following the dashed line, while the actual position of the red cross would be far above the asphalt. This effect is exactly the same as a mirror, we see an object \textit{inside} the mirror, while the actual source of the light is actually elsewhere.  In addition the image we will observe from this bendt light ray will be flipped.\par
+A real world example of this effect, called miraging (luftspeiling), is displayed in figure \vref{fig:2d2}. Here we see that instead of seeing black asphalt we are actually looking up to the sky. This is observed because of varying index of refraction resulting from the heat difference close to the asphalt. This picture is consistent with what our calculations tell us.
 \begin{figure}
   \centering
   \includegraphics[width=0.7\textwidth]{../figures/picture.jpg}
-  \caption{Miraging observed on hot asphalt. Where we expect to see black asphalt we are actually seeing the sky. This is due to the bending of the light ray due to the temperature dependence on the index of refraction..}
+  \caption{Miraging observed on hot asphalt. Where we expect to see black asphalt we are actually seeing the sky. This is due to the bending of the light ray resulting from the temperature dependence on the index of refraction..}
   \label{fig:2d2}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%% Main document
