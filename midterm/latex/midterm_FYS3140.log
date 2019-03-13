@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.9.8)  13 MAR 2019 09:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.9.8)  13 MAR 2019 10:02
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -2444,13 +2444,21 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 457.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 457.
 Package rerunfilecheck Info: File `midterm_FYS3140.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package rerunfilecheck Info: File `midterm_FYS3140.brf' has not changed.
-(rerunfilecheck)             Checksum: E6CFA8AD2866A71B3D7A1321D680C77F;155.
+
+Package rerunfilecheck Warning: File `midterm_FYS3140.brf' has changed.
+(rerunfilecheck)                Rerun to get bibliographical references right.
+
+Package rerunfilecheck Info: Checksums for `midterm_FYS3140.brf':
+(rerunfilecheck)             Before: AE73A90B0C0E15DB5265C9BBD2DC5793;155
+(rerunfilecheck)             After:  E6CFA8AD2866A71B3D7A1321D680C77F;155.
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
  31970 strings out of 492995
  595370 string characters out of 6132705
- 656223 words of memory out of 5000000
+ 656108 words of memory out of 5000000
  34804 multiletter control sequences out of 15000+600000
  79430 words of font info for 170 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -2471,7 +2479,7 @@ c/kpfonts/jkpmia.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/kpf
 onts/jkpmn8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/kpfonts
 /jkpsy.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/latx
 font/line10.pfb>
-Output written on midterm_FYS3140.pdf (18 pages, 9371724 bytes).
+Output written on midterm_FYS3140.pdf (18 pages, 9371710 bytes).
 PDF statistics:
  527 PDF objects out of 1000 (max. 8388607)
  369 compressed objects within 4 object streams
