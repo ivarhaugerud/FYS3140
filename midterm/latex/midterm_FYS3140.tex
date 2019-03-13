@@ -53,7 +53,7 @@ We will use this to find an upper bound on the absolute value of $f(z_0)$. To fi
 \end{equation}
 Here we have used that the absolute value of a product is equal to the product of the absolute value of each factor. We continue by writing the absolute value of the integral in terms of a Riemann sum
 \begin{equation}
-  \abs{\oint_{C_R} \frac{f(z)}{z-z_0}\dif z} = \lim_{n \to \infty} \abs{\sum_{k=1}^{n} \frac{f(z_k)}{z_k-z_0}}\Delta z_k. \label{first_riemann}
+  \abs{\oint_{C_R} \frac{f(z)}{z-z_0}\dif z} = \lim_{n \to \infty} \abs{\sum_{k=1}^{n} \frac{f(z_k)}{z_k-z_0}\Delta z_k}. \label{first_riemann}
 \end{equation}
 For this sum we will use the generalized triangle inequality, which states that
 \begin{equation}
@@ -79,7 +79,7 @@ We insert the upper bound of the integral into our original expression for the a
 \begin{equation}
   \abs{f(z_0)} = \frac{1}{2\pi}\,\abs{\oint_{C_R} \frac{f(z)}{z-z_0}\dif z} \leq \frac{1}{2\pi} \, 2\pi M.
 \end{equation}
-Canceling the factors of $2\pi$ we find the final expression for the upper bound estimate of the contour integral
+Canceling the factors of $2\pi$ we find the final expression for the upper bound estimate of the value of $f$ at $z_0$
 \begin{equation}
   \abs{f(z_0)} \leq M.
 \end{equation}
@@ -97,30 +97,29 @@ We use this substitution in Cauchy's integral formula \eqref{CIF}
 \begin{equation}
   f(z_0) = \frac{1}{2\pi i} \oint_{C_R} \frac{f(z)}{z-z_0}\dif z = \frac{1}{2\pi i} \int_{0}^{2\pi} \frac{f(z_0+Re^{it})}{z_0+Re^{it}-z_0}\,iRe^{it} \dif t.
 \end{equation}
-We see that the $i$ outside of the integral cancels with the one inside, and by subtracting away the $z_0$'s in the denominator we can cancel the factor $Re^{it}$, thus
+We see that the $i$ outside of the integral cancels with the one inside, and by subtracting away the $z_0$'s in the denominator we can cancel the factor $Re^{it}$, leaving us with
 \begin{equation}
   f(z_0) = \frac{1}{2\pi} \int_{0}^{2\pi} f(z_0+Re^{it}) \dif t. \label{answer1b}
 \end{equation}
-This expression will only work for circular contours around $z_0$. We can see that this rewrite gives an easier solution to the previous problem, where we immediately see that $\abs{f(z_0)}$ is bound by the largest value of $f(z)$ along the circle. The factor of $1/2\pi$ outside will cancel with the integral of $\dif t$ from $0$ to $2\pi$ once we factorize out $M$ and creating an upper bound.
+This expression will only work for circular contours around $z_0$. We can see that this rewrite gives an easier solution to the previous problem, where we immediately see that $\abs{f(z_0)}$ is bound by the largest value of $f(z)$ along the circle. The factor of $1/2\pi$ outside will cancel with the integral of $\dif t$ from $0$ to $2\pi$ once we factorize out $M$, creating an upper bound for $\abs{f(z_0)}$ equal to $M$.
 
 \subsubsection*{c)}
-We introduce the function $u(x, y)$, which is harmonic on and inside a circle of radius $R$ centred at $z_0=x_0+iy_0$. We can evaluate the value of $u$ at the center of the circle using Cauchy's integral formula \eqref{CIF}
+We introduce the function $u(x, y)$, which is harmonic on and inside a circle of radius $R$ centred at $z_0=x_0+iy_0$. Since all harmonic functions are analytic we can evaluate $u$ at the center of the circle using Cauchy's integral formula \eqref{CIF}
 \begin{equation}
-  f(z_0) = \frac{1}{2\pi i} \oint_{C_R} \frac{f(z)}{z-z_0}\dif z.
+  u(z_0) = \frac{1}{2\pi i} \oint_{C_R} \frac{u(z)}{z-z_0}\dif z.
 \end{equation}
 In the previous task we showed that such a integral, for a circular contour with radius $R$ around a point $z_0$ can be rewritten to a integral over a real scalar $t$ from $0$ to $2\pi$ \eqref{answer1b}. We use this result, but now for a variable $\theta$ over the same interval, to evaluate $z_0$ at the center of the circle
 \begin{equation}
-  u(x_0, y_0) = \frac{1}{2\pi} \int_{0}^{2\pi} f(z_0+Re^{i\theta}) \dif \theta.
+  u(z_0) = \frac{1}{2\pi} \int_{0}^{2\pi} u(z_0+Re^{i\theta}) \dif \theta.
 \end{equation}
-This result tells us that to evaluate an analytic, and in this case harmonic, function at the center of a circle we can only use values along a circle around the point. Due to the factor $1/2\pi$ outside the integral the function value at the center of the circle is equal to the average value of the function along the contour. It is quite incredible that we can do this for an arbitrary radius $R$ (as long as the function is still analytic inside and on the contour), and always be able to evaluate the function at a point we never looked at.
+This result tells us that to evaluate an analytic, and in this case harmonic, function at a point $z_0$ we can only use values along a circle of radius $R$ around the given point. Due to the factor $1/2\pi$ outside the integral the function value at the center of the circle is equal to the average value of the function along the contour. It is quite incredible that we can do this for an arbitrary radius $R$ (as long as the function is still analytic inside and on the contour), and always be able to evaluate the function at a point we never looked at.
 
 \subsubsection*{d)}
-For a pair of two dimensional functions $u(x, y)$ and $v(x, y)$, which are each other's harmonic conjugates, we have the following relation
+A pair of two-dimensional functions $u(x, y)$ and $v(x, y)$, which are each other's harmonic conjugates, must fulfill
 \begin{equation}
   \pdv{u}{x} = \pdv{v}{y} \qquad \qquad \pdv{v}{x} = - \pdv{u}{y}, \label{harmonic_def}
 \end{equation}
-which has to be fulfilled for a pair of harmonic conjugate functions in two dimensions.
-We can use this to derive the orthogonality of the gradients of the functions, where the two dimensional nabla-operator is defined as
+We can use this to derive the orthogonality of the gradients of the functions $u$ and $v$, where the two-dimensional nabla-operator is defined as
 \begin{equation}
   \nabla = \left( \pdv{}{x}, \,\, \pdv{}{y} \right),
 \end{equation}
@@ -128,7 +127,7 @@ meaning that the inner product between the two functions can be written as
 \begin{equation}
   \left( \vec{ \nabla u} \right) \,\cdot   \left( \vec{ \nabla v} \right) = \left( \pdv{u}{x}, \,\, \pdv{u}{y} \right)\cdot \left( \pdv{v}{x}, \,\, \pdv{v}{y} \right) = \pdv{u}{x}\pdv{v}{x} + \pdv{u}{y}\pdv{v}{y}.
 \end{equation}
-Where we have written the left hand side in bold to emphasis that it is the inner product between two vectors. We then make a substitution from the property of harmonic conjugates \eqref{harmonic_def} on $v$ so that we only have derivatives acting on $u$
+Where we have written the left hand side in bold to emphasis that it is the inner product between two vectors. We then make a substitution from the property of harmonic conjugates \eqref{harmonic_def} on $v$ so that we only have derivatives acting on $u$ in our sum
 \begin{equation}
   \left( \vec{ \nabla u} \right) \,\cdot   \left( \vec{ \nabla v} \right) = -\pdv{u}{y}\pdv{u}{x} + \pdv{u}{x}\pdv{u}{y} = 0.
 \end{equation}
@@ -142,7 +141,7 @@ We will now look at concrete example where one of the harmonic functions, $u(x, 
 \begin{equation}
   u(x,y) = \sin{x}\cosh{y}.
 \end{equation}
-We begin by finding it's derivatives and second derivatives with respect to both $x$ and $y$ separately
+We begin by finding it's derivatives and second derivatives with respect to both $x$ and $y$
 \begin{align}
   \begin{split}
   \pdv{u}{x} &= \cos{x}\cosh{y}\qquad \qquad\pdv[2]{u}{x} = -\sin{x}\cosh{y} \\
@@ -161,11 +160,11 @@ We multiply each side with $\dif y$ and take the integral on both sides
 \begin{equation}
   \int \dif v =  \int \cos{x}\cosh{y} \dif y.
 \end{equation}
-The left hand side will just be the function $v(x, y)$, while on the right hand side we can take $\cos{x}$ outside the integral, and the integral of $\cosh{y}$ is known, leaving us with
+The left hand side will just be the function $v(x, y)$, while on the right hand side we can take $\cos{x}$ outside the integral, and the integral of $\cosh{y}$ is simply $\sinh{y}$, leaving us with
 \begin{equation}
   v(x, y) =  \cos{x}\sinh{y} + C(x). \label{first}
 \end{equation}
-The term $C(x)$ is the integration constant, which can depend on $x$ since we took the integral over $y$. We repeat the process for the second equality in \eqref{harmonic_def}
+The term $C(x)$ is the integration constant, which can depend on $x$ since we took the integral over $y$. We do get an integration constant on the left hand side, but we can include this in the integration constant $C$ on the right hand side. We repeat the process for the second equality in \eqref{harmonic_def}
 \begin{equation}
   \dv{v}{x} = -\dv{u}{y} = - \sin{x}\sinh{y}.
 \end{equation}
@@ -173,11 +172,11 @@ We multiply each side with $\dif x$ and take the integral
 \begin{equation}
   \int \dif v = - \int \sin{x}\sinh{y} \dif x.
 \end{equation}
-The left hand side will just result in the function $v(x, y)$, while the right hand side is trivial, thus
+The left hand side will just result in the function $v(x, y)$, while for the right hand side we move $\sinh{x}$ outside and integrate $-sin{x}$ to $\cos{x}$, thus
 \begin{equation}
   v(x, y) = \cos{x}\sinh{y} + C(y). \label{last}
 \end{equation}
-Where $C(y)$ is the integration constant, which can depend on $y$ since the integral was only over $x$. The two expressions we have found (\ref{first}, \ref{last}) are consistent with one another, as they should be, and we see that the integration constant can not depend on either $x$ or $y$, and must therefore just be a constant. The final expression for $u$'s harmonic conjugate is therefore
+Where $C(y)$ is the integration constant, which can depend on $y$ since the integral was over $x$. The two expressions we have found (\ref{first}, \ref{last}) are consistent with one another, as they should be, and we see that the integration constant can not depend on either $x$ or $y$, and must therefore just be a constant. The final expression for $u$'s harmonic conjugate is therefore
 \begin{equation}
   v(x, y) = \cos{x}\sinh{y} + C. \label{v}
 \end{equation}
@@ -193,7 +192,7 @@ We multiply out the parenthesis in each term, and factor out $1/4$
 \begin{equation}
   f(x, y) = \frac{1}{4i}\left(e^{ix-y}+e^{ix+y}-e^{-ix-y}-e^{-ix+y}\right) + i\frac{1}{4}\left(e^{ix+y}-e^{ix-y}+e^{-ix+y}-e^{-ix-y}\right).
 \end{equation}
-In the second term we multiply with $i$ in the denominator and numerator, flipping the sign and making the $i$ appear in the denominator so that we can rewrite the expression to
+In the second term we multiply with $i$ in the denominator and numerator, flipping the sign and making the $i$ appear in the denominator so that we can collect the terms and rewrite the expression to
 \begin{equation}
   f(x, y) = \frac{1}{4i}\left(e^{ix-y}+e^{ix+y}-e^{-ix-y}-e^{-ix+y} - e^{ix+y}+ e^{ix-y}-e^{-ix+y}+e^{-ix-y}\right),
 \end{equation}
@@ -230,17 +229,17 @@ We insert these derivatives into the inner product of the two gradients,
 \begin{equation}
   \left( \vec{ \nabla u} \right) \,\cdot   \left( \vec{ \nabla v} \right) = -\cos{x}\cosh{y}\sin{x}\sinh{y} + \sin{x}\sinh{y}\cos{x}\cosh{y} = 0,
 \end{equation}
-where we see that the two terms are identical, but with opposite sign, and thereby canceling. Our expressions for the harmonic conjugates $u$ and $v$ satisfy the property of orthogonality found previously.
+where we see that the two terms are identical, but with opposite sign, and thereby canceling. Our expressions for the harmonic conjugates $u$ and $v$ satisfy the property of orthogonality found previously, as they should.
 \subsubsection*{g)}
 We have studied the orthogonality of the harmonic conjugates, we will now display this graphically for different functions. We begin with the simple case of
 \begin{equation}
   f(z) = x+iy \rightarrow u=x\qquad v=y.
 \end{equation}
-This is displayed in figure \vref{fig:g1}, where the left most figure is the contours of $u$, the middle is the contours of $v$, and the rightmost is both plotted together where $u$ is continuous and $v$ is dashed. In the right most figure we can clearly see the orthogonality as all the dashed and continuous lines cross orthogonally. \par
+This is displayed in figure \vref{fig:g1}, where the left most figure is the level curves of $u$, the middle is the level curves of $v$, and the rightmost is both plotted together where $u$ is continuous and $v$ is dashed. In the right most figure we can clearly see the orthogonality as all the dashed and continuous lines cross orthogonally. \par
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{../figures/first.pdf}
-  \caption{The contour levels of $u=x$ and $v=y$ is displayed in the left and middle figure respectively. Where the colour indicates the functional value at a given point, and the black lines show the curves for constant values. The same is true for the last figure, but here we have hadded the colour to the constant curves. The dashed line is for $v$, and the continuous lines for $u$, we see that the dashed and continuous lines always cross orthogonally.}
+  \caption{The level curves of $u=x$ and $v=y$ is displayed in the left and middle figure respectively, where the colour indicates the functional value at a given point, and the black lines show the curves for constant values. The same is true for the last figure, but here we have hadded the colour to the constant curves. The dashed line is for $v$, and the continuous lines for $u$, we see that the dashed and continuous lines always cross orthogonally.}
   \label{fig:g1}
 \end{figure}
 We repeat this for the function
@@ -251,7 +250,7 @@ This is displayed in figure \vref{fig:g2}, with the same order as the previous f
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{../figures/secound.pdf}
-  \caption{The contour levels of $u=x^2-y^2$ and $v=2xy$ is displayed in the left and middle figure respectively. Where the colour indicates the functional value at a given point, and the black lines show the curves for constant values. The same is true for the last figure, but here we have hadded the colour to the constant curves. The dashed line is for $v$, and the continuous lines for $u$, we see that the dashed and continuous lines always cross orthogonally.}
+  \caption{The level curves of $u=x^2-y^2$ and $v=2xy$ is displayed in the left and middle figure respectively, where the colour indicates the functional value at a given point, and the black lines show the curves for constant values. The same is true for the last figure, but here we have hadded the colour to the constant curves. The dashed line is for $v$, and the continuous lines for $u$, we see that the dashed and continuous lines always cross orthogonally.}
   \label{fig:g2}
 \end{figure}
 Lastly we do this for the function we have just studied
@@ -262,11 +261,11 @@ This is displayed in figure \vref{fig:g3}, with the same order as the previous f
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{../figures/third.pdf}
-  \caption{The contour levels of $u=\sin{x}\cosh{y}$ and $v=\cos{x}\sinh{y}$ is displayed in the left and middle figure respectively. Where the colour indicates the functional value at a given point, and the black lines show the curves for constant values. The same is true for the last figure, but here we have hadded the colour to the constant curves. The dashed line is for $v$, and the continuous lines for $u$, we see that the dashed and continuous lines always cross orthogonally.}
+  \caption{The level curves of $u=\sin{x}\cosh{y}$ and $v=\cos{x}\sinh{y}$ is displayed in the left and middle figure respectively, where the colour indicates the functional value at a given point, and the black lines show the curves for constant values. The same is true for the last figure, but here we have hadded the colour to the constant curves. The dashed line is for $v$, and the continuous lines for $u$, we see that the dashed and continuous lines always cross orthogonally.}
   \label{fig:g3}
 \end{figure}
-For the third graph in all figures we have used \texttt{plt.axis("equal")} in order for the lines to cross orthogonally. Otherwise the axis would be scaled differently such that two lines who were crossing orthogonally would not appear to do so. \\
-In the three figures mentioned we see that for the third graph the level curves of $u$ and $v$ always cross orthogonally. Where level curves of a function are the curves in the plane giving a constant value of that function. We know that $\nabla u$ is orthogonal to the level curves of $u$, and the same goes for $v$. Thus when we observe that the level curves of $u$ and $v$ are orthogonal, the gradient of $u$ and $v$ must also be orthogonal. The level curves shown in figure \ref{fig:g1}, \ref{fig:g2} and \ref{fig:g3} shows that our result \eqref{ortogonality_harmo} is consistent with what we observed for the three functions tested here.
+For the third graph in all figures we have used \texttt{plt.axis("equal")} in order for the lines to cross orthogonally. Otherwise the axis would be scaled differently such that two lines which were crossing orthogonally would not appear to do so. \\
+In the three figures mentioned we see that for the third graph the level curves of $u$ and $v$ always cross orthogonally. Where level curves of a function are the curves in the plane giving a constant value of that function. We know that $\nabla u$ is orthogonal to the level curves of $u$, and the same goes for $v$. Thus when the level curves of $u$ and $v$ are orthogonal, the gradient of $u$ and $v$ must also be orthogonal. All the level curves shown in figure \ref{fig:g1}, \ref{fig:g2} and \ref{fig:g3} are crossing orthogonally, this is consistent with the orthogonality of the gradients of harmonic conjugates \eqref{ortogonality_harmo} previously derived.
 \subsection*{Part B: A contour integral}
 \subsubsection*{a)}
 We want to solve the contour integral
@@ -277,7 +276,7 @@ where $C$ is the closed, circular, curve around $z=3$ with a radius of $2$, $C: 
 \begin{equation}
   I = \oint_{C}\frac{4i\left(z+2i\right)\left(z-2i\right)}{z\left(z+4\right)\left(z-4\right)}\sin{\left( \frac{5\pi}{\left(z+2i\right)\left(z-2i\right)} \right)} \dif z. \label{integral}
 \end{equation}
-With this rewrite we can see that we have singularities at $z=0$, $z=4$ and $z=-4$. We also see that inside the sine we have two points where we divide by zero; $z=2i$ and $z=-2i$. These five singularities, as well as the curve $C$ is displayed in the complex plane in figure \vref{fig:1Ba}.\par
+With this rewrite we can see that we have singularities at $z=0$, $z=4$ and $z=-4$. We also see that inside the sine we have two points where we divide by zero; $z=2i$ and $z=-2i$. These five points, as well as the curve $C$, is displayed in the complex plane in figure \vref{fig:1Ba}.\par
 \begin{figure}
   \centering
   \includegraphics[width=0.8\textwidth]{../figures/contour_and_sing.pdf}
@@ -359,13 +358,13 @@ We flip the fractions back and take the square root on both sides leaving us wit
    \dot{x} = \pm\frac{K}{\sqrt{n^2-K^2}}. \label{2a}
 \end{equation}
 By knowing the derivative of the $x$-coordinate of the light ray as a function of the index of refraction we can determine the path of the light given initial conditions.\\
-Since we took the square root we have found both a positive and negative solution for $\dot{x}$. Both solutions are equally correct, as the sign of $\dot{x}$ will be squared inside $F$ anyway. We will in our calculations in this problem use the positive solution, but we could just as well have used the negative one. We will later find that the sign chosen here will enter inside $\cosh{}$, since $\cosh{}$ is a symmetric function around $x=0$ ($\cosh{(-x)}=\cosh{(x)})$ the sign will not matter for our final solution.
+Since we took the square root we have found both a positive and negative solution for $\dot{x}$. Both solutions are equally correct, as the sign of $\dot{x}$ will be squared inside $F$ anyway. We will in our calculations in this problem use the positive solution, but we could just as well have used the negative one. We will later find that the sign chosen here will enter inside $\cosh{}$, since $\cosh{}$ is a symmetric function around $x=0$ ($\cosh{(-x)}=\cosh{(x)})$ the sign will not matter in our final expression.
 \subsubsection*{b)}
 We will try and solve equation \eqref{2a} for $y(x)$ to explain the path of light close to the asphalt on a warm day. The closer the air is to the hot asphalt, the hotter the air is. When the air is hotter it becomes less dense, and thereby effecting the index of refraction. We will model this by linearizing the index of refraction
 \begin{equation}
   n\left(y\right) = n_0\left(1+\gamma y\right),
 \end{equation}
-where $\gamma$ is a positive with units of one over length. Our coordinate system is set such that $y=0$ corresponds to the ground. From this we see that the index of refraction is equal to $n_0$ on the ground, and increases the further away from the ground you are. We will use this linearization for the index of refraction and solve for the path of the light, starting from \eqref{2a}
+where $\gamma$ is a positive constant with units of one over length. Our coordinate system is set such that $y=0$ corresponds to the ground. From this we see that the index of refraction is equal to $n_0$ on the ground, and increases the further away from the ground you are. We will use this linearization for the index of refraction and solve for the path of the light, starting from \eqref{2a}
 \begin{equation}
    \frac{\dif x}{\dif y} = \frac{K}{\sqrt{n_0^2\left(1+\gamma y\right)^2-K^2}}.
 \end{equation}
@@ -389,11 +388,11 @@ Where we can move $K/n_0\gamma$ outside the integral as they are constants. The 
 \begin{equation}
    x = \frac{K}{n_0\gamma}\int \frac{1}{\sqrt{u^2-1}} \dif u.
 \end{equation}
-which we can solve. To simplify we multiply the constants over to the other side, and use that this is known integral with solution equal to the inverse hyperbolic cosine (see f.ex K. Rottmann \cite{Rottmann})
+which we can solve. To simplify we multiply the constants over to the other side, and use that this is known integral with solution equal to the inverse hyperbolic cosine (see e.g. K. Rottmann \cite{Rottmann})
 \begin{equation}
    \frac{n_0\gamma x}{K} = \cosh^{-1}{u} + C,
 \end{equation}
-where $C$ is an integration constant. To singel out $u$ we move $C$ over to the other side and take $\cosh{}$ on both sides of the equal sign cancel the inverse, giving us
+where $C$ is an integration constant. We do get an integration constant for each integral, but these two constants can be added together to one. To singel out $u$ we move $C$ over to the other side and take $\cosh{}$ on both sides of the equal sign cancel the inverse, giving us
 \begin{equation}
    u = \cosh{\left(\frac{n_0\gamma x}{K}-C\right)}.
 \end{equation}
@@ -401,7 +400,7 @@ We put in for the definition of $u$ \eqref{u}, and rewrite the expression inside
 \begin{equation}
    \frac{n_0\left(1+\gamma y\right)}{K} = \cosh{\left(\frac{n_0\gamma}{K}\left(x-\frac{KC}{n_0\gamma}\right)\right)}.
 \end{equation}
-The new factor containing the integration constant $x$ has unit length, and we will therefore redefine it to
+The new factor containing the integration constant $C$ has unit length, and we will therefore redefine it to
 \begin{equation}
   x_0 \equiv \frac{KC}{n_0\gamma} .
 \end{equation}
@@ -420,9 +419,9 @@ To simplify the expression for the path of the light we will assume that the arg
 \begin{equation}
   \cosh{x}\approx1+\frac{x^2}{2} + \frac{x^4}{24} + \ldots.
 \end{equation}
-In this Taylor expansion we will only include up to the order of $x^3$, and we insert this into our expression for the path of light \eqref{2b}
+For our expression for $\cosh{}$ \cite{2b} we will expand around $x=x_0$ such that the derivatives of $\cosh{}$ evaluated at that point is known. In this Taylor expansion we will only include up to the order of $x^3$, and we insert this into our expression for the path of light \eqref{2b}
 \begin{equation}
-   y = \frac{1}{\gamma}\left(\frac{K}{n_0}\left(1+\frac{1}{2}\left(\frac{n_0\gamma}{K}\left(x-x_0\right)\right)^2 \right)-1\right) + \bigO\left(\left(\frac{n_0\gamma}{K}\right)^4\right)
+   y = \frac{1}{\gamma}\left(\frac{K}{n_0}\left(1+\frac{1}{2}\left(\frac{n_0\gamma}{K}\left(x-x_0\right)\right)^2 \right + \bigO\left(\left(\frac{n_0\gamma}{K}\right)^4\right) \right)-1\right)
 \end{equation}
 By doing the multiplication, and collecting terms with common denominator we can rewrite this expression as
 \begin{equation}
@@ -432,18 +431,18 @@ We recognize this expression as a parabola. This solution is shown graphically i
 \begin{figure}[h!]
   \centering
   \includegraphics[width=0.575\textwidth]{../figures/2c.pdf}
-  \caption{The approximate path of the light ray is displayed for the scaled positions in the $x-y$-plane. We see that the path traces a parabola, where $x=x_0$ is the $x$-position corresponding to closest altitude to the ground.}
+  \caption{The approximate path of the light ray is displayed for the scaled positions in the $x-y$-plane. We see that the path traces a parabola, where $x=x_0$ is the $x$-position corresponding to the closest altitude to the ground.}
   \label{fig:2c}
 \end{figure}
 \subsubsection*{d)}
 \begin{figure}
   \centering
   \includegraphics[width=0.67\textwidth]{../figures/drawing.pdf}
-  \caption{A qualitative drawing of what will happen when you look at hot asphalt. The eye intercepts the light ray when looking down at the asphalt. The red dotted line shows where the object is perceived to be located by the eye. The continuous red line shows the actual position of the object emitting the light. The eye is therefore observing something being \textit{reflected} in the asphalt, even though the light ray never touched the asphalt. In the figure we have indicated the position of the minima, which is $(K-n_0)/\gamma n_0$ away from the ground with $x$-coordinate equal to $x_0$.}
+  \caption{A qualitative drawing of what will happen when you look at hot asphalt. The eye intercepts the light ray when looking down at the asphalt. The red dotted line shows where the object is perceived to be located by the eye. The continuous red line shows the actual position of the object emitting the light. The eye is therefore observing something being \textit{reflected} in the asphalt, even though the light ray never touched the asphalt. In the figure we have indicated the altitude of the minima, which is $(K-n_0)/\gamma n_0$ away from the ground with $x$-coordinate equal to $x_0$. The asphalt is shown spanning in the $z$-diredction, while the light ray only moves in the $x-y$-plane.}
   \label{fig:2d}
 \end{figure}
-We have found an expression for the path of light, but this explain why the road may look like a mirror on a hot day? When looking down onto the hot asphalt the eye will intercept light which has traveled in the path of the parabola. The eye will therefore see an object in the asphalt which is actually located above. It will look like the light ray was reflected in the asphalt, even though the light ray never touched the asphalt. This is displayed in a qualitative drawing in figure \vref{fig:2d}. This effect is exactly the same as a mirror, we see an object \textit{inside} the mirror, while the actual source of the light is actually elsewhere.\par
-A real world example of this effect, called miraging (luftspeiling), is displayed in figure \vref{fig:2d2}. Here we see that instead of seeing black asphalt we are actually looking up to the sky. This picture is consistent with what our calculations tell us.
+We have found an expression for the path of light, but can we use this to explain why the road may look like a mirror on a hot day? When looking down onto the hot asphalt the eye will intercept light which has traveled in the path of the parabola. The eye will therefore see an object in the asphalt which is actually located above. It will look like the light ray was reflected in the asphalt, even though the light ray never touched the asphalt. This is displayed in a qualitative drawing in figure \vref{fig:2d}. This effect is exactly the same as a mirror, we see an object \textit{inside} the mirror, while the actual source of the light is actually elsewhere.\par
+A real world example of this effect, called miraging (luftspeiling), is displayed in figure \vref{fig:2d2}. Here we see that instead of seeing grey asphalt we are actually looking up to the sky. This picture is consistent with what our calculations tell us.
 \begin{figure}
   \centering
   \includegraphics[width=0.7\textwidth]{../figures/picture.jpg}
