@@ -236,7 +236,7 @@ We have studied the orthogonality of the harmonic conjugates, we will now displa
 \begin{equation}
   f(z) = x+iy \rightarrow u=x\qquad v=y.
 \end{equation}
-This is displayed in figure \vref{fig:g1}, where the left most figure is the contours of $u$, the middle is the contours of $v$, and the rightmost is both plotted together where $u$ is continuous and $v$ is dashed. In the right most figure we can clearly see the orthogonality as all the dashed and continuous lines cross orthogonally.\par
+This is displayed in figure \vref{fig:g1}, where the left most figure is the contours of $u$, the middle is the contours of $v$, and the rightmost is both plotted together where $u$ is continuous and $v$ is dashed. In the right most figure we can clearly see the orthogonality as all the dashed and continuous lines cross orthogonally. \par
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{../figures/first.pdf}
@@ -265,18 +265,19 @@ This is displayed in figure \vref{fig:g3}, with the same order as the previous f
   \caption{The contour levels of $u=\sin{x}\cosh{y}$ and $v=\cos{x}\sinh{y}$ is displayed in the left and middle figure respectively. Where the colour indicates the functional value at a given point, and the black lines show the lines with a constant functional value. For the last figure the colour still indicates the function value, and displays the curve of a  constant value. The dashed line is for $v=\cos{x}\sinh{y}$, and the continuous lines for $u=\sin{x}\cosh{y}$, we see that the dashed and continuous lines always cross orthogonally.}
   \label{fig:g3}
 \end{figure}
-\textbf{WRITE MORE}
+For the third graph in all figures we have used \texttt{plt.axis("equal")} in order for the lines to cross orthogonally. Otherwise the axis would be scaled differently such that two lines who were crossing orthogonally would not appear to do so. \\
+In the three figures mentiond we see that for the third graph the level curves of $u$ and $v$ always cross orthogonally. Where level curves of a function are the curves in the plane giving a constant value of that function. We know that $\nabla u$ is orthogonal to the level curves of $u$, and the same goes for $v$. Thus when we observe that the level curves of $u$ and $v$ are orthogonal, the gradient of $u$ and $v$ must also be orthogonal. The level curves shown in figure \ref{fig:g1}, \ref{fig:g2} and \ref{fig:g3} shows that our result \eqref{ortogonality_harmo} is consistent with the three funtions tested here.
 \subsection*{Part B: A contour integral}
 \subsubsection*{a)}
 We want to solve the contour integral
 \begin{equation}
   I = \oint_{C}\frac{4i\left(z^2+4\right)}{z\left(z^2-16\right)}\sin{\left( \frac{5\pi}{z^2+4} \right)} \dif z,
 \end{equation}
-where $C$ is the closed, circular, curve around $z=3$ with a radius of $2$, $C: \abs{z-3} = 2$. We begin by rewriting the integral by finding the roots of the polynomials to display the singularities more clearly
+where $C$ is the closed, circular, curve around $z=3$ with a radius of $2$, $C: \abs{z-3} = 2$. We rewrite the integral by finding the roots of the polynomials to display the singularities more clearly
 \begin{equation}
   I = \oint_{C}\frac{4i\left(z+2i\right)\left(z-2i\right)}{z\left(z+4\right)\left(z-4\right)}\sin{\left( \frac{5\pi}{\left(z+2i\right)\left(z-2i\right)} \right)} \dif z. \label{integral}
 \end{equation}
-With this rewrite we can see that we have singularities at $z=0$, $z=4$ and $z=-4$. We also see that inside the sine we have two points where we divide by zero; $z=2i$ and $z=-2i$. All of these singularities are displayed in graphically in the complex plane in figure \vref{fig:1Ba}.\par
+With this rewrite we can see that we have singularities at $z=0$, $z=4$ and $z=-4$. We also see that inside the sine we have two points where we divide by zero; $z=2i$ and $z=-2i$. These five singularities, as well as the curve $C$ is displayed in the complex plane in figure \vref{fig:1Ba}.\par
 \begin{figure}
   \centering
   \includegraphics[width=0.8\textwidth]{../figures/contour_and_sing.pdf}
@@ -304,6 +305,7 @@ Where we have used that $\sin{\left(\frac{\pi}{4}\right)}=\sqrt{2}$. Since this 
 \begin{equation}
   I  = 2\pi i\,\,\text{Res}(4) = 2\pi i\frac{5i}{\sqrt{2}} = -5\pi\sqrt{2}
 \end{equation}
+\newpage
 \section*{Problem 2: Variational calculus}
 Fermat's principle states that light travels through media with an index of refraction $n$ such that
 \begin{equation}
@@ -313,13 +315,13 @@ is stationary, where stationary means that the value of the integral is minimize
 \begin{equation}
   \dif s = \sqrt{\left(\dif x\right)^2 + \left(\dif y\right)^2}. \label{s}
 \end{equation}
-We will in this problem assume that the index of refraction is only a function of $y$-coordinate, $n=n(y)$.
+We will in this problem assume that the index of refraction is only a function of the $y$-coordinate, $n=n(y)$.
 \subsubsection*{a)}
 To find the integrand $K$ which makes the integral stationary we will insert the integrand into the Euler-Lagrange equation
 \begin{equation}
   \dv{}{t}\left( \dv{K}{\dot{q}} \right) - \dv{K}{q} = 0, \label{EL}
 \end{equation}
-and solve for one of the coordinates. In this expression $t$ is the integration-variable, and $q$ is the function variable of $n$, and $\dot{q}$ is the derivative of the $q$ with respect to the integration-variable $t$. With the definition of $\dif s$ \eqref{s} we can either choose to integrate over $x$ or $y$, depending on which one we factorize out of the square root. One option is favorable over the other. We want to choose the integration variable such that one term in the Euler-Lagrange equation \eqref{EL} disappears. Since the index of refraction is only a function of $y$ we see that the right most term in the Euler-Lagrange equation \eqref{EL} will disappear if $q=x$. We will therefore factorize out the $\dif y^2$ in $\dif s$ such that the integrand is only a function of $y$ and $\dot{x}$, where $\dot{x}=\dif x/\dif y$.
+and solve for one of the coordinates. In this expression $t$ is the integration-variable, and $q$ is the variable of $K$, and $\dot{q}$ is the derivative of $q$ with respect to the integration-variable $t$. With the definition of $\dif s$ \eqref{s} we can either choose to integrate over $x$ or $y$, depending on which one we factorize out of the square root. One option is favorable over the other. We want to choose the integration variable such that one term in the Euler-Lagrange equation \eqref{EL} disappears. Since the index of refraction is only a function of $y$ we see that the right most term in the Euler-Lagrange equation \eqref{EL} will disappear if $q=x$. We will therefore factorize out the $\dif y^2$ in $\dif s$ such that the integrand is only a function of $y$ and $\dot{x}$, where $\dot{x}=\dif x/\dif y$.
 Thus we rewrite our integral to the form
 \begin{equation}
   P = \int n(y) \sqrt{1+\left(\frac{\dif x}{\dif y}\right)^2} \dif y = \int \underbrace{n(y) \sqrt{1+\dot{x}^2}}_{F} \dif y.
@@ -340,7 +342,7 @@ which we want to solve for $\dot{x}$. To do this we begin by calculating the der
 \begin{equation}
    \frac{n(y)\dot{x}}{\sqrt{1+\dot{x}^2}} = K.
 \end{equation}
-We divide with the index of refraction before squaring on both sides
+We divide with the index of refraction before squaring both sides
 \begin{equation}
    \frac{\dot{x}^2}{1+\dot{x}^2} = \frac{K^2}{n^2}.
 \end{equation}
@@ -348,17 +350,18 @@ We divide the the numerator and denominator on the left hand side with $\dot{x}^
 \begin{equation}
    \frac{1}{1+\dot{x}^{-2}} = \frac{K^2}{n^2}.
 \end{equation}
-We flip each fraction and subtract one from each side singling out $\dot{x}^2$
+We flip each fraction and subtract $1$ from each side singling out $\dot{x}^2$
 \begin{equation}
    \frac{1}{\dot{x}^{2}} = \frac{n^2}{K^2}-1 = \frac{n^2-K^2}{K^2}.
 \end{equation}
-We flip the fractions back and the square root on both sides leaving us with an expression for $\dot{x}$
+We flip the fractions back and take the square root on both sides leaving us with an expression for $\dot{x}$
 \begin{equation}
    \dot{x} = \pm\frac{K}{\sqrt{n^2-K^2}}. \label{2a}
 \end{equation}
-By knowing the derivative of the $x$-coordinate of the light ray as a function of the index of refraction we can determine the path of the light given initial conditions.
+By knowing the derivative of the $x$-coordinate of the light ray as a function of the index of refraction we can determine the path of the light given initial conditions.\\
+Since we took the square root we have found both a positive and negative solution for $\dot{x}$. Both solutions are equally correct, as the sign of $\dot{x}$ will be squared inside $F$ anyway. We will in our calculations in this problem use the positive solution, but we could just as well have used the negative one. We will later find that the sign chosen here will enter inside $\cosh{}$, since $\cosh{}$ is a symetric function around $x=0$ ($\cosh{(-x)}=\cosh{(x)})$ the sign will not matter for our final solution.
 \subsubsection*{b)}
-We will try and solve equation \eqref{2a} for $y(x)$ to explain the path of light close to the hot asphalt on a warm day. The closer the air is to the hot asphalt, the hotter the air is. When the air is hotter it becomes less dense, and thereby effecting the index of refraction. We will model this by linearizing the index of refraction
+We will try and solve equation \eqref{2a} for $y(x)$ to explain the path of light close to the asphalt on a warm day. The closer the air is to the hot asphalt, the hotter the air is. When the air is hotter it becomes less dense, and thereby effecting the index of refraction. We will model this by linearizing the index of refraction
 \begin{equation}
   n\left(y\right) = n_0\left(1+\gamma y\right),
 \end{equation}
@@ -374,7 +377,7 @@ Now we only have $y$ dependence on the right hand side, and $x$ dependence on th
 \begin{equation}
    \int \dif x = \int \frac{1}{\sqrt{\left(n_0\left(1+\gamma y\right)/K\right)^2-1}} \dif y.
 \end{equation}
-The left most integral is simply $x$, while to the left integral we will begin by substituting the ugly expression in the denominator
+The left most integral is simply $x$, while to solve the right integral we will begin by substituting away the ugly expression in the denominator
 \begin{equation}
   \frac{n_0\left(1+\gamma y\right)}{K} = u \rightarrow \frac{\dif u}{\dif y} = \frac{n_0\gamma}{K} \rightarrow \dif y = \frac{K}{n_0\gamma} \dif u. \label{u}
 \end{equation}
@@ -386,7 +389,7 @@ Where we can move $K/n_0\gamma$ outside the integral as they are constants. The 
 \begin{equation}
    x = \frac{K}{n_0\gamma}\int \frac{1}{\sqrt{u^2-1}} \dif u.
 \end{equation}
-which we can solve. To simplify we multiply the constants over to the other side, and use that this is known integral with solution equal to the inverse hyperbolic cosine
+which we can solve. To simplify we multiply the constants over to the other side, and use that this is known integral with solution equal to the inverse hyperbolic cosine (see f.ex K. Rottmann \cite{Rottmann})
 \begin{equation}
    \frac{n_0\gamma x}{K} = \cosh^{-1}{u} + C,
 \end{equation}
@@ -413,7 +416,7 @@ Where we have now found an expression for the path of the light ray, where $x_0$
 
 
 \subsubsection*{c)}
-To simplify the expression for the path of the light we will assume that the argument of $\cosh{}$ is small, such that we can Taylor expand. The first Taylor coefficients of $\cosh{}$ can be shown to be equal to
+To simplify the expression for the path of the light we will assume that the argument of $\cosh{}$ is small, such that we can Taylor expand. The first Taylor coefficients of $\cosh{}$ can be shown \cite{Rottmann} to be equal to
 \begin{equation}
   \cosh{x}\approx1+\frac{x^2}{2} + \frac{x^4}{24} + \ldots.
 \end{equation}
@@ -426,9 +429,9 @@ By doing the multiplication, and collecting terms with common denominator we can
    y = \frac{K-n_0}{\gamma n_0} + \frac{n_0\gamma}{2K}\left(x-x_0\right)^2.
 \end{equation}
 We recognize this expression as a parabola. This solution is shown graphically in figure \vref{fig:2c}. In this figure the axis is scaled such that we do not have to set values for $n_0$, $\gamma$ and $K$. In this figure we can easily interpret $x_0$. We see that when $x=x_0$ the light ray's altitude is at it's lowest. Thus $x_0$ is the $x-$coordinate corresponding to the minima of the altitude of the light ray, where the path turns around, and begin heading upwards after the decline. The origin of $x_0$ was the integration constant, and thereby the value of $x_0$ is determined through the initial conditions of the light ray.
-\begin{figure}
+\begin{figure}[h!]
   \centering
-  \includegraphics[width=0.65\textwidth]{../figures/2c.pdf}
+  \includegraphics[width=0.575\textwidth]{../figures/2c.pdf}
   \caption{The approximate path of the light ray is displayed for the scaled positions in the $x-y$-plane. We see that the path traces a parabola, where $x=x_0$ is the $x$-position corresponding to closest altitude to the ground.}
   \label{fig:2c}
 \end{figure}
@@ -439,15 +442,15 @@ We recognize this expression as a parabola. This solution is shown graphically i
   \caption{A qualitative drawing of what will happen when you look at hot asphalt. The eye intercepts the light ray when looking down at the asphalt. The red dotted line shows where the object is perceived to be located by the eye. The continuous red line shows the actual position of the object emitting the light. The eye is therefore observing something being \textit{reflected} in the asphalt, even though the light ray never touched the asphalt. In the figure we have indicated the position of the minima, which is $(K-n_0)/\gamma n_0$ away from the ground with $x$-coordinate equal to $x_0$.}
   \label{fig:2d}
 \end{figure}
-We have found an expression for the path of light, but this explain why the road may look like a mirror on a hot day? When looking down onto the hot asphalt the eye will intercept light which has traveled in the path of the parabola. The eye will therefore see an object in the asphalt which actually is above. It will look like the light ray was reflected in the asphalt, even though the light ray never touched the asphalt. This is displayed in a qualitative drawing in figure \vref{fig:2d}. In the drawing we have included the $x$ and $y$-coordinates of the local minima. From the figure the eye will believe the red cross is at the position following the dashed line, while the actual position of the red cross would be far above the asphalt. This effect is exactly the same as a mirror, we see an object \textit{inside} the mirror, while the actual source of the light is actually elsewhere.  In addition the image we will observe from this bendt light ray will be flipped.\par
-A real world example of this effect, called miraging (luftspeiling), is displayed in figure \vref{fig:2d2}. Here we see that instead of seeing black asphalt we are actually looking up to the sky. This is observed because of varying index of refraction resulting from the heat difference close to the asphalt. This picture is consistent with what our calculations tell us.
+We have found an expression for the path of light, but this explain why the road may look like a mirror on a hot day? When looking down onto the hot asphalt the eye will intercept light which has traveled in the path of the parabola. The eye will therefore see an object in the asphalt which is actually located above. It will look like the light ray was reflected in the asphalt, even though the light ray never touched the asphalt. This is displayed in a qualitative drawing in figure \vref{fig:2d}. This effect is exactly the same as a mirror, we see an object \textit{inside} the mirror, while the actual source of the light is actually elsewhere.\par
+A real world example of this effect, called miraging (luftspeiling), is displayed in figure \vref{fig:2d2}. Here we see that instead of seeing black asphalt we are actually looking up to the sky. This picture is consistent with what our calculations tell us.
 \begin{figure}
   \centering
   \includegraphics[width=0.7\textwidth]{../figures/picture.jpg}
-  \caption{Miraging observed on hot asphalt. Where we expect to see black asphalt we are actually seeing the sky. This is due to the bending of the light ray resulting from the temperature dependence on the index of refraction..}
+  \caption{Miraging observed on hot asphalt. Where we expect to see grey asphalt we are actually looking up into the sky. This is due to the bending of the light ray resulting from the temperature dependence on the index of refraction. Image source \cite{sixty_symbols}.}
   \label{fig:2d2}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%% Main document
-%\bibliography{citations.bib}
-%\bibliographystyle{plain}
+\bibliography{citations.bib}
+\bibliographystyle{plain}
 \end{document}

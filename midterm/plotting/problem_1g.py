@@ -60,7 +60,7 @@ x = np.linspace(-10, 10, N)
 y = np.linspace(-10, 10, N)
 X, Y = np.meshgrid(x, y)
 
-fig = plt.figure(num=None, figsize=(10, 5), dpi=80, facecolor='w', edgecolor='k')
+fig = plt.figure(num=None, figsize=(14, 5), dpi=80, facecolor='w', edgecolor='k')
 cbaxes = fig.add_axes([0.1, 0.1, 0.03, 0.8])  # This is the position for the colorbar
 
 plt.subplot(1,3,1)
@@ -85,6 +85,7 @@ cp = plt.contour(X, Y, X)
 cp = plt.contour(X, Y, Y, linestyles='dashed')
 plt.xlabel('$x$', fontsize=17)
 plt.tight_layout(pad=0.1, w_pad=0.1, h_pad=0.3)
+plt.axis("equal")
 
 plt.savefig("../figures/first.pdf", bbox_inches="tight")
 os.system('pdfcrop %s %s &> /dev/null &'%("../figures/first.pdf", "../figures/first.pdf"))
@@ -92,7 +93,7 @@ plt.show()
 
 
 
-plt.figure(num=None, figsize=(10, 5), dpi=80, facecolor='w', edgecolor='k')
+plt.figure(num=None, figsize=(14, 5), dpi=80, facecolor='w', edgecolor='k')
 
 plt.subplot(1,3,1)
 plt.title(r"u = $x^2-y^2$", fontsize=17)
@@ -115,6 +116,7 @@ cp = plt.contour(X, Y, X**2-Y**2)
 cp = plt.contour(X, Y, 2*X*Y, linestyles='dashed')
 plt.xlabel('$x$', fontsize=17)
 plt.tight_layout(pad=0.1, w_pad=0.1, h_pad=0.3)
+plt.axis("equal")
 
 plt.savefig("../figures/secound.pdf", bbox_inches="tight")
 os.system('pdfcrop %s %s &> /dev/null &'%("../figures/secound.pdf", "../figures/secound.pdf"))
@@ -129,7 +131,7 @@ X, Y = np.meshgrid(x, y)
 Z1 = np.cos(X)*np.sinh(Y)
 Z2 = np.sin(X)*np.cosh(Y)
 
-plt.figure(num=None, figsize=(12, 5), dpi=80, facecolor='w', edgecolor='k')
+plt.figure(num=None, figsize=(14, 5), dpi=80, facecolor='w', edgecolor='k')
 
 plt.subplot(1,3,1)
 plt.title(r"$u = \cos{x}\,\sinh{y}$", fontsize=17)
@@ -163,6 +165,7 @@ plt.title(r"continous $u$ - dashed $v$", fontsize=17)
 cp = plt.contour(X, Y, Z1)
 cp = plt.contour(X, Y, Z2, linestyles='dashed')
 plt.xlabel('$x$', fontsize=17)
+plt.axis("equal")
 
 ax = plt.gca()
 ax.xaxis.set_major_locator(plt.MultipleLocator(np.pi))
