@@ -101,7 +101,7 @@ We see that the $i$ outside of the integral cancels with the one inside, and by 
 \begin{equation}
   f(z_0) = \frac{1}{2\pi} \int_{0}^{2\pi} f(z_0+Re^{it}) \dif t. \label{answer1b}
 \end{equation}
-This expression will only work for circular contours around $z_0$. We can see that this rewrite gives an easier solution to the previous problem, where we imidiatly see that $\abs{f(z_0)}$ is bound by the largest value of $f(z)$ along the circle. The factor of $1/2\pi$ outside will cancel with the integral of $\dif t$ from $0$ to $2\pi$ once we factorize out $M$ and creating an upper bound.
+This expression will only work for circular contours around $z_0$. We can see that this rewrite gives an easier solution to the previous problem, where we immediately see that $\abs{f(z_0)}$ is bound by the largest value of $f(z)$ along the circle. The factor of $1/2\pi$ outside will cancel with the integral of $\dif t$ from $0$ to $2\pi$ once we factorize out $M$ and creating an upper bound.
 
 \subsubsection*{c)}
 We introduce the function $u(x, y)$, which is harmonic on and inside a circle of radius $R$ centred at $z_0=x_0+iy_0$. We can evaluate the value of $u$ at the center of the circle using Cauchy's integral formula \eqref{CIF}
@@ -266,7 +266,7 @@ This is displayed in figure \vref{fig:g3}, with the same order as the previous f
   \label{fig:g3}
 \end{figure}
 For the third graph in all figures we have used \texttt{plt.axis("equal")} in order for the lines to cross orthogonally. Otherwise the axis would be scaled differently such that two lines who were crossing orthogonally would not appear to do so. \\
-In the three figures mentiond we see that for the third graph the level curves of $u$ and $v$ always cross orthogonally. Where level curves of a function are the curves in the plane giving a constant value of that function. We know that $\nabla u$ is orthogonal to the level curves of $u$, and the same goes for $v$. Thus when we observe that the level curves of $u$ and $v$ are orthogonal, the gradient of $u$ and $v$ must also be orthogonal. The level curves shown in figure \ref{fig:g1}, \ref{fig:g2} and \ref{fig:g3} shows that our result \eqref{ortogonality_harmo} is consistent with the three funtions tested here.
+In the three figures mentioned we see that for the third graph the level curves of $u$ and $v$ always cross orthogonally. Where level curves of a function are the curves in the plane giving a constant value of that function. We know that $\nabla u$ is orthogonal to the level curves of $u$, and the same goes for $v$. Thus when we observe that the level curves of $u$ and $v$ are orthogonal, the gradient of $u$ and $v$ must also be orthogonal. The level curves shown in figure \ref{fig:g1}, \ref{fig:g2} and \ref{fig:g3} shows that our result \eqref{ortogonality_harmo} is consistent with the three functions tested here.
 \subsection*{Part B: A contour integral}
 \subsubsection*{a)}
 We want to solve the contour integral
@@ -359,7 +359,7 @@ We flip the fractions back and take the square root on both sides leaving us wit
    \dot{x} = \pm\frac{K}{\sqrt{n^2-K^2}}. \label{2a}
 \end{equation}
 By knowing the derivative of the $x$-coordinate of the light ray as a function of the index of refraction we can determine the path of the light given initial conditions.\\
-Since we took the square root we have found both a positive and negative solution for $\dot{x}$. Both solutions are equally correct, as the sign of $\dot{x}$ will be squared inside $F$ anyway. We will in our calculations in this problem use the positive solution, but we could just as well have used the negative one. We will later find that the sign chosen here will enter inside $\cosh{}$, since $\cosh{}$ is a symetric function around $x=0$ ($\cosh{(-x)}=\cosh{(x)})$ the sign will not matter for our final solution.
+Since we took the square root we have found both a positive and negative solution for $\dot{x}$. Both solutions are equally correct, as the sign of $\dot{x}$ will be squared inside $F$ anyway. We will in our calculations in this problem use the positive solution, but we could just as well have used the negative one. We will later find that the sign chosen here will enter inside $\cosh{}$, since $\cosh{}$ is a symmetric function around $x=0$ ($\cosh{(-x)}=\cosh{(x)})$ the sign will not matter for our final solution.
 \subsubsection*{b)}
 We will try and solve equation \eqref{2a} for $y(x)$ to explain the path of light close to the asphalt on a warm day. The closer the air is to the hot asphalt, the hotter the air is. When the air is hotter it becomes less dense, and thereby effecting the index of refraction. We will model this by linearizing the index of refraction
 \begin{equation}
