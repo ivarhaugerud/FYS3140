@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.9.8)  13 MAR 2019 22:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.9.8)  14 MAR 2019 08:44
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -2383,26 +2383,26 @@ LaTeX Font Info:    Font shape `U/lasy/b/n' in size <9> not available
 (Font)              Font shape `U/lasy/m/n' tried instead on input line 128.
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <7> not available
 (Font)              Font shape `U/lasy/m/n' tried instead on input line 128.
-[4] [5] [6] [7] <../figures/first.pdf, id=120, 1007.765pt x 355.3275pt>
+[4] [5] [6] [7] <../figures/first.pdf, id=121, 1007.765pt x 355.3275pt>
 File: ../figures/first.pdf Graphic file (type pdf)
 <use ../figures/first.pdf>
 Package pdftex.def Info: ../figures/first.pdf used on input line 241.
 (pdftex.def)             Requested size: 438.17227pt x 154.49571pt.
-<../figures/secound.pdf, id=122, 1007.765pt x 354.32375pt>
+<../figures/secound.pdf, id=123, 1007.765pt x 354.32375pt>
 File: ../figures/secound.pdf Graphic file (type pdf)
 <use ../figures/secound.pdf>
 Package pdftex.def Info: ../figures/secound.pdf used on input line 252.
 (pdftex.def)             Requested size: 438.17227pt x 154.0593pt.
-<../figures/third.pdf, id=124, 997.7275pt x 353.32pt>
+<../figures/third.pdf, id=125, 1005.7575pt x 353.32pt>
 File: ../figures/third.pdf Graphic file (type pdf)
 <use ../figures/third.pdf>
 Package pdftex.def Info: ../figures/third.pdf used on input line 263.
-(pdftex.def)             Requested size: 438.17227pt x 155.16476pt.
+(pdftex.def)             Requested size: 438.17227pt x 153.92477pt.
 [8 <../figures/first.pdf>] [9 <../figures/secound.pdf> <../figures/third.pdf
 
 pdfTeX warning: pdflatex (file ../figures/third.pdf): PDF inclusion: multiple p
 dfs with page group included in a single page
->] <../figures/contour_and_sing.pdf, id=257, 611.28375pt x 416.55624pt>
+>] <../figures/contour_and_sing.pdf, id=258, 611.28375pt x 416.55624pt>
 File: ../figures/contour_and_sing.pdf Graphic file (type pdf)
 <use ../figures/contour_and_sing.pdf>
 Package pdftex.def Info: ../figures/contour_and_sing.pdf used on input line 282
@@ -2429,17 +2429,17 @@ l.424 ...amma}{K}\right)^4\right) \right)-1\right)
                                                   
 I'm ignoring a \right that had no matching \left.
 
-<../figures/2c.pdf, id=341, 394.47375pt x 306.14375pt>
+<../figures/2c.pdf, id=342, 394.47375pt x 306.14375pt>
 File: ../figures/2c.pdf Graphic file (type pdf)
 <use ../figures/2c.pdf>
 Package pdftex.def Info: ../figures/2c.pdf used on input line 433.
 (pdftex.def)             Requested size: 251.94771pt x 195.52959pt.
-[15] <../figures/drawing.pdf, id=356, 405.515pt x 274.02374pt>
+[15] <../figures/drawing.pdf, id=357, 405.515pt x 274.02374pt>
 File: ../figures/drawing.pdf Graphic file (type pdf)
 <use ../figures/drawing.pdf>
 Package pdftex.def Info: ../figures/drawing.pdf used on input line 440.
 (pdftex.def)             Requested size: 293.57462pt x 198.38406pt.
-<../figures/picture.jpg, id=359, 481.8pt x 361.35pt>
+<../figures/picture.jpg, id=360, 481.8pt x 361.35pt>
 File: ../figures/picture.jpg Graphic file (type jpg)
 <use ../figures/picture.jpg>
 Package pdftex.def Info: ../figures/picture.jpg used on input line 448.
@@ -2469,14 +2469,11 @@ Package rerunfilecheck Info: File `midterm_FYS3140.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package rerunfilecheck Info: File `midterm_FYS3140.brf' has not changed.
 (rerunfilecheck)             Checksum: E6CFA8AD2866A71B3D7A1321D680C77F;155.
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
  31971 strings out of 492995
  595374 string characters out of 6132705
- 656105 words of memory out of 5000000
+ 656213 words of memory out of 5000000
  34805 multiletter control sequences out of 15000+600000
  79430 words of font info for 170 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -2497,10 +2494,10 @@ c/kpfonts/jkpmia.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/kpf
 onts/jkpmn8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/kpfonts
 /jkpsy.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/latx
 font/line10.pfb>
-Output written on midterm_FYS3140.pdf (18 pages, 9372582 bytes).
+Output written on midterm_FYS3140.pdf (18 pages, 9381817 bytes).
 PDF statistics:
- 528 PDF objects out of 1000 (max. 8388607)
- 370 compressed objects within 4 object streams
+ 529 PDF objects out of 1000 (max. 8388607)
+ 371 compressed objects within 4 object streams
  127 named destinations out of 1000 (max. 500000)
  48 words of extra memory for PDF output out of 10000 (max. 10000000)
 

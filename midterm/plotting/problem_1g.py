@@ -131,7 +131,7 @@ X, Y = np.meshgrid(x, y)
 Z1 = np.cos(X)*np.sinh(Y)
 Z2 = np.sin(X)*np.cosh(Y)
 
-plt.figure(num=None, figsize=(14, 5), dpi=80, facecolor='w', edgecolor='k')
+fig = plt.figure(num=None, figsize=(14, 5), dpi=80, facecolor='w', edgecolor='k')
 
 plt.subplot(1,3,1)
 plt.title(r"$u = \cos{x}\,\sinh{y}$", fontsize=17)
@@ -165,7 +165,9 @@ plt.title(r"continous $u$ - dashed $v$", fontsize=17)
 cp = plt.contour(X, Y, Z1)
 cp = plt.contour(X, Y, Z2, linestyles='dashed')
 plt.xlabel('$x$', fontsize=17)
+limits = 0.9*2*np.pi
 plt.axis("equal")
+plt.axis([-limits, limits, -limits, limits])
 
 ax = plt.gca()
 ax.xaxis.set_major_locator(plt.MultipleLocator(np.pi))
