@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.9.8)  14 MAR 2019 08:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.9.8)  14 MAR 2019 09:20
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -2184,50 +2184,7 @@ Package: ntheorem 2011/08/15 1.33
 \c@definition=\count278
 \c@proof=\count279
 \c@elimination@steps=\count280
-) (./notation.tex
-
-! LaTeX Error: Command \tr already defined.
-               Or name \end... illegal, see p.192 of the manual.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.23 \newcommand{\tr}[0]{\text{tr}}
-                                    % trace
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: Command \rank already defined.
-               Or name \end... illegal, see p.192 of the manual.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.28 \newcommand{\rank}[0]{\mathrm{rk}}
-                                        % rank
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: Command \var already defined.
-               Or name \end... illegal, see p.192 of the manual.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.36 \newcommand{\var}{\mathds{V}}
-                                   % variance
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-) (./midterm_FYS3140.aux)
+) (./notation.tex) (./midterm_FYS3140.aux)
 \openout1 = `midterm_FYS3140.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/jkp/m/it on input line 32.
@@ -2408,38 +2365,18 @@ File: ../figures/contour_and_sing.pdf Graphic file (type pdf)
 Package pdftex.def Info: ../figures/contour_and_sing.pdf used on input line 282
 .
 (pdftex.def)             Requested size: 350.53915pt x 238.86964pt.
-[10] [11 <../figures/contour_and_sing.pdf>] [12] [13] [14]
-
-Package natbib Warning: Citation `2b' on page 15 undefined on input line 422.
-
-! Missing delimiter (. inserted).
-<to be read again> 
-                   +
-l.424 ...a}{K}\left(x-x_0\right)\right)^2 \right +
-                                                   \bigO\left(\left(\frac{n_...
-I was expecting to see something like `(' or `\{' or
-`\}' here. If you typed, e.g., `{' instead of `\{', you
-should probably delete the `{' by typing `1' now, so that
-braces don't get unbalanced. Otherwise just proceed.
-Acceptable delimiters are characters whose \delcode is
-nonnegative, or you can use `\delimiter <delimiter code>'.
-
-! Extra \right.
-l.424 ...amma}{K}\right)^4\right) \right)-1\right)
-                                                  
-I'm ignoring a \right that had no matching \left.
-
-<../figures/2c.pdf, id=342, 394.47375pt x 306.14375pt>
+[10] [11 <../figures/contour_and_sing.pdf>] [12] [13] [14] <../figures/2c.pdf, 
+id=343, 394.47375pt x 306.14375pt>
 File: ../figures/2c.pdf Graphic file (type pdf)
 <use ../figures/2c.pdf>
 Package pdftex.def Info: ../figures/2c.pdf used on input line 433.
 (pdftex.def)             Requested size: 251.94771pt x 195.52959pt.
-[15] <../figures/drawing.pdf, id=357, 405.515pt x 274.02374pt>
+[15] <../figures/drawing.pdf, id=358, 405.515pt x 274.02374pt>
 File: ../figures/drawing.pdf Graphic file (type pdf)
 <use ../figures/drawing.pdf>
 Package pdftex.def Info: ../figures/drawing.pdf used on input line 440.
 (pdftex.def)             Requested size: 293.57462pt x 198.38406pt.
-<../figures/picture.jpg, id=360, 481.8pt x 361.35pt>
+<../figures/picture.jpg, id=361, 481.8pt x 361.35pt>
 File: ../figures/picture.jpg Graphic file (type jpg)
 <use ../figures/picture.jpg>
 Package pdftex.def Info: ../figures/picture.jpg used on input line 448.
@@ -2453,9 +2390,6 @@ other resource which is no dict (key 'ProcSets', type <array>); ignored.
 \openout7 = `midterm_FYS3140.brf'.
 
 )
-
-Package natbib Warning: There were undefined citations.
-
 \tf@thm=\write8
 \openout8 = `midterm_FYS3140.thm'.
 
@@ -2471,10 +2405,10 @@ Package rerunfilecheck Info: File `midterm_FYS3140.brf' has not changed.
 (rerunfilecheck)             Checksum: E6CFA8AD2866A71B3D7A1321D680C77F;155.
  ) 
 Here is how much of TeX's memory you used:
- 31971 strings out of 492995
- 595374 string characters out of 6132705
- 656213 words of memory out of 5000000
- 34805 multiletter control sequences out of 15000+600000
+ 31970 strings out of 492995
+ 595370 string characters out of 6132705
+ 656209 words of memory out of 5000000
+ 34804 multiletter control sequences out of 15000+600000
  79430 words of font info for 170 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,15n,77p,10406b,452s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2494,10 +2428,10 @@ c/kpfonts/jkpmia.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/kpf
 onts/jkpmn8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/kpfonts
 /jkpsy.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/latx
 font/line10.pfb>
-Output written on midterm_FYS3140.pdf (18 pages, 9381817 bytes).
+Output written on midterm_FYS3140.pdf (18 pages, 9381701 bytes).
 PDF statistics:
- 529 PDF objects out of 1000 (max. 8388607)
- 371 compressed objects within 4 object streams
+ 530 PDF objects out of 1000 (max. 8388607)
+ 372 compressed objects within 4 object streams
  127 named destinations out of 1000 (max. 500000)
  48 words of extra memory for PDF output out of 10000 (max. 10000000)
 
