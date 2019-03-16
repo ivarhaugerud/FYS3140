@@ -386,19 +386,36 @@ The left most integral is simply $x$, while to solve the right integral we will 
 \begin{equation}
   \frac{n_0\left(1+\gamma y\right)}{K} = u \rightarrow \frac{\dif u}{\dif y} = \frac{n_0\gamma}{K} \rightarrow \dif y = \frac{K}{n_0\gamma} \dif u. \label{u}
 \end{equation}
-We put in for $u$ and $\dif u$ in the integral, thus becoming
+We put in for $u$ and $\dif u$ in the integral, becoming
 \begin{equation}
    x = \int \frac{1}{\sqrt{u^2-1}} \,\,\frac{K}{n_0\gamma} \dif u,
 \end{equation}
-Where we can move $K/n_0\gamma$ outside the integral as they are constants. The integral we are left with is therefore simplified down to
+Where we can move $K/n_0\gamma$ outside the integral, since they are constants, and multiply them over to the other side of the equal sign. The integral we are left with is therefore simplified down to
 \begin{equation}
-   x = \frac{K}{n_0\gamma}\int \frac{1}{\sqrt{u^2-1}} \dif u.
+   \frac{n_0\gamma x}{K} = \int \frac{1}{\sqrt{u^2-1}} \dif u.
 \end{equation}
-which we can solve. To simplify we multiply the constants over to the other side, and use that this is known integral with solution equal to the inverse hyperbolic cosine (see e.g. K. Rottmann \cite{Rottmann})
+To solve the integral we begin by using a secound substitution through $u$
 \begin{equation}
-   \frac{n_0\gamma x}{K} = \cosh^{-1}{u} + C,
+  u = \cosh{\xi} \rightarrow \dv{u}{\xi} = \sinh{\xi} \rightarrow \dif u = \sinh{\xi} \, \dif \xi. \label{substitution1}
 \end{equation}
-where $C$ is an integration constant. We do get an integration constant for both integrals, but these two constants can be added together to one. To singel out $u$ we move $C$ over to the other side and take $\cosh{}$ on both sides of the equal sign cancel the inverse, giving us
+We insert this for $u$ and $\dif u$ in the integral
+\begin{equation}
+   \frac{xn_0\gamma}{K} = \int \frac{\sinh{\xi}}{\sqrt{\cosh^2{(\xi)}-1}} \dif \xi.
+\end{equation}
+Here we can use the identity of hyperbolic functions
+\begin{equation}
+\cosh^2{x} -1 = \sinh^2{x}
+\end{equation}
+to simplify our integral
+\begin{equation}
+   \frac{xn_0\gamma}{K} = \int \frac{\sinh{\xi}}{\sinh{\xi}} \dif \xi = \int \dif \xi = \xi + C,
+\end{equation}
+where $C$ is an integration constant.
+To find $u$ as a function $\xi$ we use the definition of $\xi$ \eqref{substitution1} and solv for $u$, finding that $\xi = \cosh^{-1}{u}$, giving us
+\begin{equation}
+   \frac{n_0\gamma x}{K} = \cosh^{-1}{u} + C.
+\end{equation}
+We do get an integration constant for both integrals, but these two constants can be added together to one. To singel out $u$ we move $C$ over to the other side and take $\cosh{}$ on both sides of the equal sign cancel the inverse, giving us
 \begin{equation}
    u = \cosh{\left(\frac{n_0\gamma x}{K}-C\right)}.
 \end{equation}
