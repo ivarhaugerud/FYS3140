@@ -290,7 +290,7 @@ With this rewrite we can see that we have singularities at $z=0$, $z=4$ and $z=-
   \label{fig:1Ba}
 \end{figure}
 We see from the figure that there is only one singularity inside the contour, and no singularities on the contour. This singularity is at $z=4$, and we can see that it is a simple pole since it is of order $1$, but we have to be careful to check that this is not a removable singularity. We must check that for $z=4$ the sine factor is not equal to zero, which could have removed the singularity. For $z=4$ the sine-argument is $5\pi/20=\pi/4$, which will make the sine-factor equal to $\sqrt{2}$. Thus the singularity at $z=4$ is not removable.\\
-To calculate the integral we only need to find the integrand's residue at $z=4$. We find the residue by using the following procedure
+There are many ways to calculate the integral, we could for example use Cauchy's integral formula \eqref{CIF}, or find the integrand's residue at $z=4$. We choose the latter, and find the residue by the following procedure
 \begin{equation}
   \text{Res}(z_0) = \lim_{z \to z_0} \left[(z-z_0)f(z)\right],
 \end{equation}
