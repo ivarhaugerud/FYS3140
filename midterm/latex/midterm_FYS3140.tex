@@ -7,6 +7,8 @@
 \usepackage{commath}
 \usepackage{amsmath}
 \usepackage{tikz}
+\usepackage{gensymb}
+
 %\usepackage{cite}
 \usetikzlibrary{shapes.misc}
 
@@ -251,7 +253,7 @@ We repeat this for the function
 \begin{equation}
   f(z) = z^2 = x^2-y^2+2ixy \rightarrow u=x^2-y^2\qquad v=2xy.
 \end{equation}
-This is displayed in figure \vref{fig:g2}, with the same order as the previous figure. We can again see in the right most figure that the dashed and continuous lines are orthogonal, as they should be.\par
+This is displayed in figure \vref{fig:g2}, with the same order as the previous figure. We can again see in the right most figure that the dashed and continuous lines cross orthogonally, as they should do. But we see one exception at the origin where the lines cross at a $45\degree$ angle. I believe this occurs due to limitations of the contour plot numerically, the lines are actually crossing orthogonally, but we have to zoom in to see it. Therefore it is not visible from a distance in our figure, with a finite number of points along the $x$ and $y$ axis.\par
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{../figures/secound.pdf}
@@ -262,7 +264,7 @@ Lastly we do this for the function we have just studied
 \begin{equation}
   f(z) = \sin{z} = \sin{x}\cosh{y}+i\cos{x}\sinh{y} \rightarrow u=\sin{x}\cosh{y}\qquad v=\cos{x}\sinh{y}.
 \end{equation}
-This is displayed in figure \vref{fig:g3}, with the same order as the previous figure. We can again see in the right most figure that the dashed and continuous lines are orthogonal, as they should be.\par
+This is displayed in figure \vref{fig:g3}, with the same order as the previous figure. We can again see in the right most figure that the dashed and continuous lines cross orthogonally, as they should do.\par
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{../figures/third.pdf}
@@ -270,7 +272,7 @@ This is displayed in figure \vref{fig:g3}, with the same order as the previous f
   \label{fig:g3}
 \end{figure}
 For the third graph in all figures we have used \texttt{plt.axis("equal")} in order for the lines to cross orthogonally. Otherwise the axis would be scaled differently such that two lines which were crossing orthogonally would not appear to do so. \\
-In the three figures mentioned we see that for the third graph the level curves of $u$ and $v$ always cross orthogonally. Where level curves of a function are the curves in the plane giving a constant value of that function. We know that $\nabla u$ is orthogonal to the level curves of $u$, and the same goes for $v$. Thus when the level curves of $u$ and $v$ are orthogonal, the gradient of $u$ and $v$ must also be orthogonal. All the level curves shown in figure \ref{fig:g1}, \ref{fig:g2} and \ref{fig:g3} are crossing orthogonally, this is consistent with the orthogonality of the gradients of harmonic conjugates \eqref{ortogonality_harmo} previously derived.
+In the three figures mentioned we see that for the third graph the level curves of $u$ and $v$ always cross orthogonally. Where level curves of a function are the curves in the plane giving a constant value of that function. We know that $\nabla u$ is orthogonal to the level curves of $u$, and the same goes for $v$. Thus when the level curves of $u$ and $v$ cross orthogonally, the gradient of $u$ and $v$ must also be orthogonal. All the level curves shown in figure \ref{fig:g1}, \ref{fig:g2} and \ref{fig:g3} are crossing orthogonally, this is consistent with the orthogonality of the gradients of harmonic conjugates \eqref{ortogonality_harmo} previously derived.
 
 \subsection*{Part B: A contour integral}
 \subsubsection*{a)}
@@ -394,7 +396,7 @@ Where we can move $K/n_0\gamma$ outside the integral, since they are constants, 
 \begin{equation}
    \frac{n_0\gamma x}{K} = \int \frac{1}{\sqrt{u^2-1}} \dif u.
 \end{equation}
-To solve the integral we begin by using a secound substitution through $u$
+To solve the integral we begin by using a second substitution through $u$
 \begin{equation}
   u = \cosh{\xi} \rightarrow \dv{u}{\xi} = \sinh{\xi} \rightarrow \dif u = \sinh{\xi} \, \dif \xi. \label{substitution1}
 \end{equation}
@@ -411,7 +413,7 @@ to simplify our integral
    \frac{xn_0\gamma}{K} = \int \frac{\sinh{\xi}}{\sinh{\xi}} \dif \xi = \int \dif \xi = \xi + C,
 \end{equation}
 where $C$ is an integration constant.
-To find $u$ as a function $\xi$ we use the definition of $\xi$ \eqref{substitution1} and solv for $u$, finding that $\xi = \cosh^{-1}{u}$, giving us
+To find $u$ as a function $\xi$ we use the definition of $\xi$ \eqref{substitution1} and solve for $u$, finding that $\xi = \cosh^{-1}{u}$, giving us
 \begin{equation}
    \frac{n_0\gamma x}{K} = \cosh^{-1}{u} + C.
 \end{equation}

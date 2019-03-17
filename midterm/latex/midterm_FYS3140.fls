@@ -152,6 +152,8 @@ INPUT /usr/local/texlive/2017/texmf-dist/tex/generic/pgf/libraries/pgflibraryplo
 INPUT /usr/local/texlive/2017/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
 INPUT /usr/local/texlive/2017/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
 INPUT /usr/local/texlive/2017/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/was/gensymb.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/was/gensymb.sty
 INPUT /usr/local/texlive/2017/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.misc.code.tex
 INPUT /usr/local/texlive/2017/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.misc.code.tex
 INPUT /usr/local/texlive/2017/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.misc.code.tex
@@ -400,6 +402,11 @@ INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/base/ulasy.fd
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/latex-fonts/lasy10.tfm
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/latex-fonts/lasy9.tfm
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/latex-fonts/lasy7.tfm
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/ts1bch.fd
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/ts1bch.fd
+INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/bitstrea/charter/bchr8c.tfm
+INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/bitstrea/charter/bchr8c.tfm
+INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/bitstrea/charter/bchr8c.tfm
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/bitstrea/charter/bchb7t.tfm
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/bitstrea/charter/bchro7t.tfm
 INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/kpfonts/ot1jkpss.fd
@@ -445,6 +452,9 @@ INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/kpfonts/jkpbexa.tfm
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/kpfonts/jkpbexa.tfm
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/kpfonts/jkpbexa.tfm
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/latex-fonts/lasyb10.tfm
+INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/bitstrea/charter/bchb8c.tfm
+INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/bitstrea/charter/bchb8c.tfm
+INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/bitstrea/charter/bchb8c.tfm
 INPUT ../figures/first.pdf
 INPUT ../figures/first.pdf
 INPUT ../figures/first.pdf
@@ -489,6 +499,9 @@ INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/kpfonts/jkpexa.tfm
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/latex-fonts/lasy10.tfm
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/latex-fonts/lasy8.tfm
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/latex-fonts/lasy6.tfm
+INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/bitstrea/charter/bchr8c.tfm
+INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/bitstrea/charter/bchr8c.tfm
+INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/bitstrea/charter/bchr8c.tfm
 INPUT ../figures/secound.pdf
 INPUT ../figures/secound.pdf
 INPUT ../figures/secound.pdf
@@ -496,6 +509,7 @@ INPUT ../figures/third.pdf
 INPUT ../figures/third.pdf
 INPUT ../figures/third.pdf
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/cm/cmtt12.tfm
+INPUT /usr/local/texlive/2017/texmf-dist/fonts/vf/bitstrea/charter/bchr8c.vf
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/vf/bitstrea/charter/bchb7t.vf
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/bitstrea/charter/bchb8r.tfm
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/vf/bitstrea/charter/bchr7t.vf
