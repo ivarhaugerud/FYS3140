@@ -204,7 +204,7 @@ $I_{xy} = -\sum_{i}m_ix_iy_i = - \int xy \diff m$.
 \[
 \delta_{ij}=\begin{cases}
 1 & \mbox{ if } i=j \\
-0 & \mbox{ if } i\neq j \\
+0 & \mbox{ if } i\neq j
 \end{cases}\]
 \[
 \epsilon_{ijk}=\begin{cases}
@@ -227,6 +227,25 @@ a_{31} & a_{32} & a_{33}
 
 $$ \left( \bm{\nabla} \cross \bm{V}\right)_i = \epsilon_{ijk}\pdv{V_k}{x_j}$$
 $$ \left( \bm{U} \cross \bm{V}\right)_i = \epsilon_{ijk}U_jV_k$$
+
+\subsubsection*{Dirac-delta and Heaviside step function}
+\[
+\delta(x-a)=\begin{cases}
+\infty, & x=a \\
+0, &  x\neq a
+\end{cases}\]
+$$ \int_{-\infty}^{\infty} \delta(x-a) \diff x = 1$$
+$$ \int_{-\infty}^{\infty} f(x) \delta(x-a) \diff x = f(a)$$
+$$ \delta(ax) = \frac{1}{\abs{a}}\delta(x)$$
+\[
+H(t-a)=\begin{cases}
+0, & t<a\\
+1, & t>a
+\end{cases}\]
+$$ H'(x-a) = \delta(x-a) $$
+$$ \int_{-\infty}^{\infty} f(x) \delta^{(n)}(x-a) \diff x = (-1)^{(n)}f(a)$$
+
+
 
 \begin{mdframed}
 \subsection*{Calculus of variations}
@@ -320,6 +339,32 @@ $$ w + \left(\frac{2u'}{u}+P\right)w = \frac{R}{u}$$
 Solve this equation by integrating factors and find $v$ by $v(x) = \int w(x) \diff x$, no integration constant, get full solution by multiplying $y_p(x) = u(x)v(x)$.
 
 \subsubsection*{\small Variation of parameters}
+Know two linearly independent homogeneous soulutions $y_1$ and $y_2$, the particular solution is then
+$$ y_p(x) = -y_1 \int \frac{y_2(x)R(x)}{W(x)} \diff x + y_2 \int \frac{y_1(x) R(x)}{W(x)}\diff x$$
+where $W$ is the Wronskian $W(x) = \begin{vmatrix} y_1(x)  & y_2(x)\\ y_1'(x) & y_2'(x) \end{vmatrix}.$ Rember to write the DE in standard form before reading of $R(x)$. \\
+Derived from $y_p(x) = f_1(x)y_1(x) + f_2(x)y_2(x)$ and impose condition $f_1'y_1 + f_2'y_2 = 0$ to make terms in $y_p'$ vanish. Insert this into DE and use that $y_1$ and $y_2$ satisfy homogeneous equation to make two terms dissapear. This gives us one equation, which in combination with out imposed condition ($f_1'y_1 + f_2'y_2 = 0$) gives us the expression for $f_1$ and $f_2$ which we use to find $y_p$ from $y_p(x) = f_1(x)y_1(x) + f_2(x)y_2(x)$.
+
+\subsubsection*{\small Greens functions}
+$$ \left(\underbrace{\dv[2]{}{x} + P(x)\dv{}{x} + Q(x)}_{D}\right)y = R(x) $$
+Assume given DE, homogeneous solution, and BC. LHS and BCs give us the Greens function $G(x,z)$ which gives us $y_h + y_p$ for any $R(x)$ with no arbritrary constants. Begin by writing DE as $Dy(x)=R(x)$, exists $D^{-1}$, then $y(x) = D^{-1}R(x)$, this is an integral $$y(x) = \int_a^b G(x,z)R(z)\diff z, \qquad a \leq x, z \leq b$$
+We apply $D_x$ to both sides, giving us
+$$D_xy(x) = \int_a^b \underbrace{D_xG(x,z)}_{\delta(x-z)}R(z)\diff z$$
+Have to solve
+$$ D_xG(x,z) = \delta(x-z)$$
+The Greens function satsify the original DE, but with $R(x) = \delta(x-z)$. We have restrictions on $G(x,z)$
+\begin{itemize}
+  \item $G(x,z)$ must satisfy the given BCs given for $y(x)$.\\ Ex: $y(a)=y(b)=0 \rightarrow G(a,z) = G(b,z)=0$
+  \item $G(x,z)$ is continous at $x=z$.
+  \item We have a singularity at $x=z$, we integrate the DE for $G(x,z)$ from $z-\epsilon$ to $z+\epsilon$, this gives us that $\dv{G(x,z)}{x}\Big|_{z-\epsilon}^{z+\epsilon} = 1$
+\end{itemize}
+Begin with $DG(x,z)=\delta(x-z)$. For $x<z$ and $x>z$ we get different solutions, which both are equal to the homogeneous solution, but their coefficients are different and dependent on $z$. Use the boundary conditions, the continuity of $G$ at $x=z$, and the discontinuty of it's derivative $\dv{G(x,z)}{x}\Big|_{z-\epsilon}^{z+\epsilon} = 1$ to find $G(x,z)$ for $x<z$ and $x>z$ and solve the integral for $y(x)$.
+
+
+
+
+
+
+
 
 
 \end{multicols*}
