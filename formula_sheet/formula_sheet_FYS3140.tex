@@ -1,0 +1,293 @@
+
+
+
+\documentclass[a4paper, 10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{babel, textcomp, color, amssymb, tikz, subfig, float,esint}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{bm}
+\usepackage{gensymb}
+\usepackage{amsmath}
+\DeclareMathOperator{\arcsinh}{arcsinh}
+\DeclareMathOperator{\arctanh}{arctanh}
+
+%Makes \diff into a straight d in math mode
+\newcommand*\diff{\mathop{}\!\mathrm{d}}
+\newcommand*\Diff[1]{\mathop{}\!\mathrm{d^#1}}
+
+%can box titles
+\usepackage{mdframed}
+
+\usepackage{physics}
+\usepackage{tikz}
+\usepackage{pgfplots}
+
+\newcommand{\addPLOT}[4]{
+\addplot [domain=#1:#2,samples=200,color=#3,]{#4};}
+\newcommand{\addCOORDS}[1]{\addplot coordinates {#1};}
+\newcommand{\addDRAW}[1]{\draw #1;}
+\newcommand{\addNODE}[2]{ \node at (#1) {#2};}
+
+%		\PLOTS{x}{y}{left}{
+%			\ADDPLOT{x^2}{-2}{2}{blue}
+%			\ADDCOORDS{(0,1)(1,1)(1,2)}
+%		}
+
+
+
+
+\definecolor{svar}{RGB}{0,0,0}
+\definecolor{opgavetekst}{RGB}{109,109,109}
+\definecolor{blygraa}{RGB}{44,52,59}
+
+\hoffset = -60pt
+\voffset = -95pt
+\oddsidemargin = 0pt
+\topmargin = 0pt
+\textheight = 0.97\paperheight
+\textwidth = 0.97\paperwidth
+
+\begin{document}
+\tiny
+\begin{multicols*}{3}
+\begin{mdframed}
+\subsection*{Complex analysis}
+\end{mdframed}
+\subsubsection*{Definitions}
+\begin{align*}
+  \sin{z} &= \frac{1}{2i}\left(e^{iz}-e^{-iz}\right)\quad
+  \cos{z} = \frac{1}{2}\left(e^{iz}+e^{-iz}\right)\\
+  \sinh{z} &= \frac{1}{2}\left(e^{z}-e^{-z}\right)\qquad
+  \cosh{z} = \frac{1}{2}\left(e^{z}+e^{-z}\right)
+\end{align*}
+
+\subsubsection*{Roots}
+\begin{align*}
+  \left(e^{i\theta})^n &= \left(\cos{\theta} + i \sin{\theta})^n\right) = \cos{n\theta} + i\sin{n\theta}\\
+  z^{1/n} &= \left(re^{i\theta})^{1/n} = r^{1/n}e^{i\theta/n}.\\
+  \ln{z} &= \ln{re^{i\theta}} = \ln{r} + i\theta.
+\end{align*}
+
+
+\subsubsection*{Complex series}
+\textbf{Comparison test:}If $\abs{Z_n} \leq a_n$ and $\sum a_n$ converges, then $\sum z_n$ converges.\\
+\textbf{Ratio test:} If $\abs{\frac{z_{n+1}}{z_n}} \leq k$ for all $n$ sufficiently large, and $k<1$, then $\sum z_n$ converges absolutely.\\
+\textbf{Divergerence check:} If $z_n$ does not converge towards zero, then $\sum z_n$ diverges; the complex and imaginary part will diverge seperately.
+\textbf{Complex power series:} The ratio test gives convergence for $\abs{z-z_0} < \abs{\frac{a_n}{a_{n+1}}} = R$ as $n\rightarrow \infty$. We call $R$ radius of convergence, and $\abs{z-z_0} < R$ for the disk of convergence.
+
+\subsubsection*{Cauchy-Riemann equations}
+\textbf{Analytic:} $\leftrightarrow$ Has a unique derivative at wanted region. If a function is analytic it has unique derivatives of all orders and is a solution of Laplace's equation.\\
+\textbf{Regular point:} A point where $f(z)$ is analytic.\\
+\textbf{Singular point} or \textbf{Singularity:} A point where $f(z)$ is not analytic.\\
+\textbf{Isolated singularity:} If $f(z)$ is analytic in a small circle around, but not at, the given point.\\
+CR-eq. is a tool to check if a function $f(z) = u(x,y) +iv(x,y)$ is analytic in a region by requiering existance of a unique derivative
+\begin{align*}
+  \pdv{u}{x} &= \pdv{v}{y} \qquad\quad \pdv{v}{x} = - \pdv{u}{y} \\
+  \pdv{u}{r} &= \frac{1}{r}\pdv{v}{\theta} \qquad \frac{1}{r}\pdv{u}{\theta} = - \pdv{v}{r}
+\end{align*}
+must be satisfied in that region.\\
+If a function is analytic within some region it can be expanded as a Taylor series about any point $z_0$ inside the region. The power series converges inside a circle about $z_0$ that extends to the nearest singular point.\\
+\textbf{Harmonic functions:} Are solutions to the 2D Laplace equation $\nabla^2\phi = 0$. If a function $f(z) = u(x,y) +iv(x,y)$ is \textsc{analytic} in a region, then $u$ and $v$ are harmonic functions.\\
+\textbf{Harmonic conjugate:} Given a harmonic function $u(x,y)$, there excists another harmonic functions $v(x,y)$ such that $u+iv$ is an analytic function of $z$ in that region; $v$ is called the \textsc{Harmonic conjugate}.
+\begin{itemize}
+  \item Check that $u(x,y)$ is harmonic
+  \item Find harmonic conjugate through Cauchy-Riemann equations through integration
+  \item Express $u+iv$ in terms of $z$
+\end{itemize}
+\subsubsection*{Integrals of complex functions}
+\textbf{Contours:} Finite sequence of directed smooth curves patched together.\\
+\textbf{Simple closed contours:} A contour which does not cross itself.\\
+\textbf{Positivly oriented contour:} A contour with interior to the left and exterior to the right, arrow going counter clockwise.\\
+\textbf{Loop:} A closed contour.\\
+\textbf{Contour integral:}
+\begin{equation*}
+  \int_{\Gamma} f(z) \diff z = \lim_{n\to\infty} \sum_{k=1}^{n} f(z_k) \Delta z_k.
+\end{equation*}
+If a function is continous in a domain then
+\begin{itemize}
+  \item $f$ has an anti-derivative
+  \item Contour integrals are independent of path
+  \item Any loop integral is zero
+\end{itemize}
+If any of these are true, the two others are true.\\
+\begin{equation*}
+  \int_{C} (z-z_0)^n \diff z = \delta_{n, -1}.
+\end{equation*}
+Inside a simply connected region (no singularities) we continously deform contours without changing the integral of analytic functions along these curves.\\
+\textbf{Cauchy-Integral formula:}
+For an function $f$, which is analytic inside a simply connected region containg a contour $\Gamma$ which is simple, closed and positivly oriented, then:
+\begin{equation*}
+  f(z_0) = \frac{1}{2\pi i} \int_{\Gamma} \frac{f(z)}{z-z_0} \diff z
+\end{equation*}
+\begin{equation*}
+  f(z_0)^{(n)} = \frac{n!}{2\pi i} \int_{\Gamma} \frac{f(z)}{(z-z_0)^{n+1}} \diff z, n\geq 1
+\end{equation*}
+\textbf{Liouvilles theorem:} A bounded analytic function in the entire complex plane is a constant.\\
+\subsubsection*{\scriptsize Upper bound estimates}
+Use the generalized triangle inequality
+\begin{align*}
+  \abs{\sum_k z_k } \leq \sum_k \abs{z_k}\quad \rightarrow \quad
+  \abs{z_1-z_2} \geq \abs{z_2}-\abs{z_1}.
+\end{align*}
+Apply this to Riemann sum
+\begin{align*}
+  \abs{\int_\Gamma f(z) \diff z} = \abs{\sum_{k=1}^{n} f(z_k) \Delta z_k} \leq \sum_{k=1}^{n} \abs{f(z_k)} \abs{\Delta z_k} \leq M \sum_{k=1}^{n} \abs{\Delta z_k},
+\end{align*}
+where $M$ is the maximum value of $\abs{f(z)}$ on \textsc{contour}. We then use that $\sum_k \abs{\Delta z_k}$ can not be longer than the length of the contour $L$:
+\begin{equation*}
+  \abs{\int_\Gamma f(z) \diff z} \leq ML.
+\end{equation*}
+\textbf{Cauchy inequality:} A function $f$ which is analytic on and inside a circle with radius $R$ centerd at $z_0$ satisfy $\abs{f^{(n)}} \leq \frac{n!M}{R^n}$.
+\subsubsection*{Laurent series}
+Let $f$ be analytic in the area between two circles $r < \abs{z-z_0} < R$, then $f$ can be represented uniquely as the sum of two series
+\begin{align*}
+  f(z) &= \sum_{n=0}^{\infty} a_n(z-z_0)^n + \sum_{n=1}^{\infty} \frac{b_n}{(z-z_0)^n} \\
+  a_n &= \frac{1}{2\pi i} \oint_C \frac{f(z)}{(z-z_0)^{n+1}} \diff z \\
+  b_n &= \frac{1}{2\pi i} \oint_C \frac{f(z)}{(z-z_0)^{-n+1}} \diff z
+\end{align*}
+Derive $a_n$ from using important integral and divide expression for Laurent series with $(z-z_0)^{n+1}$ and integrating. Derive $b_n$ with same method, but multiplying with $(z-z_0)^{n-1}$ instead.\\
+Series of positive powers converges inside  some circle $\abs{z-z_0} < R$. \\
+Series of negative powers converges outside some circle $\abs{z-z_0} > R$. \\
+Often usefull to use \textsc{partial fraction decomposition} and
+\begin{equation*}
+  \frac{1}{1-w} = \sum_{n=0}^{\infty} w^n, \quad \abs{w}<1.
+\end{equation*}
+\textbf{Residue:} Is the value of the coefficient $b_1$.\\
+\textbf{A zero of a function:} A point $z_0$ where $f$ is analytic and $f(z_0)=0$.\\
+\textbf{A zero of order m:} When $f(z_0) = f^{(1)}(z_0) = ... = f^{(m-1)}(z_0)=0$ and $f^(m)(z_0)\neq 0$. This can be factorized as $f(z) = (z-z_0)^m\,g(z)$, where $g(z)$ is analytic and non-zero at $z_0$.\\
+\textbf{Isolated singularities:} Assume $f(z)$ has an isolated singularty at $z_0$, with a Laurent series, then:
+\begin{itemize}
+  \item \textbf{Removable singularity:} If all $b_n=0$
+  \item \textbf{Pole of order m:} If $b_m\neq 0$, but $b_k=0$ for all $k>m$.
+  \item \textbf{Essential singularity:} If there are infinitely many $b$-terms
+\end{itemize}
+
+\subsubsection*{Residue theory}
+If $\Gamma$ is a simplle closed, positivily oriented contour, and $f$ is analytic on and inside $\Gamma$, except at the points $z_1,...z_k$ inside $\Gamma$, then
+\begin{equation}
+  \oint_{\Gamma} f(z) \diff z = 2\pi i\, \sum_{k=1}^{N} \text{Res}(f;z_k).
+\end{equation}
+True since only $1/(z-z_0)$ term contributes in integrals, we get no other contributions sice we can deform contour around singularities such that the path between each singularity cancels.
+\textbf{Finding residues:}
+\begin{itemize}
+  \item Find Laurent series around $z_0$, then Res$(f;z_0)$ is $b_1$.
+  \item Evaluate Res$(f;z_0)=\lim_{b\rightarrow z_0} \left[f(z)\,(z-z_0)\right]$, finite answer only if it is a simple pole. Removable singularity gives zero, higher order poles gives infinity.
+  \item For $f(z)=P(z)/Q(z)$ where $P(z_0)\neq 0$ and $Q(z_0)$ is a \textsc{simple zero}, and both analytic at $z_0$, then Res$(f;z_0)=P(z_0)/Q'(z_0)$.
+  \item If $f$ has a pole of order $m$ at $z_0$ then Res$(f;z_0) = \lim_{z\rightarrow z_0} \frac{1}{(M-1)!}\frac{\diff^{M-1}}{\diff z^{M-1}}\left[(z-z_0)^Mf(z)\right]$ where $M \geq m$. If you know the order of the pole us $m=M$, but get correct result by overshooting as well.
+\end{itemize}
+\subsubsection*{Solving integrals}
+\begin{itemize}
+\item \textbf{Trigonometric integrals:} Integrals of type $\int_0^{2\pi} u(\cos{\theta}, \sin{\theta}) \diff \theta$, can be made into complex integral by variable substitution $z=e^{i\theta}$ and integrate around $\abs{z}=1$. Use complex version of $\cos{\theta} = (z+1/z)/2$ and $\sin{\theta}=(z-1/z)/2i$ and $\diff \theta = \diff z/(iz)$. Solve the integral with residue theory and take the real value of the final answer.
+If the integration limits are not $0$ to $2\pi$ you can use a substitution to change integral limits such that the final limits are $0$ to $2\pi$, f.ex $u=2\pi-\theta$ will change limits from $0\rightarrow\pi$ to $\pi\rightarrow 2\pi$.
+\item \textbf{Infinte integrals:} Integrals from $-\infty\rightarrow\infty$ can be extended to the complex plane by connecting $\pm\infinity$ at the $x$-axis by a semi-circle with infinite radius giving no contribution. Thus the integral can be solved from residues inside the first and secound quadrant, or third and fourth quadrant depending on orientation of semi-sircle. Only works if: (1) $f$ is analytic on and above the real axis, except for a finite number of singularities, (2) we can ignore contributions infinitely far away from the origin, we can do this ($f(z)=P(z)/Q(z)$) if $\text{DEG}(Q) \geq \text{DEG}(P)+2$.
+\item \textbf{Infinite Trigonometric integral:} Two options:\\1. Write the trigonometric function in it's complex form, which will give two integrals, one with $e^{imx}$ which must be closed in the upper half plane, and one with $e^{-imx}$ which must be closed in the lower half plane. Since the last one goes counter clockwise we must flip the sign. We can ignore the semi-circle only if the degree of the polynomial in the denominator is one larger than the degree of the numerator, this is called \textbf{Jordan's lemma}. Without the exponential the difference in polynomial degree would be two. \\2. If the integral is real we can write $\cos{mx}$ as the real part of $e^{imx}$, or $\sin{mx}$ as the imaginary part, then solve the integral and take the imaginary or real part of the answer.
+\item \textbf{Singularities on the real axis:} Infinities can \textit{cancel} if apprached symmetrically: PV$\int_a^b f(x)\diff x = \lim_{r\rightarrow 0} \int_a^{c-r} f(x)\diff x + \int_{c+r}^{b}f(x)\diff x$, with a singularity at $x=c$. Can also be computed with residue theory:
+$$\text{PV}\int_{-\infty}^{\infty} f(x)\diff x = 2\pi i \sum \underbrace{\text{Res}(f; z_k)}_{\text{upper half}} + \pi i \sum \underbrace{\text{Res}(f;z_j)}_{\text{real axis}}$$.
+\end{itemize}
+\newpage
+\begin{mdframed}
+\subsection*{Tensors}
+\end{mdframed}
+Tensors of rank 0 = scalars, rank 1 = vectors, rank 2 = matrices. Tensors represent physical quantities, should be independent of choice of coordinate frames
+$v_i' = A_{ij}v_j$, $v_i = A_{ji}v_j$, where $A_{ij} = \bm{e}_i\cdot \bm{e}_j'$, which implies $A^{-1} = A^{T}$. We get one $A$ for each index  $T_{kl}' = A_{ki}A_{lj}T_{ij}$.
+\subsubsection*{Inertia tensor}
+A rigid body rotating around a fixed axis: $\bm{L}=I\bm{\omega}$, where $I$ is the inertia tensor. Since $I$ is symmetric we can find a coordinate system where $I$ is diagonal. The eigenvectors of $I$ are the principle axis of inertia. \\
+\textbf{Point masses:} $I_{ij} = mr^2\delta_{ij}-mr_ir_j$ where you sum over all masses.\\
+\textbf{Continouum masses:} $I_{ij} = \int mr^2\delta_{ij}-mr_ir_j \diff m$ where. Examples:\\
+$I_{xx} = \sum_i m_i(r^2 -x^2) = \sum_i m_i(y^2 + z^2) = \int y^2 + z^2 \diff m$.\\
+$I_{xy} = -\sum_{i}m_ix_iy_i = - \int xy \diff m$.
+\subsubsection*{Cronecker-delta and Levi-civita}
+
+\[
+\delta_{ij}=\begin{cases}
+1 & \mbox{ if } i=j \\
+0 & \mbox{ if } i\neq j \\
+\end{cases}\]
+\[
+\epsilon_{ijk}=\begin{cases}
+1 & \mbox{ if } ijk=123,231, \mbox{ eller } 312 \\
+-1 & \mbox{ if } ijk=321,213, \mbox{ eller } 132 \\
+0 & \mbox{ if repeating indicies} \\
+\end{cases}
+\]
+\[
+\epsilon_{ijk}\epsilon_{imn}=\delta_{jm}\delta_{kn}-\delta_{jn}\delta_{km}
+\]
+$$(\mathbf{a}\times \mathbf{b})_i = a_j b_k \epsilon_{ijk}$$
+\[
+\mbox{det}\left(\begin{matrix}
+a_{11} & a_{12} & a_{13} \\
+a_{21} & a_{22} & a_{23} \\
+a_{31} & a_{32} & a_{33}
+\end{matrix}\right)=a_{1i}a_{2j}a_{3k}\epsilon_{ijk}
+\]
+
+$$ \left( \bm{\nabla} \cross \bm{V}\right)_i = \epsilon_{ijk}\pdv{V_k}{x_j}$$
+$$ \left( \bm{U} \cross \bm{V}\right)_i = \epsilon_{ijk}U_jV_k$$
+
+\begin{mdframed}
+\subsection*{Calculus of variations}
+\end{mdframed}
+Given an integral $I=\int_{x_0}^{x_1} F(x, y, y') \diff x$ we want to find the function $x(y)$ or $y(x)$ between $(x_1, y_1)$ and $(x_2, y_2)$ such that $I$ is stationary (locally minimized). The function which satisfies this is
+$$ \dv{}{x}\pdv{F}{y'} - \pdv{F}{y} = 0.$$
+If $F$ has no $y$ dependence we get $\pdv{F}{y'}=\text{constant}$, which can be solved for $y$. \\
+One can change variables such that we have a cylic coordinate through the substitutions: $y' = 1/x'$ and $\diff x = x' \diff y$.
+\begin{mdframed}
+\subsection*{Tips and tricks}
+\end{mdframed}
+\begin{multline*}
+  \frac{1}{z-1} = \frac{1}{z}\,\frac{1}{1-\frac{1}{z}} = \frac{1}{z}\sum_n\left(\frac{1}{z}\right)^n = \sum_n\left(\frac{1}{z}\right)^{n+1}, z>1 \\
+  ax^2 + bx + c = 0 \qquad \rightarrow \qquad x_{\pm} = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+\end{multline*}
+\newpage
+
+
+\begin{mdframed}
+\subsection*{Ordinary differential eq.}
+\end{mdframed}
+\textsc{Ordinary:} Derivatives with respect to only one variable.\\
+\textsc{Linear:} Only linear terms $y$, $y'$ etc. no $yy'$, $y^2$, $(y'')^3$ etc.
+\textsc{Order of DE:} Order of highest derivative.\\
+For secound order DE we get exact solution from BC since we can solve DE for $y''$ and evaluate at BC, and get higher orders from taking the derivative of this equation. From these values we can construct a taylor series of the function, which uniquely fixes the solution.\\
+A linear combination of two solutions is also a solution.\\
+Criteria for two solutions $y_1(x)$ and $y_2(x)$ being linearly independent:
+\begin{itemize}
+  \item Linearly independent if $c_1y_1(x) + c_2y_2(x) = 0$ can only be satisfied when $c_1 = c_2=0$ ($y_2$ is not a multiple of the other).
+  \item Linearly dependent if $y_2(x_0) = Ky_1(x_0)$ AND $y_2'(x_0) = Ky_1(x_0)$ they are linearly dependent.
+  \item Linearly independent if $y_1'(x_0)/y_2'(x_0) = y_1(x_0)/y_2(x_0)$, in other words: if the wronskian is non-zero $$ w(x_0) = \begin{vmatrix}
+  y_1(x_0)  & y_2(x_0)\\
+  y_1'(x_0) & y_2'(x_0)
+  \end{vmatrix} \neq 0$$
+\end{itemize}
+Then we can write the full solution as $y(x)=c_1y_1(x) + c_2y_2(x)$.
+\subsubsection*{\small Integrating factors}
+$$\dv{y}{x} + P(x)y = Q(x) \rightarrow \diff y + \left(Py-Q\right)\diff x = 0$$
+Multiply with $\mu(x)$ to get an exact solution from.
+$$ \mu(x) = \exp{\int P \diff x}$$
+$$ y(x) = \frac{1}{\mu(x)}\left( \int \mu(x)Q(x)\diff x +C\right)$$
+\subsubsection*{\small Variation of constants}
+If $y_1(x)$ is a solution we can find another linearly independent solution $y_2(x)$ by writing $y_2(x) = c(x)y_1(x)$, where we determine $c(x)$ from DE. When finding $c$ we can ignore constants since these constants contribute function equal to $y_1(x)$, and constant factors can be determined outside of solution.
+\subsubsection*{\small Constant coefficients}
+$$ y'' + ay' + by = 0$$
+Always has an exponential solution $y=e^{\lambda x}$, inserting gives $\lambda^2 + a\lambda + b = 0$ which we solve to find $\lambda$. This gives three possibilities:
+\begin{itemize}
+  \item $\lambda_+ \neq \lambda_-$ and both are real: we get two linearly independent solutions $y(x) = c_1e^{\lambda_+x} + c_2e^{\lambda_-x}$.
+  \item Double root $a^2-4ab=0$: gives $\lambda_+ = \lambda_- = \lambda = -a/2$. Can be shown from variation of constants that we get two linearly independent solutions $y_1(x) = e^{\lambda x}$ and $y_2(x) = xe^{\lambda x}$.
+  \item Complex roots $a^2-4b<0$: gives $\lambda_{\pm} = -a/2 \pm i\sqrt{4b-a^2}/2 = -a/2 \pm iw$. Solution is the standard form, but can be written in many different forms: $y(x) = e^{-ax/2}\left(Ae^{iwx} + Be^{-iwx}\right)$\\
+  $y(x) = e^{-ax/2}\left( C\cos{wx} + D\sin{wx} \right)$\\
+  $y(x) = e^{-ax/2}\sin{(wx+\delta)}E$.
+\end{itemize}
+
+\subsubsection*{\small Euler-Cauchy equation}
+$$ x^2y'' + a_1xy1+a_0y = 0\qquad \text{or}\qquad y''+\frac{a_1}{x}y' + \frac{a_0}{x^2}=0$$
+Use substitution $x=e^{z}$ for $x>0$ and $x=-\abs{x}=-e^{z}$ for $x<0$. This gives us $\dv{y}{x}=1/x\dv{y}{z}$ and $\dv[2]{y}{x} = -1/x^2 \dv{y}{z} + 1/x^2\dv[2]{y}{z}$, inserting this into DE gives
+$$ \dv[2]{y}{z} + (a_1-1)\dv{y}{z} + a_0y = 0$$
+This is a differential equation with constant coefficients which we can solve, then substitute back $z=\ln{\abs{x}}$. Get different coefficients from initial conditions for positive and negative $x$, no solution for $x=0$.
+
+
+\end{multicols*}
+\end{document}
+%kovalent binding
