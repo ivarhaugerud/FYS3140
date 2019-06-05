@@ -287,6 +287,40 @@ Use substitution $x=e^{z}$ for $x>0$ and $x=-\abs{x}=-e^{z}$ for $x<0$. This giv
 $$ \dv[2]{y}{z} + (a_1-1)\dv{y}{z} + a_0y = 0$$
 This is a differential equation with constant coefficients which we can solve, then substitute back $z=\ln{\abs{x}}$. Get different coefficients from initial conditions for positive and negative $x$, no solution for $x=0$.
 
+\subsubsection*{Inhomogeneous DE's}
+$$y'' + P(x)y' +Q(x)y = R(x)$$
+The full solution is the sum of the homgeneous and particular equation $y(x)=y_{h}(x)+y_p(x)$, where $y_p$ has no undetermined coefficients. The homogeneous equation can match boundary conditions if the Wronskian is non-zero.
+
+\subsubsection*{\small Method of undetermined coeffs.}
+$$ y'' + ay' + by = R(x)$$
+Method works when $R(x)$ is a function whose derivative resembles the function itself: exponential, trigonometric, polynomial, sine/cosine and combination of these. We then guess on a solution of the same form as $R(x)$, (possibly times $x$ or $x^2$) with an unknown coefficient which is determined by putting it into the equation:
+\begin{itemize}
+  \item $R(x) = Ae^{kx}$. We call the roots of the characteristic equation of the homogeneous equation $\alpha$ and $\beta$, then:
+    \begin{itemize}
+      \item $k\neq \alpha, \beta:$ $y_p(x) = Be^{kx}$
+      \item $k=\alpha \text{ or } \beta$, and $\alpha\neq\beta:$ $y_p(x) = Cxe^{kx}$
+      \item $k=\alpha=\beta:$ $y_p(x) = Dx^2e^{kx}$
+    \end{itemize}
+  \item $R(x) = A\sin{kx}$ or $R(x) = A\cos{kx}$: $y_p(x) = Ae^{ikx}$ and take real or imaginary part of solution.
+  \item $R(x) = e^{kx} P_n{x}$ where $P_n(x)$ is a polynomial of degree $n$
+  \begin{itemize}
+    \item $k\neq alpha, beta:$ $y_p = e^{kx}Q_n(x)$
+    \item $k=\alpha \text{ or } \beta$, and $\alpha\neq\beta:$ $y_p(x) = e^{kx}Q_n(x)x$
+    \item $k=\alpha=\beta:$ $y_p(x) = e^{kx}Q_{n}(x)x^2$
+  \end{itemize}
+\end{itemize}
+If RHS is a sum of two different such functions you take the sum of two guesses (???)
+
+\subsubsection*{\small Finding particular solution from factorization}
+$$y'' + P(x)y' + Q(x)y = R(x)$$
+We are given a known solution $u(x)$ of the homogeneous DE. Guess on a particular solution $y_p(x) = u(x)v(x)$, insert into DE and use that $u$ is a solution to the homogeneous equation to reduce equation down to
+$$ v'' + \left(\frac{2u'}{u}+P\right)v' = \frac{R}{u}$$
+Define $w(x)=v'(x)$, getting
+$$ w + \left(\frac{2u'}{u}+P\right)w = \frac{R}{u}$$
+Solve this equation by integrating factors and find $v$ by $v(x) = \int w(x) \diff x$, no integration constant, get full solution by multiplying $y_p(x) = u(x)v(x)$.
+
+\subsubsection*{\small Variation of parameters}
+
 
 \end{multicols*}
 \end{document}
