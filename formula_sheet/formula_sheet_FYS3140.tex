@@ -402,10 +402,21 @@ $$ \frac{1}{2\pi}\int_{-\pi}^{\pi}\cos{nx}\cos{mx} \diff x = \begin{cases}
 1; & $m,m = 0$ \\
 \end{cases}$$
 
+\textbf{Period of $2\pi$:}
+$$ f(x) = \frac{1}{2}a_0 + \sum_{n=1} a_n\cos{nx} + \sum_{n=1} b_n\sin{nx}$$
+Find coefficients by using orthogonality of sin and cos
+$$a_n = \frac{1}{\pi} \int_{-\pi}^{\pi} f(x)\cos{nx} \diff x \quad b_n = \frac{1}{\pi} \int_{-\pi}^{\pi} f(x)\sin{nx} \diff x $$
+Can also write as exponentials:
+$$f(x) = \sum_{n=-\infty}^{\infty} c_n e^{inx}, \quad c_n = \frac{1}{2\pi}\int_{-\pi}^{\pi} f(x)e^{-inx} \diff x$$
 
 
+\textbf{Dirichlets:}\\
+If $f(x)$ is periodic with period of $2\pi$ between $-\pi$ and $\pi$, it is single valued, has a finite number of maximum and mimimum values, finite number of discontinuities, $\int_{-\pi}^{\pi}} \abs{f(x)}\diff x$ is finite, then the fourier series convergess. For jumps the fourier series converges to the midpoint.
 
-
+\textbf{Other basic intervals:}\\
+$$ a_n = \frac{1}{l}\int_{-l}^l f(x) \cos{\left(\frac{n\pi x}{l}\right)} \diff x$$
+$$ b_n = \frac{1}{l}\int_{-l}^l f(x) \sin{\left(\frac{n\pi x}{l}\right)} \diff x$$
+$$ c_n = \frac{1}{2l}\int_{-l}^l f(x) \exp{\frac{-in\pi x}{l}} \diff x$$
 
 
 
