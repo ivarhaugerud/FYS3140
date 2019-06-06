@@ -414,12 +414,29 @@ $$f(x) = \sum_{n=-\infty}^{\infty} c_n e^{inx}, \quad c_n = \frac{1}{2\pi}\int_{
 If $f(x)$ is periodic with period of $2\pi$ between $-\pi$ and $\pi$, it is single valued, has a finite number of maximum and mimimum values, finite number of discontinuities, $\int_{-\pi}^{\pi}} \abs{f(x)}\diff x$ is finite, then the fourier series convergess. For jumps the fourier series converges to the midpoint.
 
 \textbf{Other basic intervals:}\\
+For basic intervall of length $2l$, $[-l, l]$, we can do the transform $x\rightarrow n\pi/l$ and $\frac{1}{\pi}\int_{-\pi}^\pi \rightarrow \frac{1}{l}\int_{-l}^l$.
 $$ a_n = \frac{1}{l}\int_{-l}^l f(x) \cos{\left(\frac{n\pi x}{l}\right)} \diff x$$
 $$ b_n = \frac{1}{l}\int_{-l}^l f(x) \sin{\left(\frac{n\pi x}{l}\right)} \diff x$$
 $$ c_n = \frac{1}{2l}\int_{-l}^l f(x) \exp{\frac{-in\pi x}{l}} \diff x$$
-
-
-
+For basic intervall of length $2l$ on $[0, 2l]$ or $[3l, 5l]$, we only change the integration limits to that same intervall, while the form of the coefficients is the same.\\
+For basic intervall $[0, l]$ we can find:
+\begin{itemize}
+  \item a series with periodicity of $l$ instead of $2l$, meaning $l\rightarrow l/2$: $a_n = \frac{1}{l/2}\int_0^l f(x)\cos{\left( \frac{n\pi x}{l/2} \right)}$.
+  \item Define an even extention to a periodicity of $2l$, this gives a cos-series.
+  \item Define an odd extention of the period to a length of $2l$, this gives a sine-series.
+\end{itemize}
+\textbf{Even functions:} $f(-x)=f(x)$\\
+\textbf{Odd  functions:} $f(-x)=-f(x)$\\
+odd $\cdot$ odd $=$ even $\cdot$ even $=$ even\\
+even $\cdot$ odd $=$ odd $\cdot$ even $=$ odd
+\begin{equation*} \int_{-L}^{L}f(x) \diff x = \begin{cases}
+0; & f(x) \text{ is odd} \\
+2\int_0^L f(x) \diff x; & f(x) \text{ is even}
+\end{cases} \end{equation*}
+The fourier series of an even function of period $2l$ is a cosine series
+$$f(x)= \frac{a_0}{2} + \sum_{n=1}^{\infty} a_n \cos{\left( \frac{n\pi x}{l} \right)},\quad a_n = \frac{2}{l}\int_0^lf(x)\cos{\left( \frac{n\pi x}{l} \right)}\diff x $$
+The fourier series of an odd function of period $2l$ is a cosine series ($f(0)=0$ when $f$ is odd)
+$$f(x)= \sum_{n=1}^{\infty} b_n \sin{\left( \frac{n\pi x}{l} \right)},\quad a_n = \frac{2}{l}\int_0^lf(x)\sin{\left( \frac{n\pi x}{l} \right)}\diff x $$
 
 
 
