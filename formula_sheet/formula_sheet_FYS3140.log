@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.9.8)  5 JUN 2019 18:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.9.8)  6 JUN 2019 12:15
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -2554,7 +2554,73 @@ Underfull \hbox (badness 10000) in paragraph at lines 279--279
 /m/it/5 x[]\OT1/cmr/m/n/5 ) =
  []
 
-[3] (./formula_sheet_FYS3140.aux) ) 
+[3]
+Package mdframed Info: Not enough space on this page on input line 389.
+! Missing $ inserted.
+<inserted text> 
+                $
+l.395 0; & $m\neq
+                  n$ \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.395 0; & $m\neq n$ \\
+                       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.396 1/2; & $m = n \neq
+                         0$ \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.396 1/2; & $m = n \neq 0$ \\
+                              
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.400 0; & $m\neq
+                  n$ \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.400 0; & $m\neq n$ \\
+                       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.401 1/2; & $m = n \neq
+                         0$ \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.401 1/2; & $m = n \neq 0$ \\
+                              
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+[4] (./formula_sheet_FYS3140.aux) ) 
 Here is how much of TeX's memory you used:
  33595 strings out of 492995
  784300 string characters out of 6132705
@@ -2583,10 +2649,10 @@ cm-super/sfcc0500.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/cm
 -super/sfrm0500.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/cm-s
 uper/sfrm1000.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/cm-sup
 er/sfti0500.pfb>
-Output written on formula_sheet_FYS3140.pdf (3 pages, 304996 bytes).
+Output written on formula_sheet_FYS3140.pdf (4 pages, 314444 bytes).
 PDF statistics:
- 89 PDF objects out of 1000 (max. 8388607)
- 66 compressed objects within 1 object stream
+ 92 PDF objects out of 1000 (max. 8388607)
+ 68 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

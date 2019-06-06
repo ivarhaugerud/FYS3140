@@ -359,6 +359,55 @@ The Greens function satsify the original DE, but with $R(x) = \delta(x-z)$. We h
 \end{itemize}
 Begin with $DG(x,z)=\delta(x-z)$. For $x<z$ and $x>z$ we get different solutions, which both are equal to the homogeneous solution, but their coefficients are different and dependent on $z$. Use the boundary conditions, the continuity of $G$ at $x=z$, and the discontinuty of it's derivative $\dv{G(x,z)}{x}\Big|_{z-\epsilon}^{z+\epsilon} = 1$ to find $G(x,z)$ for $x<z$ and $x>z$ and solve the integral for $y(x)$.
 
+\subsubsection*{\small Power series}
+$$ y'' + P(x)y' + Q(x)y = 0$$
+Usefull for DEs whose solution can not be written in terms of elementary functions. \\
+Represent $P(x)$ and $Q(x)$ as power series (if they are not already polynomials), and assume solution on the form
+$$ y(x) = \sum_{n=1}^{\infty} a_n x^n, \qquad \quad y'(x) = \sum_{n=1}^{\infty} na_n x^{n-1}$$ $$y''(x) = \sum_{n=1}^{\infty} n(n-1)a_n x^{n-2} = \sum_{n=1}^{\infty} n(n+1)a_{n+1} x^{n-1}$$
+Insert into DE and equate power by power in $x$ to determine coefficients $a_n$.\\
+\textsc{Existance of solution:} If $P(x)$ and $Q(x)$ are analytic at $x=x_0$, then every solution of the differential equation is analytic at $x=x_0$ and thus can be represented by a power series in $(x-x_0)$ with some radius of convergence $R>0$.
+$$ \text{Legendre functions: } (1-x^2)y'' -2xy' + l(l+1)y = 0$$
+
+
+\subsubsection*{\small Fröbenious method}
+$$y'' + \frac{b(x)}{x}y' + \frac{c(x)}{x^2}y = 0 $$
+where $b(x)$ and $c(x)$ are analytic at $x=0$, has at least one solution that can be represented as
+$$y(x) = x^s \sum_{n=1}^{\infty} a_n x^n$$
+By construction $a_0 \neq 0$, and $s$ may be non-integer, real or complex.
+Determine $s$ from matching terms for lowest possible power, this gives \textbf{indical equation}, which is a 2nd order equation for $s$ with at least one solution. Write DE as
+$$ x^2y'' + xb(x)y' + c(x)y = 0$$
+with $b$ and $c$ written as polynomials or infinte series, then equate terms with $x^s$ which gives \textsc{indical equation}, this gives three possible scenarios:
+\begin{itemize}
+  \item Two different roots, and their difference is not an integer. Then we have two linearly independent solutions.
+  \item Two different roots, and their difference is an integer. Find coefficients for the smallest root first, since it might give the full solution. If it does not give the full solution then finding the coefficients with the other root will. Sometimes the the smallest root does not give a solution, then find solution of largest root and use variation of constants $y_2(x) = f(x)y_1(x)$.
+  \item Double root. Find coefficient with this root, and find secound solution by variation of constants $y_2(x) = f(x)y_1(x)$.
+\end{itemize}
+
+\newpage
+\begin{mdframed}
+\subsection*{Fourier}
+\end{mdframed}
+\subsubsection*{\small Fourier series}
+Series representation of periodic functions expanded in $\sin{}$, $\cos{}$ or $e$ rahter than in power series. Can represent functions with cusps and discontinuities.\\ Orthogonality relations:
+$$ \int_{-\pi}^{\pi}\cos{nx} \diff x = \int_{-\pi}^{\pi}\sin{nx} \diff x = 0\qquad \text{$n$ is integer} $$
+$$ \int_{-\pi}^{\pi}\cos{nx}\sin{mx} \diff x = 0 \qquad \text{$n$, $m$ is integer} $$
+$$ \frac{1}{2\pi}\int_{-\pi}^{\pi}\sin{nx}\sin{mx} \diff x = \begin{cases}
+0; & $m\neq n$ \\
+1/2; & $m = n \neq 0$ \\
+0; & $m,m = 0$ \\
+\end{cases}$$
+$$ \frac{1}{2\pi}\int_{-\pi}^{\pi}\cos{nx}\cos{mx} \diff x = \begin{cases}
+0; & $m\neq n$ \\
+1/2; & $m = n \neq 0$ \\
+1; & $m,m = 0$ \\
+\end{cases}$$
+
+
+
+
+
+
+
 
 
 
