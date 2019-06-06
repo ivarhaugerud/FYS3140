@@ -1,18 +1,15 @@
-
-
-
 \documentclass[a4paper, 10pt]{article}
 \usepackage[utf8]{inputenc}
+\usepackage{amsmath}
 \usepackage[T1]{fontenc}
-\usepackage{babel, textcomp, color, amssymb, tikz, subfig, float,esint}
+\usepackage{textcomp, xcolor, amssymb, tikz, subfig, float,esint}
 \usepackage{amsfonts}
 \usepackage{graphicx}
 \usepackage{multicol}
 \usepackage{bm}
 \usepackage{gensymb}
-\usepackage{amsmath}
-\DeclareMathOperator{\arcsinh}{arcsinh}
-\DeclareMathOperator{\arctanh}{arctanh}
+%\DeclareMathOperator{\arcsinh}{arcsinh}
+%\DeclareMathOperator{\arctanh}{arctanh}
 
 %Makes \diff into a straight d in math mode
 \newcommand*\diff{\mathop{}\!\mathrm{d}}
@@ -25,11 +22,11 @@
 \usepackage{tikz}
 \usepackage{pgfplots}
 
-\newcommand{\addPLOT}[4]{
-\addplot [domain=#1:#2,samples=200,color=#3,]{#4};}
-\newcommand{\addCOORDS}[1]{\addplot coordinates {#1};}
-\newcommand{\addDRAW}[1]{\draw #1;}
-\newcommand{\addNODE}[2]{ \node at (#1) {#2};}
+%\newcommand{\addPLOT}[4]{
+%\addplot [domain=#1:#2,samples=200,color=#3,]{#4};}
+%\newcommand{\addCOORDS}[1]{\addplot coordinates {#1};}
+%\newcommand{\addDRAW}[1]{\draw #1;}
+%\newcommand{\addNODE}[2]{ \node at (#1) {#2};}
 
 %		\PLOTS{x}{y}{left}{
 %			\ADDPLOT{x^2}{-2}{2}{blue}
@@ -39,9 +36,9 @@
 
 
 
-\definecolor{svar}{RGB}{0,0,0}
-\definecolor{opgavetekst}{RGB}{109,109,109}
-\definecolor{blygraa}{RGB}{44,52,59}
+%\definecolor{svar}{RGB}{0,0,0}
+%\definecolor{opgavetekst}{RGB}{109,109,109}
+%\definecolor{blygraa}{RGB}{44,52,59}
 
 \hoffset = -60pt
 \voffset = -95pt
@@ -66,8 +63,8 @@
 
 \subsubsection*{Roots}
 \begin{align*}
-  \left(e^{i\theta})^n &= \left(\cos{\theta} + i \sin{\theta})^n\right) = \cos{n\theta} + i\sin{n\theta}\\
-  z^{1/n} &= \left(re^{i\theta})^{1/n} = r^{1/n}e^{i\theta/n}.\\
+  \left(e^{i\theta}\right)^n &= \left(\cos{\theta} + i \sin{\theta})^n\right) = \cos{n\theta} + i\sin{n\theta}\\
+  z^{1/n} &= \left(re^{i\theta}\right)^{1/n} = r^{1/n}e^{i\theta/n}.\\
   \ln{z} &= \ln{re^{i\theta}} = \ln{r} + i\theta.
 \end{align*}
 
@@ -182,7 +179,7 @@ True since only $1/(z-z_0)$ term contributes in integrals, we get no other contr
 \begin{itemize}
 \item \textbf{Trigonometric integrals:} Integrals of type $\int_0^{2\pi} u(\cos{\theta}, \sin{\theta}) \diff \theta$, can be made into complex integral by variable substitution $z=e^{i\theta}$ and integrate around $\abs{z}=1$. Use complex version of $\cos{\theta} = (z+1/z)/2$ and $\sin{\theta}=(z-1/z)/2i$ and $\diff \theta = \diff z/(iz)$. Solve the integral with residue theory and take the real value of the final answer.
 If the integration limits are not $0$ to $2\pi$ you can use a substitution to change integral limits such that the final limits are $0$ to $2\pi$, f.ex $u=2\pi-\theta$ will change limits from $0\rightarrow\pi$ to $\pi\rightarrow 2\pi$.
-\item \textbf{Infinte integrals:} Integrals from $-\infty\rightarrow\infty$ can be extended to the complex plane by connecting $\pm\infinity$ at the $x$-axis by a semi-circle with infinite radius giving no contribution. Thus the integral can be solved from residues inside the first and secound quadrant, or third and fourth quadrant depending on orientation of semi-sircle. Only works if: (1) $f$ is analytic on and above the real axis, except for a finite number of singularities, (2) we can ignore contributions infinitely far away from the origin, we can do this ($f(z)=P(z)/Q(z)$) if $\text{DEG}(Q) \geq \text{DEG}(P)+2$.
+\item \textbf{Infinte integrals:} Integrals from $-\infty\rightarrow\infty$ can be extended to the complex plane by connecting $\pm\infty$ at the $x$-axis by a semi-circle with infinite radius giving no contribution. Thus the integral can be solved from residues inside the first and secound quadrant, or third and fourth quadrant depending on orientation of semi-sircle. Only works if: (1) $f$ is analytic on and above the real axis, except for a finite number of singularities, (2) we can ignore contributions infinitely far away from the origin, we can do this ($f(z)=P(z)/Q(z)$) if $\text{DEG}(Q) \geq \text{DEG}(P)+2$.
 \item \textbf{Infinite Trigonometric integral:} Two options:\\1. Write the trigonometric function in it's complex form, which will give two integrals, one with $e^{imx}$ which must be closed in the upper half plane, and one with $e^{-imx}$ which must be closed in the lower half plane. Since the last one goes counter clockwise we must flip the sign. We can ignore the semi-circle only if the degree of the polynomial in the denominator is one larger than the degree of the numerator, this is called \textbf{Jordan's lemma}. Without the exponential the difference in polynomial degree would be two. \\2. If the integral is real we can write $\cos{mx}$ as the real part of $e^{imx}$, or $\sin{mx}$ as the imaginary part, then solve the integral and take the imaginary or real part of the answer.
 \item \textbf{Singularities on the real axis:} Infinities can \textit{cancel} if apprached symmetrically: PV$\int_a^b f(x)\diff x = \lim_{r\rightarrow 0} \int_a^{c-r} f(x)\diff x + \int_{c+r}^{b}f(x)\diff x$, with a singularity at $x=c$. Can also be computed with residue theory:
 $$\text{PV}\int_{-\infty}^{\infty} f(x)\diff x = 2\pi i \sum \underbrace{\text{Res}(f; z_k)}_{\text{upper half}} + \pi i \sum \underbrace{\text{Res}(f;z_j)}_{\text{real axis}}$$.
@@ -392,14 +389,14 @@ Series representation of periodic functions expanded in $\sin{}$, $\cos{}$ or $e
 $$ \int_{-\pi}^{\pi}\cos{nx} \diff x = \int_{-\pi}^{\pi}\sin{nx} \diff x = 0\qquad \text{$n$ is integer} $$
 $$ \int_{-\pi}^{\pi}\cos{nx}\sin{mx} \diff x = 0 \qquad \text{$n$, $m$ is integer} $$
 $$ \frac{1}{2\pi}\int_{-\pi}^{\pi}\sin{nx}\sin{mx} \diff x = \begin{cases}
-0; & $m\neq n$ \\
-1/2; & $m = n \neq 0$ \\
+0; & m\neq n \\
+1/2; & m = n \neq 0 \\
 0; & $m,m = 0$ \\
 \end{cases}$$
 $$ \frac{1}{2\pi}\int_{-\pi}^{\pi}\cos{nx}\cos{mx} \diff x = \begin{cases}
-0; & $m\neq n$ \\
-1/2; & $m = n \neq 0$ \\
-1; & $m,m = 0$ \\
+0; & m\neq n \\
+1/2; & m = n \neq 0 \\
+1; & m,m = 0 \\
 \end{cases}$$
 
 \textbf{Period of $2\pi$:}
@@ -411,7 +408,7 @@ $$f(x) = \sum_{n=-\infty}^{\infty} c_n e^{inx}, \quad c_n = \frac{1}{2\pi}\int_{
 
 
 \textbf{Dirichlets:}\\
-If $f(x)$ is periodic with period of $2\pi$ between $-\pi$ and $\pi$, it is single valued, has a finite number of maximum and mimimum values, finite number of discontinuities, $\int_{-\pi}^{\pi}} \abs{f(x)}\diff x$ is finite, then the fourier series convergess. For jumps the fourier series converges to the midpoint.
+If $f(x)$ is periodic with period of $2\pi$ between $-\pi$ and $\pi$, it is single valued, has a finite number of maximum and mimimum values, finite number of discontinuities, $\int_{-\pi}^{\pi} \abs{f(x)}\diff x$ is finite, then the fourier series convergess. For jumps the fourier series converges to the midpoint.
 
 \textbf{Other basic intervals:}\\
 For basic intervall of length $2l$, $[-l, l]$, we can do the transform $x\rightarrow n\pi/l$ and $\frac{1}{\pi}\int_{-\pi}^\pi \rightarrow \frac{1}{l}\int_{-l}^l$.
@@ -438,7 +435,17 @@ $$f(x)= \frac{a_0}{2} + \sum_{n=1}^{\infty} a_n \cos{\left( \frac{n\pi x}{l} \ri
 The fourier series of an odd function of period $2l$ is a cosine series ($f(0)=0$ when $f$ is odd)
 $$f(x)= \sum_{n=1}^{\infty} b_n \sin{\left( \frac{n\pi x}{l} \right)},\quad a_n = \frac{2}{l}\int_0^lf(x)\sin{\left( \frac{n\pi x}{l} \right)}\diff x $$
 
-
+\textbf{Perseval's theorem:}
+For a complex fourier series $f(x)$ we can evaluate infinite series. Can use complex or real fourier series
+$$ \frac{1}{2l}\int_{-l}^{l} \abs{f(x)}^2 = \sum_{n=-\infty}^{\infty} \abs{c_n}^2$$
+$$ \frac{1}{2l}\int_{-l}^{l} \abs{f(x)}^2 = \left(\frac{a_0}{2}\right)^2 + \frac{1}{2}\sum_{n=1}^{\infty} a_n^2 + \frac{1}{2}\sum_{n=1}^{\infty} b_n^2$$
+\subsubsection*{\small Fourier integrals}
+$F(k)$ is the fourier transform of $f(x)$, and $f(x)$ is the inverse fourier transform of $F(k)$.
+$$ f(x) = \mathcal{F}^{-1}\left[ F(k) \right] = \frac{1}{\sqrt{2\pi}} \int_{-\infty}^{\infty} F(k) e^{ikx} \diff k $$
+$$ F(k) = \mathcal{F}\left[ f(x) \right] = \frac{1}{\sqrt{2\pi}} \int_{-\infty}^{\infty} f(x) e^{-ik x} \diff x$$
+The sign in the exponent and the $1/\sqrt{2\pi}$ is a convention.\\
+Ok to use fourier integrals if: $f(x)$ satsify Dirichlet conditions on any finite interval, $\int_{-\infty}^{\infty} \abs{f(x)} \diff x$ is finite, at discontinuities in $f(x)$ this formula gives the midpoint of the jump.\\
+The fouriertransform of a Gaussian is a Gaussian.\\
 
 
 
