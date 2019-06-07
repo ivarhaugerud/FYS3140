@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.9.8)  7 JUN 2019 11:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.9.8)  7 JUN 2019 11:50
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -2362,21 +2362,21 @@ r/m/n/5 (\OML/cmm/m/it/5 x\OT1/cmr/m/n/5 ) [] [] []  d\OML/cmm/m/it/5 x
  []
 
 
-Overfull \hbox (32.3817pt too wide) detected at line 464
-[]\OML/cmm/m/it/5 F\OT1/cmr/m/n/5 (\OML/cmm/m/it/5 k\OT1/cmr/m/n/5 ) = [] [][] 
-\OML/cmm/m/it/5 f\OT1/cmr/m/n/5 (\OML/cmm/m/it/5 x\OT1/cmr/m/n/5 ) [] \OML/cmm/
-m/it/5 x []  \OT1/cmr/m/n/5 d\OML/cmm/m/it/5 x; f\OT1/cmr/m/n/5 (\OML/cmm/m/it/
-5 x\OT1/cmr/m/n/5 ) = [] [][] \OML/cmm/m/it/5 F\OT1/cmr/m/n/5 (\OML/cmm/m/it/5 
-k\OT1/cmr/m/n/5 ) [] [] []  d\OML/cmm/m/it/5 k
+Overfull \hbox (4.89638pt too wide) detected at line 464
+\OML/cmm/m/it/5 F\OT1/cmr/m/n/5 (\OML/cmm/m/it/5 k\OT1/cmr/m/n/5 ) = [] [][] \O
+ML/cmm/m/it/5 f[]\OT1/cmr/m/n/5 (\OML/cmm/m/it/5 x\OT1/cmr/m/n/5 ) [] \OML/cmm/
+m/it/5 x []  \OT1/cmr/m/n/5 d\OML/cmm/m/it/5 x; f[]\OT1/cmr/m/n/5 (\OML/cmm/m/i
+t/5 x\OT1/cmr/m/n/5 ) = [] [][] \OML/cmm/m/it/5 F\OT1/cmr/m/n/5 (\OML/cmm/m/it/
+5 k\OT1/cmr/m/n/5 ) [] [] []  d\OML/cmm/m/it/5 k
  []
 
 
-Overfull \hbox (28.80585pt too wide) detected at line 465
-[]\OML/cmm/m/it/5 F\OT1/cmr/m/n/5 (\OML/cmm/m/it/5 k\OT1/cmr/m/n/5 ) = [] [][] 
-\OML/cmm/m/it/5 f\OT1/cmr/m/n/5 (\OML/cmm/m/it/5 x\OT1/cmr/m/n/5 ) [] \OML/cmm/
-m/it/5 x []  \OT1/cmr/m/n/5 d\OML/cmm/m/it/5 x; f\OT1/cmr/m/n/5 (\OML/cmm/m/it/
-5 x\OT1/cmr/m/n/5 ) = [] [][] \OML/cmm/m/it/5 F\OT1/cmr/m/n/5 (\OML/cmm/m/it/5 
-k\OT1/cmr/m/n/5 ) [] [] []  d\OML/cmm/m/it/5 k
+Overfull \hbox (3.76515pt too wide) detected at line 465
+\OML/cmm/m/it/5 F\OT1/cmr/m/n/5 (\OML/cmm/m/it/5 k\OT1/cmr/m/n/5 ) = [] [][] \O
+ML/cmm/m/it/5 f[]\OT1/cmr/m/n/5 (\OML/cmm/m/it/5 x\OT1/cmr/m/n/5 ) [] \OML/cmm/
+m/it/5 x []  \OT1/cmr/m/n/5 d\OML/cmm/m/it/5 x; f[]\OT1/cmr/m/n/5 (\OML/cmm/m/i
+t/5 x\OT1/cmr/m/n/5 ) = [] [][] \OML/cmm/m/it/5 F\OT1/cmr/m/n/5 (\OML/cmm/m/it/
+5 k\OT1/cmr/m/n/5 ) [] [] []  d\OML/cmm/m/it/5 k
  []
 
 
@@ -2391,7 +2391,7 @@ Overfull \hbox (16.11565pt too wide) detected at line 492
 Here is how much of TeX's memory you used:
  33473 strings out of 492995
  782601 string characters out of 6132705
- 999691 words of memory out of 5000000
+ 1003691 words of memory out of 5000000
  36541 multiletter control sequences out of 15000+600000
  13151 words of font info for 32 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -2416,7 +2416,7 @@ cm-super/sfcc0500.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/cm
 -super/sfrm0500.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/cm-s
 uper/sfrm1000.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/cm-sup
 er/sfti0500.pfb>
-Output written on formula_sheet_FYS3140.pdf (4 pages, 330879 bytes).
+Output written on formula_sheet_FYS3140.pdf (4 pages, 333897 bytes).
 PDF statistics:
  92 PDF objects out of 1000 (max. 8388607)
  68 compressed objects within 1 object stream

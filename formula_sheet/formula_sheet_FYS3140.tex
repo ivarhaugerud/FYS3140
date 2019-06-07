@@ -460,9 +460,9 @@ $$\int_{-\infty}^{\infty} \abs{f(x)}^2 \diff x = \int_{-\infty}^{\infty} \abs{F(
 \textbf{Even and odds:}
 Even functions are represented by cos-transform\\
 Odd  functions are represented by sin-transform\\
-If $f(x)$ is even/odd then $F(k)$ is even/odd
-$$ \text{$f(x)$ even: } F(k) = \sqrt{\frac{2}{\pi}}\int_0^\infty f(x) \cos{x}\diff x, f(x) = \sqrt{\frac{2}{\pi}} \int_0^\infty F(k)\cos{kx} \diff k$$
-$$ \text{$f(x)$ odd:  } F(k) = \sqrt{\frac{2}{\pi}}\int_0^\infty f(x) \sin{x}\diff x, f(x) = \sqrt{\frac{2}{\pi}} \int_0^\infty F(k)\sin{kx} \diff k$$
+If $f(x)$ is even/odd then $F(k)$ is even/odd. Making the fourier transform for even and odd functions respectively:
+$$F(k) = \sqrt{\frac{2}{\pi}}\int_0^\infty f_e(x) \cos{x}\diff x, f_e(x) = \sqrt{\frac{2}{\pi}} \int_0^\infty F(k)\cos{kx} \diff k$$
+$$F(k) = \sqrt{\frac{2}{\pi}}\int_0^\infty f_o(x) \sin{x}\diff x, f_o(x) = \sqrt{\frac{2}{\pi}} \int_0^\infty F(k)\sin{kx} \diff k$$
 
 \begin{mdframed}
 \subsection*{Laplace transforms}
@@ -498,7 +498,20 @@ $u(x,y,t) = \sum_{n,m=1}^{\infty}[\alpha_{mn}\cos{cp_{nm}t} + \beta_{mn}\sin{p_{
 $\alpha_{mn} = \frac{4}{\alpha\beta}\int_0^a\int_0^b f(x,y)\sin{n\pi x/a}\sin{m\pi x/b} \diff x \diff y$
 
 \subsection*{Integral transforms}
+\textbf{Laplace transform:}
+Laplacetransform wrt. one of the variables, and we get an ordinary DE for the other variable which we solve to find the Laplace transform of the solution, which we can take the inverse transform of to find the actual solution.\\
+If we have a function $u(x, t)$ and take the Laplace transform wrt. $t$ we use $\mathcal{L}\left[\pdv{u}{x}\right]=\pdv{U}{x}$ and $\mathcal{L}\left[\pdv{u}{t}\right] = sU - u(x,0)$. Solve ordinary DE, and impose initial conditions $\mathcal{L}\left[u(x,0)\right] = U(0, s)$. When $U(x,s)$ is found the inverse Laplace transform is done.\\
+\textbf{Fourier transform:}
+Fourier transform with respect to one of the variables (in this case $x$), and use $\mathcal{F}\left[\pdv[2]{u}{x}\right] = -k^2U(k,t)$. Impose initial conditions $U(k,0)=\mathcal{F}\left[u(x,0)\right]$, solve the ordinary DE for $U(k,t)$ and take the inverse transform.
 
+\subsection*{Orthogonal functions}
+Differential equation with certain BCs have set of solutions that are orthogonal and can expand any function, this goes for DE on the form
+$$ P(x)y'' + P'(x)y' + \left[q(x) + \lambda r(x)\right]y = 0 $$
+with some BC at $x=a$ and $x=b$ and $r(x)>0$ on $[a,b]$. If there exists a non-zero solution for a given $\lambda$ theb $y(x)$ is called an eigenfunction, and $\lambda$ is called the eigenvalue of the problem. Typically BCs lead to a series of discrete eigenvalues $\lambda_m$ and eigenfunctions $y_m(x)$. Examples: (1) Fourier $y'' + (n\pi/L)^2y=0$, (2) Legendre $(1-x^2)y'' - 2xy'+n(n+1)y = 0$. The eigenfunctions beeing orthogonal means
+$$ \int_a^br(x)y_n(x)y_m^*(x)\diff x $$
+and we use this orthogonality relation to expand any function through the eigenfunctions by $f(x) = \sum_{n=1}^\infty a_n y_n(x)$ by multiplying each side with $r(x)y_m^*(x)$ and integrating from $a$ to $b$, giving us
+$$ a_m = \int_a^b f(x)r(x)y_m^*(x) \diff x$$
+If the operator $D$ is hermitian then we have real eigenvalues, eigenfunctions are orthogonal over $a,b$, and the eigenfunctions forms a complete sett for $a,b$. Where $D= p(x)\pdv[2]{}{x}+p'(x)\pdv{}{x} +q(x)$.
 
 
 
