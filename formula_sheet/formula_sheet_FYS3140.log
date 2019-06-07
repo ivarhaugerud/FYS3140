@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.9.8)  7 JUN 2019 13:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.9.8)  7 JUN 2019 14:25
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -2214,12 +2214,7 @@ File: tikzlibraryplotmarks.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1)
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmar
 ks.code.tex
 File: pgflibraryplotmarks.code.tex 2015/08/03 v3.0.1a (rcs-revision 1.14)
-)))
-
-LaTeX Warning: Unused global option(s):
-    [50pt].
-
-(./formula_sheet_FYS3140.aux)
+))) (./formula_sheet_FYS3140.aux)
 \openout1 = `formula_sheet_FYS3140.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 50.
@@ -2344,30 +2339,35 @@ d\OML/cmm/m/it/5 x \OT1/cmr/m/n/5 = 2\OML/cmm/m/it/5 ^^Yi [] [] \OT1/cmr/m/n/5
 {/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 Package mdframed Info: Not enough space on this page on input line 190.
 
-Overfull \hbox (33.15506pt too wide) detected at line 265
+Overfull \hbox (7.15282pt too wide) detected at line 227
+\OT1/cmr/m/n/5 [\OT1/cmr/bx/n/5 I\OT1/cmr/m/n/5 ] = [] = \OML/cmm/m/it/5 m []
+ []
+
+
+Overfull \hbox (33.15506pt too wide) detected at line 294
  []$[]\OMS/cmsy/m/n/5 r[] \OT1/cmr/m/n/5 = [] []  $ 
  []
 
 [2]
-Package mdframed Info: Not enough space on this page on input line 272.
+Package mdframed Info: Not enough space on this page on input line 301.
 
-Underfull \hbox (badness 10000) in paragraph at lines 282--282
+Underfull \hbox (badness 10000) in paragraph at lines 311--311
 []\T1/cmr/m/n/5 Linearly in-de-pen-dent if $\OML/cmm/m/it/5 y[]\OT1/cmr/m/n/5 (
 \OML/cmm/m/it/5 x[]\OT1/cmr/m/n/5 )\OML/cmm/m/it/5 =y[]\OT1/cmr/m/n/5 (\OML/cmm
 /m/it/5 x[]\OT1/cmr/m/n/5 ) =
  []
 
 [3]
-Package mdframed Info: Not enough space on this page on input line 392.
+Package mdframed Info: Not enough space on this page on input line 429.
 
-Overfull \hbox (11.59497pt too wide) detected at line 440
+Overfull \hbox (11.59497pt too wide) detected at line 477
 \OML/cmm/m/it/5 f\OT1/cmr/m/n/5 (\OML/cmm/m/it/5 x\OT1/cmr/m/n/5 ) = [] + [] \O
 ML/cmm/m/it/5 a[] [] [];  a[] \OT1/cmr/m/n/5 = [] [][] \OML/cmm/m/it/5 f\OT1/cm
 r/m/n/5 (\OML/cmm/m/it/5 x\OT1/cmr/m/n/5 ) [] [] []  d\OML/cmm/m/it/5 x
  []
 
 
-Overfull \hbox (4.89638pt too wide) detected at line 464
+Overfull \hbox (4.89638pt too wide) detected at line 501
 \OML/cmm/m/it/5 F\OT1/cmr/m/n/5 (\OML/cmm/m/it/5 k\OT1/cmr/m/n/5 ) = [] [][] \O
 ML/cmm/m/it/5 f[]\OT1/cmr/m/n/5 (\OML/cmm/m/it/5 x\OT1/cmr/m/n/5 ) [] \OML/cmm/
 m/it/5 x []  \OT1/cmr/m/n/5 d\OML/cmm/m/it/5 x; f[]\OT1/cmr/m/n/5 (\OML/cmm/m/i
@@ -2376,7 +2376,7 @@ t/5 x\OT1/cmr/m/n/5 ) = [] [][] \OML/cmm/m/it/5 F\OT1/cmr/m/n/5 (\OML/cmm/m/it/
  []
 
 
-Overfull \hbox (3.76515pt too wide) detected at line 465
+Overfull \hbox (3.76515pt too wide) detected at line 502
 \OML/cmm/m/it/5 F\OT1/cmr/m/n/5 (\OML/cmm/m/it/5 k\OT1/cmr/m/n/5 ) = [] [][] \O
 ML/cmm/m/it/5 f[]\OT1/cmr/m/n/5 (\OML/cmm/m/it/5 x\OT1/cmr/m/n/5 ) [] \OML/cmm/
 m/it/5 x []  \OT1/cmr/m/n/5 d\OML/cmm/m/it/5 x; f[]\OT1/cmr/m/n/5 (\OML/cmm/m/i
@@ -2385,7 +2385,7 @@ t/5 x\OT1/cmr/m/n/5 ) = [] [][] \OML/cmm/m/it/5 F\OT1/cmr/m/n/5 (\OML/cmm/m/it/
  []
 
 
-Overfull \hbox (16.11565pt too wide) detected at line 492
+Overfull \hbox (16.11565pt too wide) detected at line 529
 \OML/cmm/m/it/5 u\OT1/cmr/m/n/5 (\OML/cmm/m/it/5 x; \OT1/cmr/m/n/5 0) = [] \OML
 /cmm/m/it/5 A[] [] [] \OMS/cmsy/m/n/5 ! \OML/cmm/m/it/5 A[] \OT1/cmr/m/n/5 = []
  [][] \OML/cmm/m/it/5 u\OT1/cmr/m/n/5 (\OML/cmm/m/it/5 x; \OT1/cmr/m/n/5 0) [] 
@@ -2394,10 +2394,10 @@ Overfull \hbox (16.11565pt too wide) detected at line 492
 
 [4] (./formula_sheet_FYS3140.aux) ) 
 Here is how much of TeX's memory you used:
- 33474 strings out of 492995
- 782608 string characters out of 6132705
- 1003695 words of memory out of 5000000
- 36542 multiletter control sequences out of 15000+600000
+ 33473 strings out of 492995
+ 782601 string characters out of 6132705
+ 1003691 words of memory out of 5000000
+ 36541 multiletter control sequences out of 15000+600000
  13151 words of font info for 32 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,11n,96p,10410b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2421,7 +2421,7 @@ cm-super/sfcc0500.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/cm
 -super/sfrm0500.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/cm-s
 uper/sfrm1000.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/cm-sup
 er/sfti0500.pfb>
-Output written on formula_sheet_FYS3140.pdf (4 pages, 334085 bytes).
+Output written on formula_sheet_FYS3140.pdf (4 pages, 336683 bytes).
 PDF statistics:
  92 PDF objects out of 1000 (max. 8388607)
  68 compressed objects within 1 object stream

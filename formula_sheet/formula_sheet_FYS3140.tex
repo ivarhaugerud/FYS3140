@@ -167,7 +167,7 @@ If $\Gamma$ is a simplle closed, positivily oriented contour, and $f$ is analyti
 \begin{equation}
   \oint_{\Gamma} f(z) \diff z = 2\pi i\, \sum_{k=1}^{N} \text{Res}(f;z_k).
 \end{equation}
-True since only $1/(z-z_0)$ term contributes in integrals, we get no other contributions sice we can deform contour around singularities such that the path between each singularity cancels.
+True since only $1/(z-z_0)$ term contributes in integrals, we get no other contributions sice we can deform contour around singularities such that the path between each singularity cancels. A function $f(z)$ can have a singularity in infinity if $f(1/z)$ has a pole in $z=0$, their residues are the same.
 \textbf{Finding residues:}
 \begin{itemize}
   \item Find Laurent series around $z_0$, then Res$(f;z_0)$ is $b_1$.
@@ -188,14 +188,43 @@ $$\text{PV}\int_{-\infty}^{\infty} f(x)\diff x = 2\pi i \sum \underbrace{\text{R
 \begin{mdframed}
 \subsection*{Tensors}
 \end{mdframed}
-Tensors of rank 0 = scalars, rank 1 = vectors, rank 2 = matrices. Tensors represent physical quantities, should be independent of choice of coordinate frames
-$v_i' = A_{ij}v_j$, $v_i = A_{ji}v_j$, where $A_{ij} = \bm{e}_i\cdot \bm{e}_j'$, which implies $A^{-1} = A^{T}$. We get one $A$ for each index  $T_{kl}' = A_{ki}A_{lj}T_{ij}$.
+Tensors of rank 0 = scalars, rank 1 = vectors, rank 2 = matrix. Tensors represent physical quantities, and physics is independent of choice of coordinate frames, so tensors must transform between coordinate frames. A tensor product is given by
+\[
+\left(\begin{matrix}
+U_1 \\ U_2 \\ U_3 \\
+\end{matrix}\right)
+\otimes
+\left(\begin{matrix}
+V_1 \\ V_2 \\ V_3 \\
+\end{matrix}\right)
+=
+\left(\begin{matrix}
+U_1V_1 & U_1V_2 & U_1V_3 \\
+U_2V_1 & U_2V_2 & U_2V_3 \\
+U_3V_1 & U_3V_2 & U_3V_3 \\
+\end{matrix}\right)
+\]
+\subsubsection*{Cartesian tensors}
+Transform properly under rotation of a cartesian coordinate
+$v_i' = A_{ij}v_j$, $v_i = A_{ji}v_j$, where $A_{ij} = \bm{e}_i\cdot \bm{e}_j'$, which implies $A^{-1} = A^{T}$. We get one $A$ for each index  $T_{kl}' = A_{ki}A_{lj}T_{ij}$. Cartesian vectors need only one index.
 \subsubsection*{Inertia tensor}
 A rigid body rotating around a fixed axis: $\bm{L}=I\bm{\omega}$, where $I$ is the inertia tensor. Since $I$ is symmetric we can find a coordinate system where $I$ is diagonal. The eigenvectors of $I$ are the principle axis of inertia. \\
 \textbf{Point masses:} $I_{ij} = mr^2\delta_{ij}-mr_ir_j$ where you sum over all masses.\\
 \textbf{Continouum masses:} $I_{ij} = \int mr^2\delta_{ij}-mr_ir_j \diff m$ where. Examples:\\
 $I_{xx} = \sum_i m_i(r^2 -x^2) = \sum_i m_i(y^2 + z^2) = \int y^2 + z^2 \diff m$.\\
 $I_{xy} = -\sum_{i}m_ix_iy_i = - \int xy \diff m$.
+\[
+[\mathbf{I}]=\left[\begin{matrix}
+I_{xx} & I_{xy} & I_{xz} \\
+I_{yx} & I_{yy} & I_{yz} \\
+I_{zx} & I_{zy} & I_{zz} \\
+\end{matrix}\right]
+=m\left[\begin{matrix}
+y^2+z^2 & -xy & -xz \\
+-yx & x^2+z^2 & -yz \\
+-zx & -zy & x^2+y^2 \\
+\end{matrix}\right]
+\]
 \subsubsection*{Cronecker-delta and Levi-civita}
 
 \[
@@ -285,6 +314,10 @@ Criteria for two solutions $y_1(x)$ and $y_2(x)$ being linearly independent:
   \end{vmatrix} \neq 0$$
 \end{itemize}
 Then we can write the full solution as $y(x)=c_1y_1(x) + c_2y_2(x)$.
+\subsubsection*{\small Seperable solutions}
+A differential equation is seperable if it can be written as $$f(y) \diff y = g(x) \diff x$$
+then it can be solved by integrating both sides.
+
 \subsubsection*{\small Integrating factors}
 $$\dv{y}{x} + P(x)y = Q(x) \rightarrow \diff y + \left(Py-Q\right)\diff x = 0$$
 Multiply with $\mu(x)$ to get an exact solution from.
@@ -360,7 +393,9 @@ The Greens function satsify the original DE, but with $R(x) = \delta(x-z)$. We h
   \item $G(x,z)$ is continous at $x=z$.
   \item We have a singularity at $x=z$, we integrate the DE for $G(x,z)$ from $z-\epsilon$ to $z+\epsilon$, this gives us that $\dv{G(x,z)}{x}\Big|_{z-\epsilon}^{z+\epsilon} = 1$
 \end{itemize}
-Begin with $DG(x,z)=\delta(x-z)$. For $x<z$ and $x>z$ we get different solutions, which both are equal to the homogeneous solution, but their coefficients are different and dependent on $z$. Use the boundary conditions, the continuity of $G$ at $x=z$, and the discontinuty of it's derivative $\dv{G(x,z)}{x}\Big|_{z-\epsilon}^{z+\epsilon} = 1$ to find $G(x,z)$ for $x<z$ and $x>z$ and solve the integral for $y(x)$.
+Begin with $DG(x,z)=\delta(x-z)$. For $x<z$ and $x>z$ we get different solutions, which both are equal to the homogeneous solution, but their coefficients are different and dependent on $z$. Use the boundary conditions, the continuity of $G$ at $x=z$, and the discontinuty of it's derivative $\dv{G(x,z)}{x}\Big|_{z-\epsilon}^{z+\epsilon} = 1$ to find $G(x,z)$ for $x<z$ and $x>z$ and solve the integral for $y(x)$, which will be two integrals
+$$y(x) = \int_a^x G_1(x,z)R(z) \diff z + \int_x^b G_2(x,z)R(z) \diff z$$
+where $G_1$ is the greens function for $z<x$ and $G_2$ is for $z>x$.
 
 \subsubsection*{\small Power series}
 $$ y'' + P(x)y' + Q(x)y = 0$$
@@ -386,6 +421,8 @@ with $b$ and $c$ written as polynomials or infinte series, then equate terms wit
   \item Double root. Find coefficient with this root, and find secound solution by variation of constants $y_2(x) = f(x)y_1(x)$.
 \end{itemize}
 
+\textbf{Funcchs' theorem:}
+A differential equation $y'' + f(x)y' + g(x)y = 0$ has a non-essential singularity at the origin if $xf(x)$ and $x^2g(x)$ is expandable in convergent power series. The solution will then either be (1) two Frobenius series, or (2) one solution $S_1(x)$ and another $S_1(x)\ln{x}+S_2(x)$ where $S_1$ and $S_2$ are the Frobenius solutions.
 \newpage
 \begin{mdframed}
 \subsection*{Fourier}
@@ -478,7 +515,7 @@ $$ \mathcal{L}\left[ f(t)\cdot t \right] = -F'(s) \text{  or  } \mathcal{L}^{-1}
 \textbf{Convolution:}
 We are given $H(s) = F(s)G(s)$ and know $f(t) = \mathcal{L}^{-1}\left[F(s)\right]$ and $g(t) = \mathcal{L}^{-1}\left[G(s)\right]$, and want to use tihs to find $h(t) = \mathcal{L}^{-1}\left[H(s)\right]$ in terms of $f(t)$ and $g(t)$, we call this the \textsc{convolution} of $f$ and $g$, and is written as, and can be found by
 $$h(t) = \mathcal{L}^{-1}\left[H(s)\right] = \left( f*g\right)(t) = \int_0^t f(\tau)g(t-\tau) \diff \tau$$
-it does not matter which function is $f$ and which is $g$, choose $g$ as the simplest function of the two.
+it does not matter which function is $f$ and which is $g$, choose $g$ as the simplest function of the two $f*g=g*f$ and $\mathcal{L}\left[f*g\right]=\mathcal{L}\left[f\right]\mathcal{L}\left[g\right]$.
 
 
 \begin{mdframed}
