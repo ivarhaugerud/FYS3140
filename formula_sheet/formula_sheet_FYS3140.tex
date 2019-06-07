@@ -292,7 +292,8 @@ One can change variables such that we have a cyclic coordinate through the subst
   \nabla^2_{pol2D} = \pdv[2]{}{r} + \frac{1}{r}\pdv{}{r} + \frac{1}{r^2}\pdv[2]{}{\theta}\\
   \nabla^2_{spher3D} = \frac{1}{r^2}\left[ \pdv{}{r}\left( r^2\pdv{}{r} \right) + \frac{1}{\sin{\theta}}\pdv{}{\theta}\left( \sin{\theta}\pdv{}{\theta}\right) + \frac{1}{\sin^2{\theta}}\pdv[2]{}{\phi}\right]
 \end{multline*}
-DE with exponential solution can be written as $A\sinh{x} + B\cosh{x}$.
+DE with exponential solution can be written as $A\sinh{x} + B\cosh{x}$.\\
+Rember that $n=0$ is a possibility when doing boudary conditions for the derivatives of a $A\sin{px} + B\cos{px}$ solution.
 \newpage
 
 
@@ -417,7 +418,7 @@ $$ x^2y'' + xb(x)y' + c(x)y = 0$$
 with $b$ and $c$ written as polynomials or infinite series, then equate terms with $x^s$ which gives \textsc{indicial equation}, this gives three possible scenarios:
 \begin{itemize}
   \item Two different roots, and their difference is not an integer. Then we have two linearly independent solutions.
-  \item Two different roots, and their difference is an integer. Find coefficients for the smallest root first, since it might give the full solution. If it does not give the full solution then finding the coefficients with the other root will. Sometimes the the smallest root does not give a solution, then find solution of largest root and use variation of constants $y_2(x) = f(x)y_1(x)$.
+  \item Two different roots, and their difference is an integer. Find coefficients for the smallest root first, since it might give the full solution. Get full solution if $a_1$ is undetermined, as well as $a_0$ which is always undtermined. If it does not give the full solution then finding the coefficients with the other root will. Sometimes the the smallest root does not give a solution, then find solution of largest root and use variation of constants $y_2(x) = f(x)y_1(x)$.
   \item Double root. Find coefficient with this root, and find second solution by variation of constants $y_2(x) = f(x)y_1(x)$.
 \end{itemize}
 
@@ -475,8 +476,8 @@ even $\cdot$ odd $=$ odd $\cdot$ even $=$ odd
 \end{cases} \end{equation*}
 The Fourier series of an even function of period $2l$ is a cosine series
 $$f(x)= \frac{a_0}{2} + \sum_{n=1}^{\infty} a_n \cos{\left( \frac{n\pi x}{l} \right)},\quad a_n = \frac{2}{l}\int_0^lf(x)\cos{\left( \frac{n\pi x}{l} \right)}\diff x $$
-The Fourier series of an odd function of period $2l$ is a cosine series ($f(0)=0$ when $f$ is odd)
-$$f(x)= \sum_{n=1}^{\infty} b_n \sin{\left( \frac{n\pi x}{l} \right)},\quad a_n = \frac{2}{l}\int_0^lf(x)\sin{\left( \frac{n\pi x}{l} \right)}\diff x $$
+The Fourier series of an odd function of period $2l$ is a sine series ($f(0)=0$ when $f$ is odd)
+$$f(x)= \sum_{n=1}^{\infty} b_n \sin{\left( \frac{n\pi x}{l} \right)},\quad b_n = \frac{2}{l}\int_0^lf(x)\sin{\left( \frac{n\pi x}{l} \right)}\diff x $$
 
 \textbf{Perseval's theorem:}
 For a complex Fourier series $f(x)$ we can evaluate infinite series. Can use complex or real Fourier series
