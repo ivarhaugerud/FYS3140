@@ -259,8 +259,11 @@ One can change variables such that we have a cylic coordinate through the substi
 \end{mdframed}
 \begin{multline*}
   \frac{1}{z-1} = \frac{1}{z}\,\frac{1}{1-\frac{1}{z}} = \frac{1}{z}\sum_n\left(\frac{1}{z}\right)^n = \sum_n\left(\frac{1}{z}\right)^{n+1}, z>1 \\
-  ax^2 + bx + c = 0 \qquad \rightarrow \qquad x_{\pm} = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+  ax^2 + bx + c = 0 \qquad \rightarrow \qquad x_{\pm} = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} \\
+  \nabla^2_{pol2D} = \pdv[2]{}{r} + \frac{1}{r}\pdv{}{r} + \frac{1}{r^2}\pdv[2]{}{\theta}\\
+  \nabla^2_{spher3D} = \frac{1}{r^2}\left[ \pdv{}{r}\left( r^2\pdv{}{r} \right) + \frac{1}{\sin{\theta}}\pdv{}{\theta}\left( \sin{\theta}\pdv{}{\theta}\right) + \frac{1}{\sin^2{\theta}}\pdv[2]{}{\phi}\right]
 \end{multline*}
+DE with exponential solution can be written as $A\sinh{x} + B\cosh{x}$.
 \newpage
 
 
@@ -478,7 +481,23 @@ $$h(t) = \mathcal{L}^{-1}\left[H(s)\right] = \left( f*g\right)(t) = \int_0^t f(\
 it does not matter which function is $f$ and which is $g$, choose $g$ as the simplest function of the two.
 
 
+\begin{mdframed}
+\subsection*{Partial DE}
+\end{mdframed}
+\subsection*{Seperation of variables}
+Transform a PDE with $n$ variabels to $n$ ordinary DE. Find a solution of those DEs satisfying boundary conditions, this gives infinitely many solutions, this is not the most general solution but forms a basis of sultions which we can expand the full solution in. Superposition of these such that initial conditions are satisfied (a fourier series).\\
+Write $u(x,t)$ as $F(x)$ or $G(t)$. Use seperation of variable and solve their ordinary DE seperately. Quantize constant such that they can satisfy BCs. This gives
+$$ u(x,t) = \sum_{n=1}^{\infty} A_n f_n(x)g_n(t)$$
+and impose initial conditions, which should give a fourier series f.ex
+$$ u(x,0) = \sum_{n=1}^\infty A_n \sin{\left( \frac{n\pi x}{L} \right)} \rightarrow A_n = \frac{2}{L}\int_0^L u(x,0) \sin{\left( \frac{n\pi x}{L} \right)} \diff x$$
+\textbf{1D wave equation:} $\pdv[2]{u}{t} = c^2\pdv[2]{u}{x}$, $u(x,t) = F(x)G(t)$, get $F'' = kF$ and $\ddot{G} = kc^2G$. To satisfy BC ($u(0,t) = u(L,t)=0$): $k=-p^2$, gives $F_n = \sin{\left(p_nx\right)}$ and $G_n = A_n \cos{p_nc t} + B_n\sin{p_nc t}$ with $p_n=n\pi/L$.
+Combine to get $u_n(x,t) = \left(A_n \cos{p_nc t} + B_n\sin{p_nc t}\right)\sin{p_nx}$, where $A_n$ and $B_n$ are fixed by initial conditions: $u(x,0) = f(x) = \sum_{n=1}^{\infty}A_n \sin{p_n t} \rightarrow A_n = 2/L \int_0^Lf(x)\sin{p_nx}\diff x$. And $\dot{u}(x,0)=g(x)=\sum_{n=1}^{\infty}\lambda_nB_n\sin{p_nx} \rightarrow B_n\lambda_n = 2/L \int_0^L g(x)\sin{p_nx}\diff x$ \\
+\textbf{1D heat equation:} $\pdv{u}{t} = c^2\pdv[2]{u}{x}$, $u(x,t) = F(x)G(t)$, get $F'' = kF$ and $\dot{G} = kc^2G$, to satisfy BC $k=-p^2$, gives $F=A_n\cos{p_nx}+B_n\sin{p_nx}$ and $G = e^{-c^2p_n^2t}$. Impose BC $u_n(x,t) = B_n\sin{p_nx}e^{-c^2p_n^2t}$. Use initial conditions $B_n=\frac{2}{L}\int_0^Lu(x,0)\sin{n\pi x/L}$.\\
+\textbf{2D wave equation:} First seperate time and space $u = F(x,y)G(t)$, then seperate $F(x,y) = H(x)Q(y)$. Get $\ddot{G}=-c^2\nu^2G$, $H'' = -k^2H$, $Q'' = -p^2Q$ with $p^2+k^2 = \nu^2$. Get $F_{n}(x,y) = \sin{n\pi x/a}\sin{m\pi x/b}$. We get a double fourier series
+$u(x,y,t) = \sum_{n,m=1}^{\infty}[\alpha_{mn}\cos{cp_{nm}t} + \beta_{mn}\sin{p_{nm}ct}]\sin{n\pi x/a}\sin{m\pi x/b}$. If $u(x,y,0) = f(x,y)$ we get
+$\alpha_{mn} = \frac{4}{\alpha\beta}\int_0^a\int_0^b f(x,y)\sin{n\pi x/a}\sin{m\pi x/b} \diff x \diff y$
 
+\subsection*{Integral transforms}
 
 
 
