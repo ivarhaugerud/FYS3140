@@ -231,9 +231,12 @@ $$ \left( \bm{U} \cross \bm{V}\right)_i = \epsilon_{ijk}U_jV_k$$
 \infty, & x=a \\
 0, &  x\neq a
 \end{cases}\]
+$$ \delta(-(x-a)) = \delta(x-a) \qquad \text{symmetric}$$
 $$ \int_{-\infty}^{\infty} \delta(x-a) \diff x = 1$$
 $$ \int_{-\infty}^{\infty} f(x) \delta(x-a) \diff x = f(a)$$
 $$ \delta(ax) = \frac{1}{\abs{a}}\delta(x)$$
+$$ \mathcal{F}\left[ \delta(x) \right] = \frac{1}{\sqrt{2\pi}}, \delta(x) = \frac{1}{2\pi}\int_{-\infty}^{\infty}e^{ikx}\diff k$$
+$$ \mathcal{L}\left[ \delta(t-a) \right] = e^{-as}$$
 \[
 H(t-a)=\begin{cases}
 0, & t<a\\
@@ -446,6 +449,40 @@ $$ F(k) = \mathcal{F}\left[ f(x) \right] = \frac{1}{\sqrt{2\pi}} \int_{-\infty}^
 The sign in the exponent and the $1/\sqrt{2\pi}$ is a convention.\\
 Ok to use fourier integrals if: $f(x)$ satsify Dirichlet conditions on any finite interval, $\int_{-\infty}^{\infty} \abs{f(x)} \diff x$ is finite, at discontinuities in $f(x)$ this formula gives the midpoint of the jump.\\
 The fouriertransform of a Gaussian is a Gaussian.\\
+Fourier integrals be used to go from a DE to an algebraic equation which you can solve for $\mathcal{F}\left[ f(x) \right]$ and take the inverse fourier transform
+$$ \mathcal{F}\left[ f^{(n)}(x) \right] = (ik)^n\mathcal{F}\left[ f(x) \right]$$
+\textbf{Perseval's theorem (v2):}
+For the fourier transform $F(k)$ of $f(x)$ satisfying Dirichlet conditions we have
+$$\int_{-\infty}^{\infty} \abs{f(x)}^2 \diff x = \int_{-\infty}^{\infty} \abs{F(k)}^2 \diff k $$
+\textbf{Even and odds:}
+Even functions are represented by cos-transform\\
+Odd  functions are represented by sin-transform\\
+If $f(x)$ is even/odd then $F(k)$ is even/odd
+$$ \text{$f(x)$ even: } F(k) = \sqrt{\frac{2}{\pi}}\int_0^\infty f(x) \cos{x}\diff x, f(x) = \sqrt{\frac{2}{\pi}} \int_0^\infty F(k)\cos{kx} \diff k$$
+$$ \text{$f(x)$ odd:  } F(k) = \sqrt{\frac{2}{\pi}}\int_0^\infty f(x) \sin{x}\diff x, f(x) = \sqrt{\frac{2}{\pi}} \int_0^\infty F(k)\sin{kx} \diff k$$
+
+\begin{mdframed}
+\subsection*{Laplace transforms}
+\end{mdframed}
+An integral transform which reduces DE to algebraic equations where initial value problems are solved directly. The fourier transform of $f(t)$ is written as $F(s)$ and is defined as
+$$ F(s) = \mathcal{L}\left[ f(t) \right] = \int_0^\infty e^{-st} f(t) \diff t \qquad f(t) = \mathcal{L}^{-1}\left[ F(s) \right]$$
+Inverse Laplace transforms are found from tables
+$$ \mathcal{L}\left[ f^{(n)}(t) \right] = s^n\mathcal{L}\left[ f(t) \right]-s^{n-1}\mathcal{L}\left[ f(0) \right]-s^{n-2}\mathcal{L}\left[ f'(0) \right] - ...$$
+$$ \text{s-shifting: }\mathcal{L}^{-1}\left[ F(s-a) \right] = e^{at}\mathcal{L}^{-1}\left[ F(s)\right] $$
+$$ \text{t-shifting: }\mathcal{L}^{-1}\left[ e^{-as}F(s) \right] = f(t-a)\underbrace{H(t-a)}_{\text{Heaviside}}$$
+$$ \mathcal{L}^{-1}\left[ H(t-a) \right] = \frac{1}{s}e^{-as}$$
+$$ \mathcal{L}\left[ f(t)\cdot t \right] = -F'(s) \text{  or  } \mathcal{L}^{-1}\left[F'(s)\right] = -tf(t)$$
+\textbf{Convolution:}
+We are given $H(s) = F(s)G(s)$ and know $f(t) = \mathcal{L}^{-1}\left[F(s)\right]$ and $g(t) = \mathcal{L}^{-1}\left[G(s)\right]$, and want to use tihs to find $h(t) = \mathcal{L}^{-1}\left[H(s)\right]$ in terms of $f(t)$ and $g(t)$, we call this the \textsc{convolution} of $f$ and $g$, and is written as, and can be found by
+$$h(t) = \mathcal{L}^{-1}\left[H(s)\right] = \left( f*g\right)(t) = \int_0^t f(\tau)g(t-\tau) \diff \tau$$
+it does not matter which function is $f$ and which is $g$, choose $g$ as the simplest function of the two.
+
+
+
+
+
+
+
 
 
 
