@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.9.8)  7 JUN 2019 11:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.9.8)  7 JUN 2019 13:03
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -2214,7 +2214,12 @@ File: tikzlibraryplotmarks.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1)
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmar
 ks.code.tex
 File: pgflibraryplotmarks.code.tex 2015/08/03 v3.0.1a (rcs-revision 1.14)
-))) (./formula_sheet_FYS3140.aux)
+)))
+
+LaTeX Warning: Unused global option(s):
+    [50pt].
+
+(./formula_sheet_FYS3140.aux)
 \openout1 = `formula_sheet_FYS3140.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 50.
@@ -2389,10 +2394,10 @@ Overfull \hbox (16.11565pt too wide) detected at line 492
 
 [4] (./formula_sheet_FYS3140.aux) ) 
 Here is how much of TeX's memory you used:
- 33473 strings out of 492995
- 782601 string characters out of 6132705
- 1003691 words of memory out of 5000000
- 36541 multiletter control sequences out of 15000+600000
+ 33474 strings out of 492995
+ 782608 string characters out of 6132705
+ 1003695 words of memory out of 5000000
+ 36542 multiletter control sequences out of 15000+600000
  13151 words of font info for 32 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,11n,96p,10410b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2416,7 +2421,7 @@ cm-super/sfcc0500.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/cm
 -super/sfrm0500.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/cm-s
 uper/sfrm1000.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/cm-sup
 er/sfti0500.pfb>
-Output written on formula_sheet_FYS3140.pdf (4 pages, 333897 bytes).
+Output written on formula_sheet_FYS3140.pdf (4 pages, 334085 bytes).
 PDF statistics:
  92 PDF objects out of 1000 (max. 8388607)
  68 compressed objects within 1 object stream
