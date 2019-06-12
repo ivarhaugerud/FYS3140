@@ -148,7 +148,7 @@ Let $f$ be analytic in the area between two circles $r < \abs{z-z_0} < R$, then 
 Derive $a_n$ from using important integral and divide expression for Laurent series with $(z-z_0)^{n+1}$ and integrating. Derive $b_n$ with same method, but multiplying with $(z-z_0)^{n-1}$ instead.\\
 Series of positive powers converges inside  some circle $\abs{z-z_0} < R$. \\
 Series of negative powers converges outside some circle $\abs{z-z_0} > R$. \\
-Rember to write every term a power of $(z-z_0)$ where $z_0$ is the point you are expanding around.
+Remember to write every term a power of $(z-z_0)$ where $z_0$ is the point you are expanding around.
 Often useful to use \textsc{partial fraction decomposition} and
 \begin{equation*}
   \frac{1}{1-w} = \sum_{n=0}^{\infty} w^n, \quad \abs{w}<1.
@@ -168,7 +168,7 @@ If $\Gamma$ is a simple closed, positively oriented contour, and $f$ is analytic
 \begin{equation}
   \oint_{\Gamma} f(z) \diff z = 2\pi i\, \sum_{k=1}^{N} \text{Res}(f;z_k).
 \end{equation}
-True since only $1/(z-z_0)$ term contributes in integrals, we get no other contributions sice we can deform contour around singularities such that the path between each singularity cancels. A function $f(z)$ can have a singularity in infinity if $f(1/z)$ has a pole in $z=0$, their residues are the same.
+True since only $1/(z-z_0)$ term contributes in integrals, we get no other contributions since we can deform contour around singularities such that the path between each singularity cancels. A function $f(z)$ can have a singularity in infinity if $f(1/z)$ has a pole in $z=0$, their residues are the same.
 \textbf{Finding residues:}
 \begin{itemize}
   \item Find Laurent series around $z_0$, then Res$(f;z_0)$ is $b_1$.
@@ -183,7 +183,7 @@ If the integration limits are not $0$ to $2\pi$ you can use a substitution to ch
 \item \textbf{Infinite integrals:} Integrals from $-\infty\rightarrow\infty$ can be extended to the complex plane by connecting $\pm\infty$ at the $x$-axis by a semi-circle with infinite radius giving no contribution. Thus the integral can be solved from residues inside the first and second quadrant, or third and fourth quadrant depending on orientation of semi-circle. Only works if: (1) $f$ is analytic on and above the real axis, except for a finite number of singularities, (2) we can ignore contributions infinitely far away from the origin, we can do this ($f(z)=P(z)/Q(z)$) if $\text{DEG}(Q) \geq \text{DEG}(P)+2$.
 \item \textbf{Infinite Trigonometric integral:} Two options:\\1. Write the trigonometric function in it's complex form, which will give two integrals, one with $e^{imx}$ which must be closed in the upper half plane, and one with $e^{-imx}$ which must be closed in the lower half plane. Since the last one goes counter clockwise we must flip the sign. We can ignore the semi-circle only if the degree of the polynomial in the denominator is one larger than the degree of the numerator, this is called \textbf{Jordan's lemma}. Without the exponential the difference in polynomial degree would be two. \\2. If the integral is real we can write $\cos{mx}$ as the real part of $e^{imx}$, or $\sin{mx}$ as the imaginary part, then solve the integral and take the imaginary or real part of the answer.
 \item \textbf{Singularities on the real axis:} Infinities can \textit{cancel} if approached symmetrically: PV$\int_a^b f(x)\diff x = \lim_{r\rightarrow 0} \int_a^{c-r} f(x)\diff x + \int_{c+r}^{b}f(x)\diff x$, with a singularity at $x=c$. Can also be computed with residue theory:
-$$\text{PV}\int_{-\infty}^{\infty} f(x)\diff x = 2\pi i \sum \underbrace{\text{Res}(f; z_k)}_{\text{upper half}} + \pi i \sum \underbrace{\text{Res}(f;z_j)}_{\text{real axis}}$$.
+$$\text{PV}\int_{-\infty}^{\infty} f(x)\diff x = 2\pi i \sum \underbrace{\text{Res}(f; z_k)}_{\text{upper half}} + \pi i \sum \underbrace{\text{Res}(f;z_j)}_{\text{real axis}}$$This can only be done for simple poles, for higher order poles try and use \textsc{partial fraction decomposition} or integration by parts to go from a higher order pole to a simple pole.
 \end{itemize}
 \newpage
 \begin{mdframed}
@@ -257,7 +257,7 @@ a_{31} & a_{32} & a_{33}
 
 $$ \left( \bm{\nabla} \cross \bm{V}\right)_i = \epsilon_{ijk}\pdv{V_k}{x_j}$$
 $$ \left( \bm{U} \cross \bm{V}\right)_i = \epsilon_{ijk}U_jV_k$$
-
+Changing any two indicies changes the sign, f.ex $\epsilon_{123}=1\rightarrow\epsilon_{321}=-1$ where we exchanged $1$ and $3$. Therefore an even number of permutations does not change the sign, while an odd number does. If you rotate all three indices cyclically there is no change.
 \subsubsection*{Dirac-delta and Heaviside step function}
 \[
 \delta(x-a)=\begin{cases}
@@ -307,16 +307,16 @@ One can change variables such that we have a cyclic coordinate through the subst
   \int x \cos{ax} \diff x = \frac{1}{a^2}\cos{ax}+\frac{x}{a}\sin{ax}+C \\
 \end{multline*}
 DE with exponential solution can be written as $A\sinh{x} + B\cosh{x}$.\\
-Rember that $n=0$ is a possibility when doing boudary conditions for the derivatives of a $A\sin{px} + B\cos{px}$ solution.
+Remember that $n=0$ is a possibility when doing boundary conditions for the derivatives of a $A\sin{px} + B\cos{px}$ solution.
 \subsubsection*{\small Steady-state temperature in cylinder}
 Laplace equation in cylindrical coord. with assumption $u=R(r)\Theta(\theta)Z(z)$ gives
-$\frac{1}{R}\frac{1}{r}\DIFF{}{r}\left(r\DIFF{R}{r}\right)+\frac{1}{\Theta}\frac{1}{r^2}\DIFF{^2\Theta}{\theta^2}+\frac{1}{Z}\DIFF{^2 Z}{z^2}=0$
+$\frac{1}{R}\frac{1}{r}\diff{}{r}\left(r\diff{R}{r}\right)+\frac{1}{\Theta}\frac{1}{r^2}\diff{^2\Theta}{\theta^2}+\frac{1}{Z}\diff{^2 Z}{z^2}=0$
 $$
  \frac{1}{Z}\dv[2]{Z}{z}=K^2;
  \frac{1}{\Theta} \dv[2]{\Theta}{\theta}=-n^2;
  \frac{r}{R}\dv{}{r}\left(r\dv{R}{r}\right)-n^2+K^2 r^2=0
 $$
-where $R(r)$ is solved by the orthogonal bessel functions $J_n(Kr)$.
+where $R(r)$ is solved by the orthogonal Bessel functions $J_n(Kr)$.
 \subsubsection*{\small Steady-state final and initial condition}
 Given some initial and final temperature distribution, $u_0$ and $u_f$, with fixed endpoints set to zero, we must add the final steady state distribution to our Fourier series
 $$ u(x,t) = \sum_{n=1}^{\infty} A_ne^{-(n\pi\alpha/l)^2t}\sin{\left( \frac{n\pi x}{l} \right)} + u_f(x)$$
@@ -324,29 +324,34 @@ We must add this since the exponential will kill all terms as $t\rightarrow\inft
 $$ u_0-u_f = \sum_{n=1}^{\infty} A_n\sin{\left( \frac{n\pi x}{l} \right)}$$
 The steady state solution means $\dot{u}(x,t)=0\rightarrow \nabla^2 u = 0$.
 \subsubsection*{\small Legendre}
-\textbf{Egenfunksjoner:} \\
-Legendrepolynomer $y_n(x)=P_n(x)$ for $x\in[-1,1]$, $P_n(-x) = (-1)^nP_n(x)$ \\
-\textbf{Orthogonalitet: }
+\textbf{Eigenfunctions:} \\
+Legendrepolynomials $y_n(x)=P_n(x)$ for $x\in[-1,1]$, $P_n(-x) = (-1)^nP_n(x)$ \\
+\textbf{Orthogonality: }
 $  \int_{-1}^1 P_n(x)P_m(x)dx=\frac{2}{2n+1}\delta_{nm}.$ \\
-\textbf{Kompletthet: }
-\EQU{
-f(x)=\sum_{n=0}^\infty a_nP_n(x),x\in[-1,1]; \\
-a_n=\frac{2n+1}{2}\int_{-1}^1 f(x) P_n(x)dx
-}\\
+\textbf{Completeness: }
+$$
+f(x)=\sum_{n=0}^\infty a_nP_n(x),x\in[-1,1];$$
+$$a_n=\frac{2n+1}{2}\int_{-1}^1 f(x) P_n(x)dx
+$$
 $$ \int_0^1 P_{2n+1}(x) \diff x = (-1)^n \frac{(2n)!}{2^{2n+1}n!(n+1)!}$$\\
 $$ \int_0^1 P_{2n}(x) \diff x = 0 $$
 
 \subsubsection*{\small Hermite}
-\textbf{Egenfunksjoner:}\\
-Hermitepolynomer $y_n(x)=H_n(x)$ for $x\in(-\infty,\infty)$. \\
-\textbf{Orthogonalitet: }
+\textbf{Eigenfunctions:}\\
+Hermitepolynomials $y_n(x)=H_n(x)$ for $x\in(-\infty,\infty)$. \\
+\textbf{Orthogonality: }
 $\int_{-1}^1 e^{-x^2}H_n(x)H_m(x)dx=2^n n! \sqrt{\pi}\delta_{nm} $ \\
-\textbf{Kompletthet:} \EQU{
-f(x)=\sum_{n=0}^\infty a_nH_n(x),x\in(-\infty,\infty);  \
-a_n=\frac{1}{2^n n! \sqrt{\pi}}\int_{-\infty}^\infty
-f(x) e^{-x^2} H_n(x)dx
-}
+\textbf{Kompletthet:}$$
+f(x)=\sum_{n=0}^\infty a_nH_n(x),x\in(-\infty,\infty);$$
+$$a_n=\frac{1}{2^n n! \sqrt{\pi}}\int_{-\infty}^\infty
+f(x) e^{-x^2} H_n(x)\diff x$$
 
+\subsubsection*{\small Partial fraction decomposition}
+For $p(x)/q(x)$ (1) use polynomial division until $p(x)$ is of lower order than $q(x)$. (2) Factorize $q(x)$ on the form $(x-r)^n$ or $(ax^2 + bx + c)^n$, cancel terms if possible. (3) Each factor of $(x-r)^n$ gives a contribution
+$$ \frac{a_1}{x-r} + \frac{a_2}{(x-r)^2}+...+\frac{a_n}{(x-r)^n}$$
+and each factor of $(ax^2 + bx + c)^n$ gives
+$$ \frac{A_1x+B_1}{(ax^2 + bx + c)} + \frac{A_2x+B_2}{(ax^2 + bx + c)^2} + ... + \frac{A_nx+B_n}{(ax^2 + bx + c)^n}$$
+Put $p(x)/q(x)$ equal to ther terms you have found and multiply both sides with $q(x)$. Then you can put in clever $x$ values, take the derivative of both sides and then insert clever $x$ values, or compare coefficients of equal degrees of the polynomial.
 \newpage
 
 \begin{mdframed}
@@ -390,7 +395,7 @@ Always has an exponential solution $y=e^{\lambda x}$, inserting gives $\lambda^2
 \end{itemize}
 
 \subsubsection*{\small Euler-Cauchy equation}
-$$ x^2y'' + a_1xy1+a_0y = 0\qquad \text{or}\qquad y''+\frac{a_1}{x}y' + \frac{a_0}{x^2}=0$$
+$$ x^2y'' + a_1xy+a_0y = 0\qquad \text{or}\qquad y''+\frac{a_1}{x}y' + \frac{a_0}{x^2}=0$$
 Use substitution $x=e^{z}$ for $x>0$ and $x=-\abs{x}=-e^{z}$ for $x<0$. This gives us $\dv{y}{x}=1/x\dv{y}{z}$ and $\dv[2]{y}{x} = -1/x^2 \dv{y}{z} + 1/x^2\dv[2]{y}{z}$, inserting this into DE gives
 $$ \dv[2]{y}{z} + (a_1-1)\dv{y}{z} + a_0y = 0$$
 This is a differential equation with constant coefficients which we can solve, then substitute back $z=\ln{\abs{x}}$. Get different coefficients from initial conditions for positive and negative $x$, no solution for $x=0$.
@@ -417,7 +422,7 @@ Method works when $R(x)$ is a function whose derivative resembles the function i
     \item $k=\alpha=\beta:$ $y_p(x) = e^{kx}Q_{n}(x)x^2$
   \end{itemize}
 \end{itemize}
-If RHS is a sum of two different such functions you take the sum of two guesses (???)
+If RHS is a sum of two different such functions you take the sum of two guesses.
 
 \subsubsection*{\small Finding particular solution from factorization}
 $$y'' + P(x)y' + Q(x)y = R(x)$$
@@ -470,7 +475,7 @@ $$ x^2y'' + xb(x)y' + c(x)y = 0$$
 with $b$ and $c$ written as polynomials or infinite series, then equate terms with $x^s$ which gives \textsc{indicial equation}, this gives three possible scenarios:
 \begin{itemize}
   \item Two different roots, and their difference is not an integer. Then we have two linearly independent solutions.
-  \item Two different roots, and their difference is an integer. Find coefficients for the smallest root first, since it might give the full solution. Get full solution if $a_1$ is undetermined, as well as $a_0$ which is always undtermined. If it does not give the full solution then finding the coefficients with the other root will. Sometimes the the smallest root does not give a solution, then find solution of largest root and use variation of constants $y_2(x) = f(x)y_1(x)$.
+  \item Two different roots, and their difference is an integer. Find coefficients for the smallest root first, since it might give the full solution. Get full solution if $a_1$ is undetermined, as well as $a_0$ which is always undetermined. If it does not give the full solution then finding the coefficients with the other root will. Sometimes the the smallest root does not give a solution, then find solution of largest root and use variation of constants $y_2(x) = f(x)y_1(x)$.
   \item Double root. Find coefficient with this root, and find second solution by variation of constants $y_2(x) = f(x)y_1(x)$.
 \end{itemize}
 
@@ -571,13 +576,13 @@ $$ \text{t-shifting: }\mathcal{L}^{-1}\left[ e^{-as}F(s) \right] = f(t-a)\underb
 $$ \mathcal{L}^{-1}\left[ H(t-a) \right] = \frac{1}{s}e^{-as}$$
 $$ \mathcal{L}\left[ f(t)\cdot t \right] = -F'(s) \text{  or  } \mathcal{L}^{-1}\left[F'(s)\right] = -tf(t)$$
 \textbf{Convolution:}
-We are given $H(s) = F(s)G(s)$ and know $f(t) = \mathcal{L}^{-1}\left[F(s)\right]$ and $g(t) = \mathcal{L}^{-1}\left[G(s)\right]$, and want to use tihs to find $h(t) = \mathcal{L}^{-1}\left[H(s)\right]$ in terms of $f(t)$ and $g(t)$, we call this the \textsc{convolution} of $f$ and $g$, and is written as, and can be found by
+We are given $H(s) = F(s)G(s)$ and know $f(t) = \mathcal{L}^{-1}\left[F(s)\right]$ and $g(t) = \mathcal{L}^{-1}\left[G(s)\right]$, and want to use this to find $h(t) = \mathcal{L}^{-1}\left[H(s)\right]$ in terms of $f(t)$ and $g(t)$, we call this the \textsc{convolution} of $f$ and $g$, and is written as, and can be found by
 $$h(t) = \mathcal{L}^{-1}\left[H(s)\right] = \left( f*g\right)(t) = \int_0^t f(\tau)g(t-\tau) \diff \tau$$
 it does not matter which function is $f$ and which is $g$, choose $g$ as the simplest function of the two $f*g=g*f$ and $\mathcal{L}\left[f*g\right]=\mathcal{L}\left[f\right]\mathcal{L}\left[g\right]$.\\
 $$1\rightarrow 1/s, e^{-at} \rightarrow \frac{1}{s+a}, \sin{at}\rightarrow\frac{a}{s^2+a^2}\rightarrow \cos{at}\rightarrow \frac{p}{p^2+a^2} $$\\
 $$t^k \rightarrow \frac{k!}{s^{k+1}}, t^ke^{-at}\rightarrow \frac{k!}{\left(p+a\right)^{k+1}} $$
 \textbf{Bromwich integral:}
-Laplacetransform can be related to fourier transform by allowing $s$ to be complex, $s\rightarrow x+iy$, and can then find an explicit formula for the inverse laplace transform
+Laplace-transform can be related to fourier transform by allowing $s$ to be complex, $s\rightarrow x+iy$, and can then find an explicit formula for the inverse laplace transform
 $$ f(t) = \frac{1}{2\pi i}\int_{c-i\infty}^{c+i\infty} F(z)e^{zt} \diff z, \quad t>0$$
 Can solve integral by finding residues of all singularities of the integrand. Close contour with a semi-circle with no contribution as $R\rightarrow \infty$ and get $f(t) = \sum \text{res}(F(z)e^{zt})$.
 
@@ -609,12 +614,12 @@ Fourier transform with respect to one of the variables (in this case $x$), and u
 Differential equation with certain BCs have set of solutions that are orthogonal and can expand any function, this goes for DE on the form
 $$ P(x)y'' + P'(x)y' + \left[q(x) + \lambda r(x)\right]y = 0 $$
 with some BC at $x=a$ and $x=b$ and $r(x)>0$ on $[a,b]$. If there exists a non-zero solution for a given $\lambda$ the $y(x)$ is called an eigenfunction, and $\lambda$ is called the eigenvalue of the problem. Typically BCs lead to a series of discrete eigenvalues $\lambda_m$ and eigenfunctions $y_m(x)$. Examples: (1) Fourier $y'' + (n\pi/L)^2y=0$, (2) Legendre $(1-x^2)y'' - 2xy'+n(n+1)y = 0$. The eigenfunctions being orthogonal means
-$$ \int_a^br(x)y_n(x)y_m^*(x)\diff x = 0 $$
+$$ \int_a^br(x)y_n(x)y_m^*(x)\diff x = \delta_{nm} $$
 and we use this orthogonality relation to expand any function through the eigenfunctions by $f(x) = \sum_{n=1}^\infty a_n y_n(x)$ by multiplying each side with $r(x)y_m^*(x)$ and integrating from $a$ to $b$, giving us
 $$ a_m = \int_a^b f(x)r(x)y_m^*(x) \diff x$$
 $D$ is hermitian if it satisfies
 \[
-\int_{a}^{b}y_n(x)^*D y_m(x) dx = \int_{a}^{b} y_m(x) D y_n(x)^* dx
+\int_{a}^{b}y_n(x)^*D y_m(x) \diff x = \int_{a}^{b} y_m(x) D y_n(x)^* \diff x
 \]
 for boundary conditions, then: real eigenvalues, eigenfunctions are orthogonal over $a,b$, and the eigenfunctions forms a complete sett for $a,b$. Where $D= p(x)\pdv[2]{}{x}+p'(x)\pdv{}{x} +q(x)$.\\
 Examples:\\
