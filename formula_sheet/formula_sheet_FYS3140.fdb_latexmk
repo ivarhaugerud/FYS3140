@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1560335071 "formula_sheet_FYS3140.tex" "formula_sheet_FYS3140.pdf" "formula_sheet_FYS3140" 1560335073
+["pdflatex"] 1560346244 "formula_sheet_FYS3140.tex" "formula_sheet_FYS3140.pdf" "formula_sheet_FYS3140" 1560346247
   "/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1480098666 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1480098666 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2017/texmf-dist/fonts/map/fontname/texfonts.map" 1480098670 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
@@ -214,9 +214,9 @@
   "/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1495593472 2350277 a699055bee05bf8a40b0504752487295 ""
   "/usr/local/texlive/2017/texmf-var/web2c/pdftex/pdflatex.fmt" 1504893732 4129591 b1a7ed87e25bd8fdaf5080304d300aaa ""
   "/usr/local/texlive/2017/texmf.cnf" 1495593465 577 2b71d4d888f9e5560b2e99985915a9fa ""
-  "formula_sheet_FYS3140.aux" 1560335072 43 0a6ade4f027f9d564f6341465efa0b40 ""
-  "formula_sheet_FYS3140.tex" 1560335069 44199 1985a9820e598a9e2a6214f76ae8f5cd ""
+  "formula_sheet_FYS3140.aux" 1560346245 43 0a6ade4f027f9d564f6341465efa0b40 ""
+  "formula_sheet_FYS3140.tex" 1560346241 44204 5a97a7150276214031b0e1954f53d474 ""
   (generated)
-  "formula_sheet_FYS3140.log"
   "formula_sheet_FYS3140.aux"
+  "formula_sheet_FYS3140.log"
   "formula_sheet_FYS3140.pdf"

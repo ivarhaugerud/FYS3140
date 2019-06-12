@@ -340,7 +340,7 @@ $$ \int_0^1 P_{2n}(x) \diff x = 0 $$
 \textbf{Egenfunksjoner:}\\
 Hermitepolynomer $y_n(x)=H_n(x)$ for $x\in(-\infty,\infty)$. \\
 \textbf{Orthogonalitet: }
-$\int_{-1}^1 e^{-x^2}H_n(x)H_m(x)dx=2^n n! \sqrt{\pi}\delta_{nm}$ \\
+$\int_{-1}^1 e^{-x^2}H_n(x)H_m(x)dx=2^n n! \sqrt{\pi}\delta_{nm} $ \\
 \textbf{Kompletthet:} \EQU{
 f(x)=\sum_{n=0}^\infty a_nH_n(x),x\in(-\infty,\infty);  \
 a_n=\frac{1}{2^n n! \sqrt{\pi}}\int_{-\infty}^\infty
@@ -609,7 +609,7 @@ Fourier transform with respect to one of the variables (in this case $x$), and u
 Differential equation with certain BCs have set of solutions that are orthogonal and can expand any function, this goes for DE on the form
 $$ P(x)y'' + P'(x)y' + \left[q(x) + \lambda r(x)\right]y = 0 $$
 with some BC at $x=a$ and $x=b$ and $r(x)>0$ on $[a,b]$. If there exists a non-zero solution for a given $\lambda$ the $y(x)$ is called an eigenfunction, and $\lambda$ is called the eigenvalue of the problem. Typically BCs lead to a series of discrete eigenvalues $\lambda_m$ and eigenfunctions $y_m(x)$. Examples: (1) Fourier $y'' + (n\pi/L)^2y=0$, (2) Legendre $(1-x^2)y'' - 2xy'+n(n+1)y = 0$. The eigenfunctions being orthogonal means
-$$ \int_a^br(x)y_n(x)y_m^*(x)\diff x $$
+$$ \int_a^br(x)y_n(x)y_m^*(x)\diff x = 0 $$
 and we use this orthogonality relation to expand any function through the eigenfunctions by $f(x) = \sum_{n=1}^\infty a_n y_n(x)$ by multiplying each side with $r(x)y_m^*(x)$ and integrating from $a$ to $b$, giving us
 $$ a_m = \int_a^b f(x)r(x)y_m^*(x) \diff x$$
 $D$ is hermitian if it satisfies
